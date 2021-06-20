@@ -1,0 +1,33 @@
+#+TITLE: Black Lagoon, Burke's Grammar of Motives and Org-roam
+#+AUTHOR: BuddhiLW
+#+DATE:<2021-06-20 Sun>
+
+* What is the connection between these topics?
+  - *Org-roam can help us take the notes*
+  - *Grammar of Motives give us background*
+  - *Black Lagoon is our raw-data to analyze*
+
+** How this document is composed - Org-roam
+    I will use Org-roam to write this complex document, using the
+    least resources.
+    
+    #+begin_quote
+    Everything should be made as simple as possible, but not simpler.
+    #+end_quote
+
+    So, Org-roam is here to help us to connect these ideas and
+    publish it, in a way so not to make it harder than having the idea
+    and formulating it in thought and words itself.
+
+    Session's version of what he recalls from Einstein,
+    #+begin_quote
+    It can scarcely be denied that the supreme goal of all theory is to
+    make the irreducible basic elements as simple and as few as possible
+    without having to surrender the adequate representation of a single
+    datum of experience.
+    #+end_quote
+
+** Closing the dots - Theory and Practice
+   Black Lagoon is a series that can be dated to 2002; televised in
+   2006, by Madhouse. 
+# TODO: use-package -> org-roam-server; e/Editing.org

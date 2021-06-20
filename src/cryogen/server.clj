@@ -18,10 +18,10 @@
   (compile-assets-timed)
   (let [ignored-files (-> (resolve-config) :ignored-files)]
     (run!
-      #(if fast?
-         (start-watcher-for-changes! % ignored-files compile-assets-timed {})
-         (start-watcher! % ignored-files compile-assets-timed))
-      ["content" "themes"])))
+     #(if fast?
+        (start-watcher-for-changes! % ignored-files compile-assets-timed {})
+        (start-watcher! % ignored-files compile-assets-timed))
+     ["content" "themes"])))
 
 (defn wrap-subdirectories
   [handler]
@@ -50,10 +50,11 @@
           (handler request)))))
 
 (defroutes routes
-  (GET "/" [] (redirect (let [config (resolve-config)]
-                          (path (:blog-prefix config)
-                                (when (= (:clean-urls config) :dirty)
-                                  "index.html")))))
+  (GET "/" [] (redirect
+               (let [config (resolve-config)]
+                 (path (:blog-prefix config)
+                       (when (= (:clean-urls config) :dirty)
+                         "index.html")))))
   (route/files "/")
   (route/not-found "Page not found"))
 
@@ -63,8 +64,8 @@
   "Entrypoint for running via tools-deps (clojure)"
   [{:keys [fast] :as opts}]
   (ring-server/serve
-    handler
-    (merge {:init (partial init fast)} opts)))
+   handler
+   (merge {:init (partial init fast)} opts)))
 
 (defn -main [& args]
   (serve {:port 3000, :fast ((set args) "fast")}))

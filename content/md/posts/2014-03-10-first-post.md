@@ -2,9 +2,9 @@
  :layout :post
  :tags  ["not fetch"]}
 
-### This Post Not Fetch Enough
+### Post 007
 
-some stuff happened
+That's when I knew... Rumi was right.
 
-> Stop trying to make fetch happen.
->- Regina
+>  "Stop acting so small. You are the universe in ecstatic motion."
+>- Rumi.

@@ -1,95 +1,107 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<html lang="en">
   <head>
-    <!-- Website Template designed by www.downloadwebsitetemplates.co.uk -->
-    <!-- Modified to fit Cryogen.-->
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Dark Cyber Corner</title>
     
     <meta name="description" content="My little dark corner of the cyberspace">
     <meta name="keywords" content="">
     
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
-    <link rel="shortcut icon" href="images/ico/favicon.png">
-    <!--[if IE]><![endif]-->
-    <link href="/css/buttons.css" rel="stylesheet" type="text/css" />
-    <link href="/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="/css/typography.css" rel="stylesheet" type="text/css" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow-night-eighties.min.css">
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-
-    <div id="left">
-
-      <p id="logo">
+    <aside id="sidebar">
+      <div id="logo">
         <a title="Dark Cyber Corner" href="/">
-          <span class="fa fa-rocket"></span>
-          <span class="text">Nucleus!</span>
+          <img class="icon" src="/img/perfil.jpeg">
+          <div class="text desktop-and-tablet-only">Dark Cyber Corner</div>
+          <div class="text mobile-only">Dark Cyber Corner</div>
         </a>
-      </p>
-
-      <div id="menucont" class="bodycontainer clearfix">
-        <div class="menutitle">
-          <p><span class="fa fa-reorder"></span><strong>Menu</strong></p>
-        </div>
-        <ul class="menu">
-          <li  class="active" ><a title="Home" href="/">Home</a></li>
-          <li ><a title="Archives" href="/archives/">Archives</a></li>
-          
-          <li ><a title="Tags" href="/tags/">Tags</a></li>
-          
-          
-          <li >
-            <a href="/pages-output/about/">About</a>
-          </li>
-          
-          <li><a title="RSS" href="/feed.xml">RSS</a></li>
-        </ul>
       </div>
 
-      <div id="socialmedia" class="clearfix">
-        <ul>
-          <li><a title="GitHub" href="./" rel="external"><span class="fa fa-github"></span></a></li>
-          <li><a title="Stack Overflow" href="./" rel="external"><span class="fa fa-stack-overflow"></span></a></li>
-          <li><a title="Google+" href="./" rel="external"><span class="fa fa-google-plus"></span></a></li>
-          <li><a title="LinkedIn" href="./" rel="external"><span class="fa fa-linkedin"></span></a></li>
-          <li><a title="Last.fm" href="./" rel="external"><span class="fa fa-lastfm"></span></a></li>
-        </ul>
-      </div>
+      <nav id="sidebar-links">
+        <nav id="menucont">
+          <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+          <label for="menu-checkbox" class="menutitle">
+            <svg class="icon icon-menu" aria-hidden="true"><use xlink:href="/img/icons.svg#icon-menu"></use></svg><span class="menu-text">Menu</span>
+          </label>
+          <ul class="menu">
+            <li  class="active" ><a title="Home" href="/"><div class="menu-item-text">Home</div></a></li>
+            <li ><a title="Archives" href="/archives/"><div class="menu-item-text">Archives</div></a></li>
+            
+            <li ><a title="Tags" href="/tags/"><div class="menu-item-text">Tags</div></a></li>
+            
+            
+            <li >
+              <a href="/pages-output/about/"><div class="menu-item-text">About</div></a>
+            </li>
+            
+            <!-- <li><a title="RSS" href="/feed.xml"><div class="menu-item-text">RSS</div></a></li> -->
+          </ul>
+        </nav>
 
-    </div>
+        <nav id="socialmedia">
+          <ul>
+            <!-- <li><a title="LinkedIn" href="https://www.linkedin.com/in/" rel="external"><svg class="icon icon-linkedin"><use xlink:href="/img/icons.svg#icon-linkedin"></use></svg></a></li> -->
+	    <!-- <li><a title="GitHub" href="https://github.com/BuddhiLW" rel="external"><svg class="icon icon-github-circled"><use xlink:href="/img/icons.svg#icon-github-circled"></use></svg></a></li> -->
+	    <!-- <li><a title="RSS Feed" href="/feed.xml"><svg class="icon icon-rss-squared"><use xlink:href="/img/icons.svg#icon-rss-squared"></use></svg></a></li> -->
 
-    <div id="right" class="clearfix">
+	  <li>
+	    <a title="GitHub" href="#" rel="external">
+	      <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
+	    </a>
+	  </li>
+	  <!-- [<img align="left" alt="buddhilw | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/youtube.svg" />][youtube] -->
+	  <li>
+	    <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+	    <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
+	    </a> 
+	  </li>
+	  <li>
+	    <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+	      <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+	    </a>
+	  </li>
+	  <!-- [<img align="left" alt="buddhilw | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/instagram.svg" />][instagram] -->
+	  
+	  </ul>
+        </nav>
+      </nav>
+    </aside>
+
+    <article id="main">
       
 <div id="post">
     <div class="post-header">
-    <div id="post-meta" class="row">
-        <strong>November 4, 2014</strong>
-        
+    <div id="post-meta">
+        <h1>Functional Web Projects</h1>
+        <div class="byline">
+            <span class="date">June 20, 2021</span>
+            
+        </div>
     </div>
-    <h1>Yet Another Post</h1>
 </div>
 <div>
     
-    <h3 id="this-post-so-fetch">This Post So Fetch</h3><p>some more stuff happened</p>
+    <h3 id="my-first-impressions-of-cryogen-and-nyxt-clojurecommon-lisp">My first impressions of Cryogen and Nyxt (Clojure/Common Lisp)</h3><!-- ![]( "Nyxt and Cryogen"){ width = 50%} --><img src="../../img/nyxt-cryogen.png" alt="nyxt cryogen" width="700" /><h2 id="----english-verion----">--- English verion ---</h2><p>In this fortnight, I worked on two side #projects.</p><p>I learned about Nyxt, a extremely extensible browser, written in pure Common Lisp. Blazely fast! I could compose him with Emacs functions easily.</p><p>At last, I develop my static website generator, based on Cryogen, a #clojure template. It's written in 70 lines of code. Pretty astonishing.  The library itself has less than 400 lines of code.</p><p>Github page: <a href="https://github.com/BuddhiLW/Blobing">https://github.com/BuddhiLW/Blobing</a></p><blockquote><p>"Stop acting so small. You are the universe in ecstatic motion."</p><ul><li>Rumi.</li></ul></blockquote><h2 id="----portuguese-version----">--- Portuguese version ---</h2><p>Essa quinzena, tive o prazer de aprender com, e estender, dois diferentes projetos secundários.</p><p>Utilizei a biblioteca Cryogen. Foi possível escrever um gerador de sites estáticos em 70 linhas de Clojure(Script).</p><p>Comei a utilizar o Nyxt, um browser escrito em Common Lisp. Assustadoramente rápido. E, o mais importante, muito fácil de aprimorar seu comportamento. É possível utilizar as funções do meu editor de texto, nele, diretamente.</p><blockquote><p>"Pare de ajir pequeninamente. Você é o universo em movimento exstático."</p><ul><li>Rumi.</li></ul></blockquote>
 </div>
 
 <div id="post-tags">
-    <br/> 
+    <br/>
     <b>Tags: </b>
     
-    <a href="/tags-output/very%20fetch/">very fetch</a>
+    <a href="/tags-output/extensibility/">extensibility</a>
+    
+    <a href="/tags-output/clojure/">clojure</a>
+    
+    <a href="/tags-output/common%20lisp/">common lisp</a>
+    
+    <a href="/tags-output/open%20source/">open source</a>
     
 </div>
 
@@ -97,24 +109,31 @@
 
     
 
+    
     <div id="prev-next">
-        
-        
-        <a class="button right" href="/posts-output/2014-03-10-first-post/">A Post &raquo;</a>
-        
-    </div>
+    
+    <div class="prev"></div>
+    
+    
+    <a class="next" href="/posts-output/2014-11-04-second-post/"><div class="nav-text"">Yet Another Post</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
+    
+</div>
+
+    
+
 </div>
 
       <hr/>
-      <div id="footercont" class="clearfix">Copyright &copy; 2021 BuddhiLW
-	<p>Powered by <a href="http://cryogenweb.org">Cryogen</a> | Free Website Template by <a title="free website templates" href="http://www.downloadwebsitetemplates.co.uk" rel="external">Download Website Templates</a></p>
-
+      <div id="footercont">
+        Copyright &copy; 2021 BuddhiLW
+        <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
+        <br>Theme by <a href="http://github.com/KingMob">KingMob</a>
       </div>
-    </div>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    </article>
+
     <script src="/js/highlight.pack.js" type="application/javascript"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/scripts.js" type="application/javascript"></script>
+
     
     
   </body>

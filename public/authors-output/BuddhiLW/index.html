@@ -1,81 +1,94 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<html lang="en">
   <head>
-    <!-- Website Template designed by www.downloadwebsitetemplates.co.uk -->
-    <!-- Modified to fit Cryogen.-->
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Dark Cyber Corner: Posts by BuddhiLW </title>
     
     <meta name="description" content="My little dark corner of the cyberspace">
     <meta name="keywords" content="">
     
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
-    <link rel="shortcut icon" href="images/ico/favicon.png">
-    <!--[if IE]><![endif]-->
-    <link href="/css/buttons.css" rel="stylesheet" type="text/css" />
-    <link href="/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="/css/typography.css" rel="stylesheet" type="text/css" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow-night-eighties.min.css">
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-
-    <div id="left">
-
-      <p id="logo">
+    <aside id="sidebar">
+      <div id="logo">
         <a title="Dark Cyber Corner" href="/">
-          <span class="fa fa-rocket"></span>
-          <span class="text">Nucleus!</span>
+          <img class="icon" src="/img/perfil.jpeg">
+          <div class="text desktop-and-tablet-only">Dark Cyber Corner</div>
+          <div class="text mobile-only">Dark Cyber Corner</div>
         </a>
-      </p>
-
-      <div id="menucont" class="bodycontainer clearfix">
-        <div class="menutitle">
-          <p><span class="fa fa-reorder"></span><strong>Menu</strong></p>
-        </div>
-        <ul class="menu">
-          <li ><a title="Home" href="/">Home</a></li>
-          <li ><a title="Archives" href="/archives/">Archives</a></li>
-          
-          <li ><a title="Tags" href="/tags/">Tags</a></li>
-          
-          
-          <li >
-            <a href="/pages-output/about/">About</a>
-          </li>
-          
-          <li><a title="RSS" href="/feed.xml">RSS</a></li>
-        </ul>
       </div>
 
-      <div id="socialmedia" class="clearfix">
-        <ul>
-          <li><a title="GitHub" href="./" rel="external"><span class="fa fa-github"></span></a></li>
-          <li><a title="Stack Overflow" href="./" rel="external"><span class="fa fa-stack-overflow"></span></a></li>
-          <li><a title="Google+" href="./" rel="external"><span class="fa fa-google-plus"></span></a></li>
-          <li><a title="LinkedIn" href="./" rel="external"><span class="fa fa-linkedin"></span></a></li>
-          <li><a title="Last.fm" href="./" rel="external"><span class="fa fa-lastfm"></span></a></li>
-        </ul>
-      </div>
+      <nav id="sidebar-links">
+        <nav id="menucont">
+          <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+          <label for="menu-checkbox" class="menutitle">
+            <svg class="icon icon-menu" aria-hidden="true"><use xlink:href="/img/icons.svg#icon-menu"></use></svg><span class="menu-text">Menu</span>
+          </label>
+          <ul class="menu">
+            <li ><a title="Home" href="/"><div class="menu-item-text">Home</div></a></li>
+            <li ><a title="Archives" href="/archives/"><div class="menu-item-text">Archives</div></a></li>
+            
+            <li ><a title="Tags" href="/tags/"><div class="menu-item-text">Tags</div></a></li>
+            
+            
+            <li >
+              <a href="/pages-output/about/"><div class="menu-item-text">About</div></a>
+            </li>
+            
+            <!-- <li><a title="RSS" href="/feed.xml"><div class="menu-item-text">RSS</div></a></li> -->
+          </ul>
+        </nav>
 
-    </div>
+        <nav id="socialmedia">
+          <ul>
+            <!-- <li><a title="LinkedIn" href="https://www.linkedin.com/in/" rel="external"><svg class="icon icon-linkedin"><use xlink:href="/img/icons.svg#icon-linkedin"></use></svg></a></li> -->
+	    <!-- <li><a title="GitHub" href="https://github.com/BuddhiLW" rel="external"><svg class="icon icon-github-circled"><use xlink:href="/img/icons.svg#icon-github-circled"></use></svg></a></li> -->
+	    <!-- <li><a title="RSS Feed" href="/feed.xml"><svg class="icon icon-rss-squared"><use xlink:href="/img/icons.svg#icon-rss-squared"></use></svg></a></li> -->
 
-    <div id="right" class="clearfix">
+	  <li>
+	    <a title="GitHub" href="#" rel="external">
+	      <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
+	    </a>
+	  </li>
+	  <!-- [<img align="left" alt="buddhilw | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/youtube.svg" />][youtube] -->
+	  <li>
+	    <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+	    <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
+	    </a> 
+	  </li>
+	  <li>
+	    <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+	      <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+	    </a>
+	  </li>
+	  <!-- [<img align="left" alt="buddhilw | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/instagram.svg" />][instagram] -->
+	  
+	  </ul>
+        </nav>
+      </nav>
+    </aside>
+
+    <article id="main">
       
 <div id="posts">
     <div id="page-header" class="post-header">
         <h1>Posts by BuddhiLW</h1>
     </div>
+    
+    <h4>2021 June</h4>
+    <ul>
+        
+        <li>
+            Jun 20 - <a href="/posts-output/2021-06-20-demo/">Functional Web Projects</a>
+        </li>
+        
+    </ul>
     
     <h4>2014 November</h4>
     <ul>
@@ -98,15 +111,16 @@
 </div>
 
       <hr/>
-      <div id="footercont" class="clearfix">Copyright &copy; 2021 BuddhiLW
-	<p>Powered by <a href="http://cryogenweb.org">Cryogen</a> | Free Website Template by <a title="free website templates" href="http://www.downloadwebsitetemplates.co.uk" rel="external">Download Website Templates</a></p>
-
+      <div id="footercont">
+        Copyright &copy; 2021 BuddhiLW
+        <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
+        <br>Theme by <a href="http://github.com/KingMob">KingMob</a>
       </div>
-    </div>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    </article>
+
     <script src="/js/highlight.pack.js" type="application/javascript"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/scripts.js" type="application/javascript"></script>
+
     
     
   </body>

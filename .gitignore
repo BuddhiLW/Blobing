@@ -9,7 +9,4 @@ pom.xml.asc
 .lein-repl-history
 .lein-plugins/
 .lein-failures
-/public/
-/themes/lotus/css/blog.css
-/themes/lotus/css/blog.css.map
 .cpcache/

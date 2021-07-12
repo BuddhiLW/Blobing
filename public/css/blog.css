@@ -37,6 +37,8 @@ img{
 
 nav#socialmedia img{
   width: 30px;
+  padding:-20px;
+  margin-bottom:10px;
 }
 
 strong, b {
@@ -370,13 +372,13 @@ body {
 
 @media (min-width: 700px) {
   #sidebar {
-    flex: 0 0 auto;
+    flex: 0;
     height: 100vh;
   }
 }
 @media (max-width: 700px) {
   #sidebar {
-    flex: 1 0 auto;
+    flex: 1 0 0 0;
     width: 100vw;
   }
 }
@@ -390,11 +392,14 @@ body {
 @media (max-width: 700px) {
   #sidebar-links {
     flex-flow: row nowrap;
+    /* flex-wrap: wrap; */
+    /* nowrap; */
+    margin-bottom: 15px;
   }
 }
 
 .post-header h1 {
-  margin-top: 0;
+  margin-top: 10px;
 }
 .post-header .byline {
   display: flex;
@@ -504,6 +509,26 @@ img {
   -ms-backface-visibility: hidden;
 }
 
+#post img{
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: 50%;
+  margin: 0 calc(20%) 0 calc(25%);
+}
+
+/* ==================================================
+   Markdown hljs
+================================================== */
+
+#post code.hljs.coffeescript{
+  text-align:center;
+}
+
+#post span.hljs-string{
+  text-align:center;
+}
+
 /* ==================================================
    Sections
 ================================================== */
@@ -520,6 +545,7 @@ img {
   #sidebar {
     padding-bottom: 10px;
   }
+  
 }
 #sidebar #logo {
   padding: 20px;
@@ -597,21 +623,22 @@ img {
   max-height: 100%;
   max-width: 100%;
   opacity: 0.85;
+  /* margin-bottom:20px; */
 }
 #socialmedia ul .icon:hover {
   opacity: 1;
 }
 
-@media (min-width: 700px) {
-  #main {
-    padding: 2rem;
-  }
-}
-@media (max-width: 700px) {
-  #main {
-    padding: 1rem;
-  }
-}
+/* @media (min-width: 700px) { */
+/*   #main { */
+/*     padding: 2rem; */
+/*   } */
+/* } */
+/* @media (max-width: 700px) { */
+/*   #main { */
+/*     padding: 1rem; */
+/*   } */
+/* } */
 
 #main p:last-child {
   margin: 0;
@@ -625,10 +652,18 @@ img {
   margin: 0 auto;
   max-width: calc(100vw - 175.33px);
   font-size: 14px;
-/*   img { */
-/*     width: 400px; */
-/*   } */
 }
+@media (max-width: 700px) {
+  #post {
+    margin: auto auto;
+    max-width: calc(100vw);
+    font-size: 14px;
+  }
+  img {
+    margin-right: 20vw;
+  }
+}
+
 
 #footercont {
   color: rgba(0, 0, 0, 0.4);

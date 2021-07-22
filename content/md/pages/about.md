@@ -1,8 +1,8 @@
-{:title "About"
+{:title "Sobre"
  :layout :page
  :page-index 0
  :navbar? true}
 
-## Write something about something
+## BuddhiLW 
 
-wow wow wow
+a.k.a., Buddhi Litte White.

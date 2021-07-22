@@ -1,8 +1,19 @@
-{:title "Another Page"
+{:title "Where can you find me?"
  :layout :page
  :page-index 1}
 
-## Look at this sweet page
+## Where can you find me?
 
-this is another custom page
-totally not a post
+[<img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>][github]: https://github.com/BuddhiLW
+
+📖 ---Open source, open book--- 📖
+
+[<img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]: https://github.com/BuddhiLW
+
+### My status
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=BuddhiLW)](https://github.com/anuraghazra/github-readme-stats)
+
+[<img align="left" alt="GNU/Linux" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" />][github]: Artix Linux user.
+
+[<img align="left" alt="Emacs" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/emacs/emacs.png" />][github]: Hardcore Emacs user https://github.com/BuddhiLW/Frank-init

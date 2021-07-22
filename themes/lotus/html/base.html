@@ -34,7 +34,10 @@
             <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}"><div class="menu-item-text">Home</div></a></li>
             <li {% if archives %} class="active" {% endif %}><a title="Archives" href="{{archives-uri}}"><div class="menu-item-text">Archives</div></a></li>
             {% if tags|not-empty %}
-            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}><a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div></a></li>
+            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}>
+	      <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div>
+	      </a>
+	    </li>
             {% endif %}
             {% for nav-page in navbar-pages %}
             <li {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}>

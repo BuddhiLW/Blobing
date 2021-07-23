@@ -2,24 +2,32 @@
  :layout :page
  :page-index 1}
 
-## Where can you find me?
-
-<img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
-
-https://github.com/BuddhiLW
-
+<div style="text-align:center">
+<p>
 📖 ---Open source, open book--- 📖
+</p>
+</div>
 
-<img align="left" alt="buddhilw.com" width="22" height="22" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
-https://github.com/BuddhiLW
+<div  style="display:flex;">
 
-### My status
+<img alt="buddhilw | Github" style="margin-left:300px; width:50px;" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
+<p style="margin-right:300px;"><a href="https://github.com/BuddhiLW">https://github.com/BuddhiLW</a><p/>
+</div>
+
+
+
+<div></div>
+
+## My GitHub status
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=BuddhiLW)](https://github.com/anuraghazra/github-readme-stats)
 
-<img align="left" alt="GNU/Linux" width="26" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" />
-Artix Linux user.
+<!-- <div> -->
+<!-- <img alt="GNU/Linux" style="width:40px;" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png"/> -->
+<!-- <p>Artix Linux user.</p> -->
+<!-- </div> -->
+<img align="left" alt="Emacs" style="width:80px;" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/emacs/emacs.png" />
+<p>Hardcore Emacs user. Check out my configs:</p>
 
-<img align="left" alt="Emacs" width="26" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/emacs/emacs.png" />
-Hardcore Emacs user
-[https://github.com/BuddhiLW/Frank-init](https://github.com/BuddhiLW/Frank-init)
+<!-- [https://github.com/BuddhiLW/Frank-init](https://github.com/BuddhiLW/Frank-init) -->
+<p><a href="https://github.com/BuddhiLW/Frank-init">https://github.com/BuddhiLW/Frank-init</a><p/>

@@ -20,7 +20,7 @@
 
 ## My GitHub status
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=BuddhiLW)](https://github.com/anuraghazra/github-readme-stats)
+[![https://github.com/BuddhiLW](https://github-readme-stats.vercel.app/api?username=BuddhiLW)](https://github.com/anuraghazra/github-readme-stats)
 
 <!-- <div> -->
 <!-- <img alt="GNU/Linux" style="width:40px;" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png"/> -->

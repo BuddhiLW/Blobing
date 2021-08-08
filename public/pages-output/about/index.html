@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js">
+    </script>
+    <script>
+      MathJax = {
+	  loader: {load: ['[tex]/enclose']},
+	  tex: {
+	      // packages: ['base,asm'],        // extensions to use
+	      inlineMath: [              // start/end delimiter pairs for in-line math
+		  ['\\(', '\\)']
+	      ],
+	      displayMath: [             // start/end delimiter pairs for display math
+		  ['$$', '$$'],
+		  ['\\[', '\\]'],
+		  ['\begin{equation}', '\end{equation}']
+	      ],
+	      processEscapes: true,      // use \$ to produce a literal dollar sign
+	      processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+	      processRefs: true,         // process \ref{...} outside of math mode
+	      digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+              // pattern for recognizing numbers
+	  }};
+    </script>
     <meta charset="utf-8">
     <title>Dark Cyber Corner: About</title>
     
@@ -90,7 +114,7 @@
         <h1>About</h1>
     </div>
     
-    <h2 id="buddhilw">BuddhiLW</h2><p>a.k.a., Buddhi Litte White.</p>
+    <h2 id="buddhilw">BuddhiLW</h2><p>a.k.a., Buddhi Litte White.</p><p>My goal is to be the best RPG character I can, while alive.</p>
 
     
     <div id="prev-next">

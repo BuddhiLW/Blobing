@@ -4,7 +4,11 @@
 
 * 2021 Agust 07, How to classify Groups scientifically (F-tests)
 Let's imagine we have four normaly-distributed groups with different
-'intrisic' variability in regards to belief on a X-subject.
+'intrinsic' variability in regards to belief on a given subject.
+
+{:title "Noise-Signal ratios (F-tests)"
+ :layout :post
+ :tags  ["science" ""]}
 
 ** We can use scipy, numpy and matplotlib to help us through our thoughts 
 	  #+NAME: cbdc1991-d500-4fb1-93d0-2e164213fdfc

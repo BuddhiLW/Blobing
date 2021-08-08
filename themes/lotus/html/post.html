@@ -14,7 +14,6 @@
 {% block content %}
 <div id="post">
     {% include "/html/post-content.html" %}
-
     {% with prev=post.prev next=post.next%}
     {% include "/html/prev-next.html" %}
     {% endwith %}

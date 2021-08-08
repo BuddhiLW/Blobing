@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js">
+    </script>
+    <script>
+      MathJax = {
+	  loader: {load: ['[tex]/enclose']},
+	  tex: {
+	      // packages: ['base,asm'],        // extensions to use
+	      inlineMath: [              // start/end delimiter pairs for in-line math
+		  ['\\(', '\\)']
+	      ],
+	      displayMath: [             // start/end delimiter pairs for display math
+		  ['$$', '$$'],
+		  ['\\[', '\\]'],
+		  ['\begin{equation}', '\end{equation}']
+	      ],
+	      processEscapes: true,      // use \$ to produce a literal dollar sign
+	      processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+	      processRefs: true,         // process \ref{...} outside of math mode
+	      digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+              // pattern for recognizing numbers
+	  }};
+    </script>
     <meta charset="utf-8">
     <title>Dark Cyber Corner</title>
     
@@ -82,24 +106,75 @@
 <div id="post">
     <div class="post-header">
     <div id="post-meta">
-        <h1>Collapse of Biological Cycles</h1>
+        <h1>Noise-Signal ratios (F-tests)</h1>
         <div class="byline">
-            <span class="date">July 22, 2021</span>
+            <span class="date">August 7, 2021</span>
             
         </div>
     </div>
 </div>
 <div>
     
-    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org16dfb1d">Climate-lag (BIO-CC)</a><ol><li><a href="#org8322061">Fukushima</a></li><li><a href="#orgaf634ea">Preferential futures:</a></li></ol></li></ol><p><a id="org16dfb1d"></a></p><h1 id="climate-lag-bio-cc">Climate-lag (BIO-CC)</h1><p>Most species's life cycle are, at most, of <a href="https://tpwd.texas.gov/publications/nonpwdpubs/young_naturalist/animals/animal_life_spans/">30 years</a>. When populations
-go extinct, because of global change. It happens "all of a
-sudden". Because one year you had them; the next, less than half; in 5
-years, none - their offspring didn't survive, so the cycle collapses.</p><p>That's one of the whys some climate-crises-conditions only appear
-10-30 year later (the so-called climate-lag)<a href="https://iopscience.iop.org/article/10.1088/1748-9326/9/12/124002/pdf">1</a>,<a href="https://climate.nasa.gov/effects/">2</a>.</p><p><a id="org8322061"></a></p><h2 id="fukushima">Fukushima</h2><p>Fukushima, for example, consequences are still being studied. From
-what we know, anyone who eats fish monthly, has "digested" radioative
-food <a href="https://web.stanford.edu/group/efmh/jacobson/TenHoeveEES12.pdf">3</a> (photo). Not enough, they decided to release the Fukushima
-water they treated, saying it's safe to drink it - just as many have
-said, let the politicians who say that take the first sip <a href="https://www.reuters.com/business/environment/countries-react-japans-plans-release-fukushima-water-into-ocean-2021-04-13/">4</a>.</p><p>*Image from Stanford's simulation paper (Worldwide health effects of the Fukushima Daiichi nuclear accident, John E. Ten Hoevea and Mark Z. Jacobson, 2012)</p><p><a href="file:///home/buddhilw/PP/ClojureScript/Blobing/content/img/simulation.png"><img src="../../img/simulation.png" alt="img" /></a></p><p><a id="orgaf634ea"></a></p><h2 id="preferential-futures">Preferential futures:</h2><ul><li>Remedy of biological collapses.</li><li>Sustainable industrialization of underdevelopment countries.</li><li>Share state-of-the-art technologies.</li></ul>
+    <h1 id="2021-agust-07-how-to-classify-groups-scientifically-f-tests">2021 Agust 07, How to classify Groups scientifically (F-tests)</h1><p>Let's imagine we have four normaly-distributed groups with different
+'intrisic' variability in regards to belief on a X-subject.</p><p><a id="org86097b2"></a></p><h2 id="we-can-use-scipy-numpy-and-matplotlib-to-help-us-through-our-thoughts">We can use scipy, numpy and matplotlib to help us through our thoughts</h2><pre><code>from scipy.stats import norm
+import numpy as np
+import matplotlib.pyplot as plt
+</code></pre><h2 id="visualizing-these-many-distributions">Visualizing these many distributions</h2><pre><code>    #x-axis
+    x = np.arange(20, 95, 0.001)
+    
+    ## background
+    plt.figure(facecolor='#FFF0F5')
+    
+    ###define normal values (not normalized)
+    plt.plot(x, norm.pdf(x, 50, 12), label='μ: 50, σ: 12', color='k')
+    plt.plot(x, norm.pdf(x, 49.7, 6), label='μ: 49.7, σ: 6', color='violet')
+    plt.plot(x, norm.pdf(x, 53, 3), label='μ: 53, σ: 3', color='blue')
+    plt.plot(x, norm.pdf(x, 51.3, 17), label='μ: 51.3, σ: 17', color='red')
+    
+    # Axis titles
+    plt.xlabel('Degree of belief in a subject X')
+    plt.ylabel('Probability')
+    #add legend to plot
+    plt.legend()
+    
+    plt.show()
+</code></pre><img src="./../../img/normal.png" alt="" align="center" title="Normals" class="img" /><p>Ok, we see these are all close to one another. At the same time,
+some groups are more orthodox, as blue, which means they posses extremely narrow
+possible views about this subject X.</p><p>So, the question is, can we categorize them as one thing (holding the same belief), without committing overgeneralization?</p><h2 id="the-hypothesis">The Hypothesis</h2><h3 id="s1-hypothesis-undirectional-anova">S1: Hypothesis undirectional ANOVA</h3><p>Can we measure the behavior of these four groups as the same, without loss of generality?</p><p>The Null and Alternative Hypothesis follow,</p><p>$$H_0: \hat{\mu_1}=\hat{\mu_2}=\hat{\mu_3}=\hat{\mu_4}$$
+$$H_1: \hat{\mu_i}\neq \hat{\mu_j},\quad i\neq{}j$$</p><p>That is, either they can or can not be treated as the same.</p><h3 id="the-analysis-of-variance-anova-method-is-perfectly-suited-for-that">The Analysis Of Variance (ANOVA) method is perfectly suited for that</h3><p>We will have a more in-depth knowledge of the origins and  the
+mathematical basis of ANOVA's in other posts.</p><p>Let's dive in solving our mystery first. Just an overview:</p><pre><code>- ANOVA will compare differences of means using standard variations
+		- There are the *Within* measures of groups.
+		- There are the *Between* measures of groups.
+	
+	- Generally, if we wanted to compare directly among two groups, we would use:
+		- T-tests
+		- Z-tests
+</code></pre><h3 id="why-use-it-instead-of-t-tests-and-z-tests">Why use it instead of T-tests and Z-tests</h3><p>By using the <strong>Variations</strong> as our way of comparison, we can abstract
+the fact we are dealing with n-groups an concentrate in a
+one-dimensional variable.</p><p>If we were to deal with means to derive these conclusions, we couldn't
+take that approach. We rather would have to make six T-tests:</p><p>$$\quad \binom{\textrm{n-groups}}{2}= \frac{n!}{2!(n-2)!}$$
+$$\implies n=4:\quad  \binom{\textrm{4}}{2}= \frac{4!}{2!(4-2)!}=6$$</p><h3 id="what-does-it-measure-exactly">What does it measure, exactly?</h3><p>Our final measure we'll be look at is the F-ratio: $$F=\dfrac{S_{Between}}{S_{Within}}$$</p><p>The <strong>Variation</strong> inside groups can be estimated by 	
+$$S_{Within}$$.</p><p>The <strong>Variation</strong> among different groups can be estimated by
+$$S_{Between}$$.</p><p>But, the Between estimator also that the Within variation as a
+baseline. So, truly, it can be seen as \(S_{Between}=S_{Within}+
+S_{\textrm{Intrinsic variation among groups}}\)</p><p>Thus, F is a ratio to measure how much of \(S_{\textrm{Intrinsic variation
+among groups}}\) account for differences among individuals of each
+groups.</p><h3 id="finally-computation">Finally, computation</h3><p>Now that we had an overview of what we need to compute an ANOVA and
+how it work, let's do the Math.</p><ol><li><em>A priori</em> threshold for certainty</li></ol><p>In Statistics, we can choose levels of causality and certainties we
+are prepared to accept as truth. Here, we will adopt the
+\(\alpha=0.05\). That is, I want to be "95% sure" that this relation is Causal.</p><h3 id="degrees-of-freedom">Degrees of freedom</h3><p>An abstract concept we use to compute are degrees of freedom. In this
+case we have 4 groups and  - let's arbitrarily say we took 4 people and
+measured them in each group. So,</p><p>$$df_{between}=(n_{\textrm{groups}}-1)=34$$	
+$$df_{within}=(n_{\textrm{measures}}-n_{\textrm{groups}})=12$$</p><h2 id="our-cutoff">Our cutoff</h2><p>Looking at a table, \(F_{3,12}=2.60552\).</p><p>This is our cutoff.</p><h3 id="variations-and-f">Variations and F</h3><p>Generally, we have.</p><p>$$S^2_M=$$</p><p>$$\dfrac{\sum\limits_i (M_i-GM)^2}{df_{\textrm{between}}}$$</p><p>$$S_{Within}=$$</p><p>The average of</p><p>$$\sum\limits_{i=1} S_i^2$$</p><p>$$F=$$
+$$\dfrac{S_{\textrm{Between}}}{S_{\textrm{Within}}}$$</p><p>$$S_{Between}=$$
+$$\sqrt{n.{S^{2}}_{M}}$$</p><pre><code>n: quantity of people measured per group
+N: quantity of groups
+GM: mean of means
+</code></pre><p>Thus,</p><p>$$GM = \frac{50+49.7+53+51.3}{4}=51$$</p><p>$$\quad S_{Within} = \dfrac{12+6+3+17}{4}=9.5$$</p><p>$$S_M^2=2.26$$</p><p>$$\quad S_{\textrm{Between}} = \sqrt{4\times{}2.26}=9.04$$</p><p>Finally, \(F=\dfrac{9.04}{9.5}=0.952\).</p><h3 id="comparison-with-a-table-and-cutoff">Comparison with a table and cutoff</h3><p>As \( F=0.952 \) measured is way less than \(F_{{(3, 12),
+\alpha=0.05}}=2.60552\).</p><p>We conclude that we shouldn't negate the null hypothesis
+(\(H_0\)).</p><p>In this case, we could say all these four groups could be
+treated as the same (average-wise).</p><p>Do you agree? Well, ether you do or not, that's scientific
+scrutiny, right there.</p>
 </div>
 
 <div id="post-tags">
@@ -108,15 +183,7 @@ said, let the politicians who say that take the first sip <a href="https://www.r
     
     <a href="/tags-output/"></a>
     
-    <a href="/tags-output/collapse/">collapse</a>
-    
-    <a href="/tags-output/climate%20lag/">climate lag</a>
-    
-    <a href="/tags-output/biology/">biology</a>
-    
-    <a href="/tags-output/bio-cc/">bio-cc</a>
-    
-    <a href="/tags-output/climate%20change/">climate change</a>
+    <a href="/tags-output/science/">science</a>
     
 </div>
 
@@ -130,7 +197,7 @@ said, let the politicians who say that take the first sip <a href="https://www.r
     <div class="prev"></div>
     
     
-    <a class="next" href="/posts-output/2021-07-12-GW:2021/"><div class="nav-text"">Global Warming (GW) 2021: 35C Norway.</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
+    <a class="next" href="/posts-output/2021-07-22-BIO-CC/"><div class="nav-text"">Collapse of Biological Cycles</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
     
 </div>
 

@@ -103,17 +103,21 @@
 <div id="post">
     <div class="post-header">
     <div id="post-meta">
-        <h1>Noise-Signal ratios (F-tests)</h1>
+        <h1>Noise-Signal ratios (F-tests) - (SS)</h1>
         <div class="byline">
             <span class="date">August 7, 2021</span>
             
         </div>
     </div>
+    <div class="fancy-area">
+      <div class="fancy"></div>
+    </div>
 </div>
 <div>
     
     <h1 id="how-to-classify-groups-scientifically-f-tests">How to classify Groups scientifically (F-tests)</h1><p>Let's imagine we have four normaly-distributed groups with different
-'intrinsic' variability in regards to belief on a given subject.</p><p><a id="org86097b2"></a></p><h2 id="we-can-use-scipy-numpy-and-matplotlib-to-help-us-through-our-thoughts">We can use scipy, numpy and matplotlib to help us through our thoughts</h2><pre><code>from scipy.stats import norm
+'intrinsic' variability in regards to belief on a given subject.</p><p>Can we group them without lossing generality? Is the error commited too great in this categorization?
+Let's find out!</p><p><a id="org86097b2"></a></p><h2 id="we-can-use-scipy-numpy-and-matplotlib-to-help-us-through-our-thoughts">We can use scipy, numpy and matplotlib to help us through our thoughts</h2><pre><code>from scipy.stats import norm
 import numpy as np
 import matplotlib.pyplot as plt
 </code></pre><h2 id="visualizing-these-many-distributions">Visualizing these many distributions</h2><pre><code>    #x-axis
@@ -135,7 +139,7 @@ import matplotlib.pyplot as plt
     plt.legend()
     
     plt.show()
-</code></pre><img src="./../../img/normal.png" alt="" align="center" title="Normals" class="img" /><p>Ok, we see these are all close one to the other. At the same time, some
+</code></pre><img src="./../../img/normal.png" alt="" align="center" title="Normals" class="img" /><p>Ok, we see these are all close to one another. At the same time, some
 groups are more orthodox, as blue, which has extremely narrow possible
 views about this subject X.</p><p>So, the question is, can we categorize them
 as one thing (holding the same belief), without committing
@@ -149,7 +153,7 @@ H_1: \hat{\mu_i}&amp;\neq \hat{\mu_j},\quad i\neq{}j
 \end{aligned}
 \end{equation} \qquad (1)$$</p><p>That is, either they can or can not be treated as the same.</p><p>The Analysis Of Variance (ANOVA) method is perfectly suited for that</p><p>We will have a more in-depth knowledge of the origins and the
 mathematical basis of ANOVA's in other posts.</p><p>Let's dive in solving our mystery first. Just an overview:</p><blockquote><ul><li>ANOVA will compare differences of means using standard variations</li></ul><ol><li>There are the <em>Within</em> measures of groups.</li><li>There are the <em>Between</em> measures of groups.</li></ol></blockquote><blockquote><ul><li>Generally, if we wanted to compare directly among two groups, we would use:</li></ul><ol><li>T-tests</li><li>Z-tests</li></ol></blockquote><ol><li><p>Why use it instead of T-tests and Z-tests</p><p>By using the <strong>Variations</strong> as our way of comparison, we can
-abstract the fact we are dealing with n-groups an concentrate in a
+abstract the fact we are dealing with n-groups and concentrate in a
 one-dimensional variable.</p><p>If we were to deal with means to derive these conclusions, we
 couldn't take that approach. We rather would have to make six
 T-tests:</p><p>$$\begin{equation}
@@ -160,13 +164,13 @@ T-tests:</p><p>$$\begin{equation}
 \end{equation} \qquad (2)$$</p></li><li><p>What does it measure, exactly?</p><p>Our final measure we'll be look at is the F-ratio:
 \(F=\dfrac{S_{Between}}{S_{Within}}\)</p><blockquote><ul><li>The <strong>Variation</strong> inside groups can be estimated by
 \(S_{Within}\).</li><li>The <strong>Variation</strong> among different groups can be estimated by
-\(S_{Between}\).</li></ul></blockquote><p>But, the Between estimator also that the Within variation as a
+\(S_{Between}\).</li></ul></blockquote><p>But, the Between estimator also takes the Within variation as a
 baseline. So, truly, it can be seen as \(S_{Between}=S_{Within}+
 S_{\textrm{Intrinsic variation among groups}}\)</p><p>Thus, F is a ratio to measure how much of
 \(S_{\textrm{Intrinsic variation among groups}}\) account for differences among individuals of each groups.</p></li></ol><h3 id="finally-computation">Finally, computation</h3><p>Now that we had an overview of what we need to compute an ANOVA and how
 it work, let's do the Math.</p><ol><li><p><em>A priori</em> threshold for certainty</p><p>In Statistics, we can choose levels of causality and certainties we
 are prepared to accept as truth. Here, we will adopt the
-$\alpha=0.05$. That is, I want to be "95% sure" that this relation
+\(\alpha=0.05\). That is, I want to be "95% sure" that this relation
 is Causal.</p></li><li><p>Degrees of freedom</p><p>An abstract concept we use to compute are degrees of freedom. In
 this case we have 4 groups and - let's arbitrarily say we took 4
 people and measured them in each group. So,</p><p>$$\begin{equation}
@@ -187,8 +191,8 @@ S^2_M &amp;= \dfrac{(50-51)^2+(49.7-51)^2+(53-51)^2+(51.3-51)^2}{(4-1)}= 2.26
 \end{equation}$$</p><blockquote><p>Finally, \(F=\dfrac{9.04}{9.5}=0.952\).</p></blockquote><ol start="4"><li><p>Comparison with a table and cutoff</p><p>As \(F=0.952\) measured is way less than
 \(F_{{(3,12),\alpha=0.05}}=2.60552\). We conclude that we
 shouldn't negate the null hypothesis (\(H_0\)).</p><p>In this case, we could say all these four groups could be treated as
-the same (average-wise).</p><p>Do you agree? Well, ether you do or not, that's scientific scrutiny,
-right there.</p></li></ol>
+the same (average-wise).</p><p>Do you agree? Well, either you do or not, that's scientific scrutiny,
+right there. In a research that would be the conclusions we would arrive at!</p></li></ol><blockquote><p>If you want to learn more, check out the other Statistical Series (SS) posts in the website</p></blockquote>
 </div>
 
 <div id="post-tags">

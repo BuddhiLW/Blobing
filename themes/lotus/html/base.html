@@ -31,6 +31,11 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <!-- {% style "css/default.css"%} -->
+    <!-- {% style "css/blue.css"%} -->
+    <!-- {% style "css/green.css"%} -->
+    <!-- {% style "css/purple.css"%} -->
+
     {% style "css/normalize.css" %}
     {% style "css/blog.css" %}
     {% style "css/lotus-highlightjs.min.css" %}
@@ -54,6 +59,7 @@
           <ul class="menu">
             <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}"><div class="menu-item-text">Home</div></a></li>
             <li {% if archives %} class="active" {% endif %}><a title="Archives" href="{{archives-uri}}"><div class="menu-item-text">Archives</div></a></li>
+            <!-- <li {% if web-dev %} class="active" {% endif %}><a title="Web Dev" href="{{web-dev-uri}}"><div class="menu-item-text">Web-dev</div></a></li> -->
             {% if tags|not-empty %}
             <li {%ifequal uri tags-uri %} class="active" {% endifequal %}>
 	      <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div>

@@ -4,10 +4,12 @@
  :site-url                     "http://buddhilw.com/"
  :post-root                    "posts"
  :page-root                    "pages"
+ :projects-root                "projects"
  :post-root-uri                "posts-output"
  :page-root-uri                "pages-output"
  :tag-root-uri                 "tags-output"
  :author-root-uri              "authors-output"
+ :project-root-uri            "projects-output"
  :public-dest                  "public"
  :blog-prefix                  "" ;; /blog -> default -- changes due to netifly
  :rss-name                     "feed.xml"

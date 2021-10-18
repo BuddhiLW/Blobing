@@ -50,7 +50,7 @@
 <div id="corner-tl" class="corner"></div>
 <div id="corner-tr" class="corner"></div>
 <h3>What I Do</h3>
-<p>I was a lead developer in a past life, now I enjoy teaching courses.</p>
+<p>I research at University of São Paulo and enjoy learning about a variety of subjects, including Web Design.</p>
 <div id="corner-br" class="corner"></div>
 <div id="corner-bl" class="corner"></div>
 </div>
@@ -67,10 +67,13 @@
 <div class="about-me">
 <h4>More about me</h4>
 
-<p>I build new projects just to tickle my brain and love teaching others how they're made.</p>
+<p>I'm in my last semester as an Undergradute in Engineering Physics and I've acquire a repertoire of skills.</p>
 
-<p>While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.</p>
+<p>I've worked for other Engineers, to automate report production. These Healt and Safety Engineers have worked to Lupo S.A., JBS and other major companies in Brazil. </p>
 
+<p>Also, I developed an automation project dealing with Clearence and Ledger, using Clojure for FlowFinance in Santa Catarina, Brazil.</p>
+
+<p> Currently, I research Traffic Flow and Traffic Jams under supervision of <a href=http://spherio.eel.usp.br/mediawiki/index.php/Wei-Liang_Qian"">Ph.D. Qian Wei-Liang</a>.
 
 <hr>
 

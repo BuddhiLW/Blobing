@@ -3,27 +3,6 @@
  :page-index 0
  :navbar? true}
 
-<!-- <div  style="display:flex;"> -->
-
-<!-- <a href="https://github.com/BuddhiLW"> -->
-<!-- <img alt="buddhilw | Github" style="margin-left:300px; width:50px;" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/> -->
-<!-- <p style="margin-right:300px;">https://github.com/BuddhiLW<p/> -->
-<!-- </a> -->
-<!-- </div> -->
-
-
-
-<!-- <div></div> -->
-
-<!-- ## My GitHub status -->
-
-<!-- [![https://github.com/BuddhiLW](https://github-readme-stats.vercel.app/api?username=BuddhiLW)](https://github.com/anuraghazra/github-readme-stats) -->
-
-<!-- <img align="left" alt="Emacs" style="width:80px;" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/emacs/emacs.png" /> -->
-<!-- <p>Hardcore Emacs user. Check out my configs:</p> -->
-
-<!-- <p><a href="https://github.com/BuddhiLW/Frank-init">https://github.com/BuddhiLW/Frank-init</a><p/> -->
-
 <section class="s1">
 <div class="main-container">
 <div class="greeting-wrapper">
@@ -144,7 +123,7 @@
 <div class="post">
 <img class="thumbnail" src="images/dash.jpg">
 <div class="post-preview">
-<h6 class="post-title">Laboratory Management System</h6>
+<h6 class="post-title">Landing Page</h6>
 <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
 <a href="post.html">Read More</a>
 </div>
@@ -200,6 +179,6 @@
 <input id="submit-btn" type="submit" value="Send">
 </form>
 </div>
-</section> 
+</section>
 
 <script type="text/javascript" src="script.js"></script>

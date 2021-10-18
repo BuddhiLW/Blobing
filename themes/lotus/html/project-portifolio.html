@@ -1,5 +1,5 @@
 <!-- {% extends "/html/base.html"} -->
-{% extends "/html/base-project.html" %}
+{% extends "/html/base-curriculum.html" %}
 {% block subtitle %}: {{page.title}}{% endblock %}
 {% block meta %}
 {% if page.description %}
@@ -22,6 +22,7 @@
     {% with prev=page.prev next=page.next%}
     {% include "/html/prev-next.html" %}
     {% endwith %}
+
 </div>
 
 <script src="/js/"></script>

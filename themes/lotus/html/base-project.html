@@ -40,53 +40,57 @@
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
-    <!-- {% style "css/normalize.css" %} -->
-    {% style "css/default.css"%}
-    {% style "css/blue.css"%}
-    {% style "css/green.css"%}
-    {% style "css/purple.css"%}
+    {% style "css/normalize.css" %}
+    <!-- {% style "css/fcc-landing.css" %} -->
+    <!-- {% style "css/default.css"%} -->
+    <!-- {% style "css/blue.css"%} -->
+    <!-- {% style "css/green.css"%} -->
+    <!-- {% style "css/purple.css"%} -->
     <!-- {% style "css/blog.css" %} -->
-    <!-- {% style "css/lotus-highlightjs.min.css" %} -->
+    {% style "css/fancy.css"%}
+    {% style "css/lotus-highlightjs.min.css" %}
   </head>
   <body>
-    <!-- <aside id="sidebar"> -->
-    <!--   <div id="logo"> -->
-    <!--     <a title="{{title}}" href="{{index-uri}}"> -->
-          <!-- <img class="icon" src="/img/perfil.jpeg"> -->
-          <!-- <div class="text desktop-and-tablet-only">{{title}}</div> -->
-          <!-- <div class="text mobile-only">{{title}}</div> -->
-        <!-- </a> -->
+    <aside id="sidebar">
+      <!-- <div id="logo"> -->
+      <!--   <a title="{{title}}" href="{{index-uri}}"> -->
+      <!--     <img class="icon" src="/img/perfil.jpeg"> -->
+      <!--     <div class="text desktop-and-tablet-only">{{title}}</div> -->
+      <!--     <div class="text mobile-only">{{title}}</div> -->
+      <!--   </a> -->
       <!-- </div> -->
 
-      <!-- <nav id="sidebar-links"> -->
-      <!--   <nav id="menucont"> -->
-      <!--     <input type="checkbox" id="menu-checkbox" class="menu-checkbox"> -->
-      <!--     <label for="menu-checkbox" class="menutitle"> -->
-      <!--       <svg class="icon icon-menu" aria-hidden="true"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-menu"></use></svg><span class="menu-text">Menu</span> -->
-      <!--     </label> -->
-      <!--     <ul class="menu"> -->
-      <!--       <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}"><div class="menu-item-text">Home</div></a></li> -->
-      <!--       <li {% if archives %} class="active" {% endif %}><a title="Archives" href="{{archives-uri}}"><div class="menu-item-text">Archives</div></a></li> -->
-      <!--       <\!-- <li {% if web-dev %} class="active" {% endif %}><a title="Web Dev" href="{{web-dev-uri}}"><div class="menu-item-text">Web-dev</div></a></li> -\-> -->
-      <!--       {% if tags|not-empty %} -->
-      <!--       <li {%ifequal uri tags-uri %} class="active" {% endifequal %}> -->
-      <!-- 	      <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div> -->
-      <!-- 	      </a> -->
-      <!-- 	    </li> -->
-      <!--       {% endif %} -->
-      <!--       {% for nav-page in navbar-pages %} -->
-      <!--       <li {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}> -->
-      <!--         <a href="{{nav-page.uri}}"><div class="menu-item-text">{{nav-page.title}}</div></a> -->
-      <!--       </li> -->
-      <!--       {% endfor %} -->
-      <!--       <\!-- <li><a title="RSS" href="{{rss-uri}}"><div class="menu-item-text">RSS</div></a></li> -\-> -->
-      <!--     </ul> -->
-      <!--   </nav> -->
+      <nav id="sidebar-links">
+        <nav id="menucont">
+          <!-- <input type="checkbox" id="menu-checkbox" class="menu-checkbox"> -->
+          <!-- <label for="menu-checkbox" class="menutitle"> -->
+            <!-- <svg class="icon icon-menu" aria-hidden="true"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-menu"></use></svg><span class="menu-text">Menu</span> -->
+          <!-- </label> -->
+          <!-- <ul class="menu"> -->
+            <!-- <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}"><div class="menu-item-text">Home</div></a></li> -->
+            <!-- <li {% if archives %} class="active" {% endif %}><a title="Archives" href="{{archives-uri}}"><div class="menu-item-text">Archives</div></a></li> -->
+            <!-- <li {% if web-dev %} class="active" {% endif %}><a title="Web Dev" href="{{web-dev-uri}}"><div class="menu-item-text">Web-dev</div></a></li> -->
+            {% if tags|not-empty %}
+            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}>
+	      <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div>
+	      </a>
+	    </li>
+            {% endif %}
+            {% for nav-page in navbar-pages %}
+            <li {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}>
+              <a href="{{nav-page.uri}}"><div class="menu-item-text">{{nav-page.title}}</div></a>
+            </li>
+            {% endfor %}
+            <!-- <li><a title="RSS" href="{{rss-uri}}"><div class="menu-item-text">RSS</div></a></li> -->
+          </ul>
+        </nav>
 
-        <nav id="socialmedia">
+	<div class="fancy-area">
+	  <div class="fancy"></div>
+          <nav id="socialmedia">
           <ul class="socialmedia">
 	  <li>
-	    <a title="DCC" href="https://www.buddhilw.com/" rel="external">
+	    <a title="DCC" href="https://www.buddhilw.com/">
 	      <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
 	    </a>
 	  </li>
@@ -96,10 +100,11 @@
 	    </a> 
 	  </li>
 	  <li>
-	    <a title="Linkedin" href="https://www.linkedin.com/in/pedro-g-branquinho/" rel="external">
+	    <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
 	      <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
 	    </a>
 	  </li>
+	  </div>
 	  <!-- [<img align="left" alt="buddhilw | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/instagram.svg" />][instagram] -->
 	  
 	  </ul>
@@ -114,15 +119,6 @@
       <div id="footercont">
 	<div>
         Copyright &copy; {{today|date:yyyy}} {{author}}  
-        <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
-        <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
-        <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
-	</div>
-	<div>
-	  <span style="font-size:50px">🅭🅯🄎</span>
-	</div>
-	<div>
-	  <span style="font-size:50px">🅭🅯🄎</span>
 	</div>
       </div>
     </article>

@@ -1,5 +1,5 @@
 {:title "Portifolio"
- :layout :project
+ :layout :project-portifolio
  :page-index 0
  :navbar? true}
 
@@ -125,7 +125,7 @@
 <div class="post-preview">
 <h6 class="post-title">Laboratory Management System</h6>
 <p class="post-intro">Designed built & mantained a the lab managment system for FOI Laboratories</p>
-<a href="post.html">Read More</a>
+<a href="/pages-output/fcc-landing/index.html">Read More</a>
 </div>
 </div>
 </div>
@@ -179,5 +179,4 @@
 <input id="submit-btn" type="submit" value="Send">
 </form>
 </div>
-</section> 
-
+</section>

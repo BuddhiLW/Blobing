@@ -30,7 +30,7 @@
 </div>
 
 <div class="left-column">
-<img id="profile_pic" src="../../img/portifolio/Dennis.jpg">
+<img id="profile_pic" src="../../img/portifolio/pedro.jpg">
 <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
 
 <div id="theme-options-wrapper">
@@ -76,20 +76,20 @@
 
 <h4>TOP EXPERTISE</h4>
 
-<p>Fullstack developer with primary focus on Django + React: <a target="_blank" href="resume.pdf">Download Resume</a></p>
+<p>Engineer Physicist with strong background on Computing: <a target="_blank" href="../../pdf/cv-2021-08-11.pdf">Download Resume</a></p>
 
 <div id="skills">
 <ul>
+<li>Linux</li>
 <li>Python</li>
-<li>Django</li>
-<li>JavaScript</li>
-<li>React</li>
-<li>Postgres</li>
+<li>Julia</li>
+<li>Clojure</li>
+<li>ClojureScript</li>
 </ul>
 
 <ul>
-<li>Google Maps API</li>
-<li>JS Charts</li>
+<li>ArchLinux/EXWM</li>
+<li>General Purpouse</li>
 <li>AWS (RDS/S3)</li>
 <li>Heroku</li>
 <li>HTML/CSS</li>
@@ -101,12 +101,14 @@
 
 
 <div class="social-links">
-<img id="social_img" src="../../img/portifolio/follow.jpg">
-<h3>Find me on Twitter & Youtube</h3>
+<img id="social_img" src="../../img/portifolio/youtube.png">
+<h3>Find me on Youtube & Social Medias</h3>
 
-<a target="_blank" href="https://www.youtube.com/c/dennisivy">YouTube: @DennisIvy</a>
+<a target="_blank" href="https://www.youtube.com/channel/UCcDTD0VMlN2tGA7sDVZllRw">YouTube: @Branquinho</a>
 <br>
-<a target="_blank" href="https://twitter.com/dennisivy11">Twitter: @DennisIvy11</a>
+<a target="_blank" href="https://www.facebook.com/pedro.g.branquinho/">Facebook: pedro.g.branquinho</a>
+<br>
+<a target="_blank" href="https://www.linkedin.com/in/pedro-g-branquinho/">LinkedIn: pedro-g-branquinho </a>
 </div>
 </div>
 

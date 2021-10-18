@@ -93,9 +93,9 @@
 <ul>
 <li>ArchLinux/EXWM</li>
 <li>General Purpouse</li>
-<li>AWS (RDS/S3)</li>
-<li>Heroku</li>
-<li>HTML/CSS</li>
+<li>PDEs and Data Science</li>
+<li>Automation and pipelines</li>
+<li>Reagent and Retit (Full Stack)</li>
 </ul>
 
 </div>

@@ -35,7 +35,7 @@
 
 <div id="theme-options-wrapper">
 <div data-mode="light" id="light-mode" class="theme-dot"></div>
-<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+<div data-mode="yellow" id="yellow-mode" class="theme-dot"></div>
 <div data-mode="green" id="green-mode" class="theme-dot"></div>
 <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
 </div>

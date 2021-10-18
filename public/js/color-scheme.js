@@ -24,8 +24,8 @@ function setTheme(mode){
 		document.getElementById('theme-style').href = '../../css/default.css'
 	}
 
-	if(mode == 'blue'){
-		document.getElementById('theme-style').href = '../../css/blue.css'
+	if(mode == 'yellow'){
+		document.getElementById('theme-style').href = '../../css/yellow.css'
 	}
 
 	if(mode == 'green'){

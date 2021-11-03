@@ -1,6 +1,6 @@
 {:title "Fourier Series, An Example"
  :layout :post
- :tags  ["science" "fourier" "serier" "fourier series" "periodic" "inequality"]}
+ :tags  ["julia" "modeling" "analysis" "science" "fourier" "series" "fourier series" "periodic" "inequality"]}
 
 # Table of Contents
 
@@ -39,7 +39,9 @@ f(x) =
 
 Usando,
 
-$$\begin{equation}f(x) \sim \frac{1}{2}a\_0 + \sum\_{n=1}^{\infty}{a\_n \cos{(\frac{n\pi{}x}{L})} + b\_n \sin{(\frac{n\pi{}x}{L})}\end{equation}$$
+$$\begin{equation}
+f(x) = \frac{1}{2}a0 + \sum^{\infty}{a\_n \cos{(\frac{n\pi{}x}{L})} + b\_n \sin{(\frac{n\pi{}x}{L})}
+\end{equation}$$
 
 Chegamos em,
 

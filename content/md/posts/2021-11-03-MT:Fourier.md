@@ -40,7 +40,9 @@ f(x) =
 Usando,
 
 $$\begin{equation}
-f(x) = \frac{1}{2}a0 + \sum^{\infty}{a\_n \cos{(\frac{n\pi{}x}{L})} + b\_n \sin{(\frac{n\pi{}x}{L})}
+\begin{aligned}
+f(x) = \frac{1}{2}a0 + \sum^\infty{an \cos{(\frac{n \pi x}{L})} + bn \sin{(\frac{n \pi x}{L})}
+\end{aligned}
 \end{equation}$$
 
 Chegamos em,

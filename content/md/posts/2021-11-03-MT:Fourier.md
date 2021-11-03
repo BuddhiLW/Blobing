@@ -41,7 +41,7 @@ Usando,
 
 $$\begin{equation}
 \begin{aligned}
-f(x) = \dfrac{1}{2}a\_0 + \sum^\infty a\_n \cos(\dfrac{n \pi x}{L}) + b_n \sin(\dfrac{n \pi x}{L})
+f(x) = \dfrac{1}{2}a\_0 + \sum\_{n=1}^\infty \left[a\_n \cos(\dfrac{n \pi x}{L}) + b_n \sin(\dfrac{n \pi x}{L})\right]
 \end{aligned}
 \end{equation}$$
 

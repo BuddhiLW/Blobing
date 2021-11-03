@@ -39,11 +39,7 @@ f(x) =
 
 Usando,
 
-$$\begin{equation}
-\begin{aligned}
-f(x) \sim \frac{1}{2}a_0 + \sum_{n=1}^{\infty}{a_n \cos{(\frac{n\pi{}x}{L})} + b_n \sin{(\frac{n\pi{}x}{L})}
-\end{aligned}
-\end{equation}$$
+$$f(x) \sim \frac{1}{2}a_0 + \sum_{n=1}^{\infty}{a_n \cos{(\frac{n\pi{}x}{L})} + b_n \sin{(\frac{n\pi{}x}{L})}$$
 
 Chegamos em,
 
@@ -51,7 +47,7 @@ Chegamos em,
 \begin{aligned}
 \begin{cases}
 a_0 &= 1\\\\
-a_n &= 0,\, \forall n \in \mathbb{K}\\\\
+a_n &= 0, \quad \forall n \in \mathbb{K}\\\\
 b_k &= \dfrac{2}{(2k-1)\pi}
 \end{cases}
 \end{aligned}
@@ -70,6 +66,8 @@ f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x
 
 ## Implementação em Julia
 
+A função aproximação da série de **Fourier**
+
     function f(x,N)
       g = 1/2
       for k in 1:1:N
@@ -78,7 +76,11 @@ f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x
       return g
     end
 
+Mapeamos os valores para o intervalo que queremos estimar a função periódica
+
     values = map(x -> f.(-4*π:0.01:4*π,x), 1:1:100)
+
+Por fim, definimos a função real, a qual queremos aproximar
 
     function f_actual(x)
         if abs(x)<π
@@ -97,12 +99,15 @@ f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x
         end
     end
 
+Gerando os valores literais
+
     values_actual = f_actual.(-4*π:0.01:4*π)
 
 
 <a id="orgd89c0a2"></a>
 
 ## Plot
+Usaremos a biblioteca *PlotlyJS.jl*, para gerarmos um gráfico de alta qualidade,
 
     trace = PlotlyJS.scatter(;x=xs, y=values[10])
 
@@ -110,13 +115,14 @@ f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x
 
     trace3 = PlotlyJS.scatter(;x=xs, y=values_actual)
 
+
     PlotlyJS.plot([trace,trace3])
 	
-> Fourier com 10 termos de aproximação
+Fourier com 10 termos de aproximação
 [![img](../../img/fourier.png)](ein-images/fourier.png)
 
     PlotlyJS.plot([trace2,trace3])
 
-> Fourier com 100 termos de aproximação
+Fourier com 100 termos de aproximação
 [![img](../../img/fourier.png)](ein-images/fourier2.png)
 

@@ -39,19 +39,19 @@ f(x) =
 
 Usando,
 
-\begin{equation}
+$$\begin{equation}
 \begin{aligned}
 f(x) \sim \frac{1}{2}a_0 + \sum_{n=1}^{\infty}{a_n \cos{(\frac{n\pi{}x}{L})} + b_n \sin{(\frac{n\pi{}x}{L})}
 \end{aligned}
-\end{equation}
+\end{equation}$$
 
 Chegamos em,
 
 \begin{equation}
 \begin{aligned}
 \begin{cases}
-a_0 &= 1\\
-a_n &= 0,\, \forall n \in \mathbb{K}\\
+a_0 &= 1\\\\
+a_n &= 0,\, \forall n \in \mathbb{K}\\\\
 b_k &= \dfrac{2}{(2k-1)\pi}
 \end{cases}
 \end{aligned}
@@ -59,11 +59,11 @@ b_k &= \dfrac{2}{(2k-1)\pi}
 
 O que significa que
 
-\begin{equation}
+$$\begin{equation}
 \begin{aligned}
 f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x)}\right)}
 \end{aligned}
-\end{equation}
+\end{equation}$$
 
 
 <a id="org18d9e9b"></a>
@@ -111,12 +111,12 @@ f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x
     trace3 = PlotlyJS.scatter(;x=xs, y=values_actual)
 
     PlotlyJS.plot([trace,trace3])
+	
+> Fourier com 10 termos de aproximação
+[![img](../../img/fourier.png)](ein-images/fourier.png)
 
-    PlotlyJS.plot([trace,trace2])
+    PlotlyJS.plot([trace2,trace3])
 
-	> Fourier com 10 termos de aproximação
-[![img](./ein-images/fourier.png)](ein-images/fourier.png)
-
-	> Fourier com 100 termos de aproximação
-[![img](./ein-images/fourier.png)](ein-images/fourier2.png)
+> Fourier com 100 termos de aproximação
+[![img](../../img/fourier.png)](ein-images/fourier2.png)
 

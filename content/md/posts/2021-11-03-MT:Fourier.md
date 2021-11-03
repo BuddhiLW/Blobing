@@ -39,7 +39,7 @@ f(x) =
 
 Usando,
 
-$$f(x) \sim \frac{1}{2}a_0 + \sum_{n=1}^{\infty}{a_n \cos{(\frac{n\pi{}x}{L})} + b_n \sin{(\frac{n\pi{}x}{L})}$$
+$$\begin{equation}f(x) \sim \frac{1}{2}a\_0 + \sum\_{n=1}^{\infty}{a\_n \cos{(\frac{n\pi{}x}{L})} + b\_n \sin{(\frac{n\pi{}x}{L})}\end{equation}$$
 
 Chegamos em,
 
@@ -123,6 +123,6 @@ Fourier com 10 termos de aproximação
 
     PlotlyJS.plot([trace2,trace3])
 
-Fourier com 100 termos de aproximação
+\Fourier com 100 termos de aproximação
 [![img](../../img/fourier2.png)](ein-images/fourier2.png)
 

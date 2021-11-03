@@ -124,5 +124,5 @@ Fourier com 10 termos de aproximação
     PlotlyJS.plot([trace2,trace3])
 
 Fourier com 100 termos de aproximação
-[![img](../../img/fourier.png)](ein-images/fourier2.png)
+[![img](../../img/fourier2.png)](ein-images/fourier2.png)
 

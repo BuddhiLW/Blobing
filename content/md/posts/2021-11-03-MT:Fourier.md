@@ -25,9 +25,9 @@
 \begin{aligned}
 f(x) =
 \begin{cases}
-1, \quad 0\leq\text{x}<\pi\\
-0, \quad -\pi\leq\text{x}<0\\
-\end{cases}
+1, \quad 0\leq\text{x}<\pi\\\\
+0, \quad -\pi\leq\text{x}<0\\\\
+\end{cases}\\\\
 \text{periodic with period T}=2\pi
 \end{aligned}
 \end{equation}

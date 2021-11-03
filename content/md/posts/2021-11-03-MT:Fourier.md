@@ -41,9 +41,19 @@ Usando,
 
 $$\begin{equation}
 \begin{aligned}
-f(x) = \frac{1}{2}a0 + \sum^\infty{an \cos{(\frac{n \pi x}{L})} + bn \sin{(\frac{n \pi x}{L})}
+f(x) = \dfrac{1}{2}a\_0 + \sum^\infty a\_n \cos(\dfrac{n \pi x}{L}) + b_n \sin(\dfrac{n \pi x}{L})
 \end{aligned}
 \end{equation}$$
+
+\begin{equation}
+\begin{aligned}
+\begin{cases}
+a_0 &= 1\\\\
+a_n &= 0, \quad \forall n \in \mathbb{K}\\\\
+b_k &= \dfrac{2}{(2k-1)\pi}
+\end{cases}
+\end{aligned}
+\end{equation}
 
 Chegamos em,
 

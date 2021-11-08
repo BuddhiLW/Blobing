@@ -414,11 +414,27 @@ ul img{
 	background-color: var(--buttonColor);
 	border:none;
 }
-
+@media screen and (min-width: 1200px){
+	#skills {
+	    width: 85vw;
+	    max-width: calc(2 * 120%);
+	    display: flex;
+	    justify-content: space-evenly;
+	    background-color: var(--previewShadow);
+	}
+}
 
 @media screen and (max-width: 1200px){
 	.main-container{
-		width: 95%;
+	    width: 95%;
+	    
+	}
+	#skills {
+	    width: 85vw;
+	    max-width: calc(2 * 120%);
+	    display: flex;
+	    justify-content: space-evenly;
+	    background-color: var(--previewShadow);
 	}
 }
 

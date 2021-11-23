@@ -1,6 +1,7 @@
 * 26 Sep 2017
 
 ** A estrutura fala
+#+begin_quote
 .
 Métrica é muito importante 
 Se ir longe demais 
@@ -41,3 +42,4 @@ Ti
 ||
 ;
 .
+#+end_quote

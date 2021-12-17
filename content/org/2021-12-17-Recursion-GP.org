@@ -1,0 +1,42 @@
+* 2021 Dec 17, Recursion and Geometric Progressions
+** This thought has come to me many times
+*** Cleaning analogy
+When cleaning up something, like a room, we use objects which
+themselves will get dirty. So, soon or later, we must clean the
+cleaning objects themselves. In turn, we use other cleaning means, or
+objects, like clean water. This water, soon or later, will be
+treated, so to be cleaned. Etc.
+
+The same can be said about a maid, for example. We use money to pay
+someone to clean our house for us. This person, in turn, will have to
+pay another person to clean their own, or clean themselves.
+
+*** Mapping the analogy to simple mathematics
+Finally, this structure of things maps to the structure of =Geometric
+Progressions= with decreasing terms. That is, the geometric ratio
+being less than 1. Series with geometric ratios less than one will be
+converging series. The sum total value of the infinite series given
+by:
+
+Let $\mathbf{a} = (a_0, a_1, a_2, \ldots)$, be terms of the
+series. Let $r$ be the =ratio= between two consecutive terms,
+$r=\dfrac{a_{j+1}}{a_j}$. Thus, the infinite sum is given by
+$S_{\infty} = \dfrac{a_0}{1-r}$.
+
+*** Case example, back to our analogy
+So, let's say, in our analogy, that $\mathbf{a}$ signifies the
+consecutive efforts of each task. e.i., $a_0$ is the effort to do the
+first cleaning task. Therefore, if we simplify our =ratio= to a decreasing
+average $|r|<1$, we have that the $S_{\infty}$ can be applied.
+
+Thus, let $a_0=1$ and $r=0.5$, the total effort to clean, in the
+entire chain of process is:  $S_{\infty} = \dfrac{1}{1-0.5} = 2$. So,
+the effort of all cleaning chain is twice the cleaning effort of the
+first cleaning.
+
+*** Conclusion
+Sometimes we just urge to write down our thoughts, doesn't matter how
+simplistic or funny they may sound. That's one of those.
+
+Although, entire economic and social models can arrive from these
+banal thoughts, with inifinitely minused mathematical descriptions.

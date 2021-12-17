@@ -112,9 +112,9 @@
 <div id="post">
     <div class="post-header">
     <div id="post-meta">
-        <h1>Fourier Series, An Example</h1>
+        <h1>Thoughts and Analogies: Recursion and G.P. and finite processes</h1>
         <div class="byline">
-            <span class="date">November 3, 2021</span>
+            <span class="date">December 17, 2021</span>
             
         </div>
     </div>
@@ -124,91 +124,50 @@
 </div>
 <div>
     
-    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org92968c8">Plot de uma série de Fourier</a><ol><li><a href="#orgaa53458">Função à descrever</a></li><li><a href="#orgbb90a0c">Solução analítica</a></li><li><a href="#org18d9e9b">Implementação em Julia</a></li><li><a href="#orgd89c0a2">Plot</a></li></ol></li></ol><p><a id="org92968c8"></a></p><h1 id="plot-de-uma-série-de-fourier">Plot de uma série de Fourier</h1><p><a id="orgaa53458"></a></p><h2 id="função-à-descrever">Função à descrever</h2><p>\begin{equation}
-\begin{aligned}
-f(x) =
-\begin{cases}
-1, \quad 0\leq\text{x}&lt;\pi\\
-0, \quad -\pi\leq\text{x}&lt;0\\
-\end{cases}\\
-\text{periodic with period T}=2\pi
-\end{aligned}
-\end{equation}</p><p><a id="orgbb90a0c"></a></p><h2 id="solução-analítica">Solução analítica</h2><p>Usando,</p><p>$$\begin{equation}
-\begin{aligned}
-f(x) = \dfrac{1}{2}a_0 + \sum_{n=1}^\infty \left[a_n \cos(\dfrac{n \pi x}{L}) + b_n \sin(\dfrac{n \pi x}{L})\right]
-\end{aligned}
-\end{equation}$$</p><p>Chegamos em,</p><p>\begin{equation}
-\begin{aligned}
-\begin{cases}
-a_0 &amp;= 1\\
-a_n &amp;= 0, \quad \forall n \in \mathbb{K}\\
-b_k &amp;= \dfrac{2}{(2k-1)\pi}
-\end{cases}
-\end{aligned}
-\end{equation}</p><p>O que significa que</p><p>$$\begin{equation}
-\begin{aligned}
-f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x)}\right)}
-\end{aligned}
-\end{equation}$$</p><p><a id="org18d9e9b"></a></p><h2 id="implementação-em-julia">Implementação em Julia</h2><p>A função aproximação da série de <strong>Fourier</strong></p><pre><code>function f(x,N)
-  g = 1/2
-  for k in 1:1:N
-      g += (2/((2*k -1)*π))*sin((2*k-1)*x)
-  end
-  return g
-end
-</code></pre><p>Mapeamos os valores para o intervalo que queremos estimar a função periódica</p><pre><code>values = map(x -&gt; f.(-4*π:0.01:4*π,x), 1:1:100)
-</code></pre><p>Por fim, definimos a função real, a qual queremos aproximar</p><pre><code>function f_actual(x)
-    if abs(x)&lt;π
-	if 0&lt;=x&lt;π 
-	    return 1
-	elseif -π&lt;=x&lt;0
-	    return 0
-	end
-    else 
-	y = (x/2π -floor(x/2π))*2π
-	if π&lt;=y&lt;2π 
-	    return 0
-	elseif 0&lt;=y&lt;π
-	    return 1
-	end
-    end
-end
-</code></pre><p>Gerando os valores literais</p><pre><code>values_actual = f_actual.(-4*π:0.01:4*π)
-</code></pre><p><a id="orgd89c0a2"></a></p><h2 id="plot">Plot</h2><p>Usaremos a biblioteca <em>PlotlyJS.jl</em>, para gerarmos um gráfico de alta qualidade,</p><pre><code>trace = PlotlyJS.scatter(;x=xs, y=values[10])
-
-trace2 = PlotlyJS.scatter(;x=xs, y=values[100])
-
-trace3 = PlotlyJS.scatter(;x=xs, y=values_actual)
-
-
-PlotlyJS.plot([trace,trace3])
-</code></pre><p>Fourier com 10 termos de aproximação
-<a href="ein-images/fourier.png"><img src="../../img/fourier.png" alt="img" /></a></p><pre><code>PlotlyJS.plot([trace2,trace3])
-</code></pre><p>\Fourier com 100 termos de aproximação
-<a href="ein-images/fourier2.png"><img src="../../img/fourier2.png" alt="img" /></a></p>
+    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org4bde05e">2021 Dec 17, Recursion and Geometric Progressions</a><ol><li><a href="#orgc3b9e73">This thought has come to me many times</a><ol><li><a href="#orgc5dbb34">Cleaning analogy</a></li><li><a href="#orga8897af">Mapping the analogy to simple mathematics</a></li><li><a href="#org0b2715d">Case example, back to our analogy</a></li><li><a href="#org9c28557">Conclusion</a></li></ol></li></ol></li></ol><p><a id="org4bde05e"></a></p><h1 id="2021-dec-17-recursion-and-geometric-progressions">2021 Dec 17, Recursion and Geometric Progressions</h1><p><a id="orgc3b9e73"></a></p><h2 id="this-thought-has-come-to-me-many-times">This thought has come to me many times</h2><p><a id="orgc5dbb34"></a></p><h3 id="cleaning-analogy">Cleaning analogy</h3><p>When cleaning up something, like a room, we use objects which
+themselves will get dirty. So, soon or later, we must clean the
+cleaning objects themselves. In turn, we use other cleaning means, or
+objects, like clean water. This water, soon or later, will be
+treated, so to be cleaned. Etc.</p><p>The same can be said about a maid, for example. We use money to pay
+someone to clean our house for us. This person, in turn, will have to
+pay another person to clean their own, or clean themselves.</p><p><a id="orga8897af"></a></p><h3 id="mapping-the-analogy-to-simple-mathematics">Mapping the analogy to simple mathematics</h3><p>Finally, this structure of things maps to the structure of <code>Geometric Progressions</code> with decreasing terms. That is, the geometric ratio
+being less than 1. Series with geometric ratios less than one will be
+converging series. The sum total value of the infinite series given
+by:</p><p>Let \(\mathbf{a} = (a_0, a_1, a_2, \ldots)\), be terms of the
+series. Let \(r\) be the <code>ratio</code> between two consecutive terms,
+\(r=\dfrac{a_{j+1}}{a_j}\). Thus, the infinite sum is given by
+\(S_{\infty} = \dfrac{a_0}{1-r}\).</p><p><a id="org0b2715d"></a></p><h3 id="case-example-back-to-our-analogy">Case example, back to our analogy</h3><p>So, let's say, in our analogy, that \(\mathbf{a}\) signifies the
+consecutive efforts of each task. e.i., \(a_0\) is the effort to do the
+first cleaning task. Therefore, if we simplify our <code>ratio</code> to a decreasing
+average \(|r|&lt;1\), we have that the \(S_{\infty}\) can be applied.</p><p>Thus, let \(a_0=1\) and \(r=0.5\), the total effort to clean, in the
+entire chain of process is:  \(S_{\infty} = \dfrac{1}{1-0.5} = 2\). So,
+the effort of all cleaning chain is twice the cleaning effort of the
+first cleaning.</p><p><a id="org9c28557"></a></p><h3 id="conclusion">Conclusion</h3><p>Sometimes we just urge to write down our thoughts, doesn't matter how
+simplistic or funny they may sound. That's one of those.</p><blockquote><p>Although, entire economic and social models can arrive from these
+banal thoughts, with inifinitely minused mathematical descriptions.</p></blockquote>
 </div>
 
 <div id="post-tags">
     <br/>
     <b>Tags: </b>
     
-    <a href="/tags-output/science/">science</a>
+    <a href="/tags-output/map/">map</a>
     
-    <a href="/tags-output/fourier%20series/">fourier series</a>
+    <a href="/tags-output/structure/">structure</a>
     
-    <a href="/tags-output/inequality/">inequality</a>
+    <a href="/tags-output/convergent/">convergent</a>
     
-    <a href="/tags-output/julia/">julia</a>
+    <a href="/tags-output/similarity/">similarity</a>
     
-    <a href="/tags-output/fourier/">fourier</a>
+    <a href="/tags-output/geometric-progression/">geometric-progression</a>
     
-    <a href="/tags-output/periodic/">periodic</a>
+    <a href="/tags-output/recurssion/">recurssion</a>
     
-    <a href="/tags-output/series/">series</a>
+    <a href="/tags-output/analogy/">analogy</a>
     
-    <a href="/tags-output/analysis/">analysis</a>
+    <a href="/tags-output/thought/">thought</a>
     
-    <a href="/tags-output/modeling/">modeling</a>
+    <a href="/tags-output/finite-process/">finite-process</a>
     
 </div>
 
@@ -222,7 +181,7 @@ PlotlyJS.plot([trace,trace3])
     <div class="prev"></div>
     
     
-    <a class="next" href="/posts-output/2021-08-07-F_ratios/"><div class="nav-text"">Noise-Signal ratios (F-tests) - (SS)</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
+    <a class="next" href="/posts-output/2021-11-23-p2/"><div class="nav-text"">Ensaio (Poem)</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
     
 </div>
 

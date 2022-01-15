@@ -1,0 +1,3 @@
+[submodule "content/md/projects/personal-library"]
+	path = content/md/projects/personal-library
+	url = https://github.com/BuddhiLW/personal-library.git

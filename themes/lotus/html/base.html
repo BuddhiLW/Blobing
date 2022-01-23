@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-      MathJax = {
-	  tex: {
-	      // packages: ['base,asm'],        // extensions to use
-	      inlineMath: [              // start/end delimiter pairs for in-line math
-		  ['\\(', '\\)']
-	      ],
-	      displayMath: [             // start/end delimiter pairs for display math
-		  ['$$', '$$'],
-		  ['\\[', '\\]'],
-		  ['\begin{equation}', '\end{equation}']
-	      ],
-	      processEscapes: true,      // use \$ to produce a literal dollar sign
-	      processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
-	      processRefs: true,         // process \ref{...} outside of math mode
-	      digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
-              // pattern for recognizing numbers
-	  }};
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+     MathJax = {
+       tex: {
+         // packages: ['base,asm'],        // extensions to use
+         inlineMath: [              // start/end delimiter pairs for in-line math
+                                    ['\\(', '\\)']
+         ],
+         displayMath: [             // start/end delimiter pairs for display math
+                                    ['$$', '$$'],
+                                    ['\\[', '\\]'],
+                                    ['\begin{equation}', '\end{equation}']
+         ],
+         processEscapes: true,      // use \$ to produce a literal dollar sign
+         processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+         processRefs: true,         // process \ref{...} outside of math mode
+         digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+         // pattern for recognizing numbers
+     }};
     </script>
     <meta charset="utf-8">
     <title>{{title}}{% block subtitle %}{% endblock %}</title>
@@ -58,19 +58,20 @@
           </label>
           <ul class="menu">
             <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}"><div class="menu-item-text">Home</div></a></li>
-            <li {% if archives %} class="active" {% endif %}><a title="Archives" href="{{archives-uri}}"><div class="menu-item-text">Archives</div></a></li>
+            <li {% if archives %} class="active" {% endif %}><a title="Posts" href="{{archives-uri}}"><div class="menu-item-text">Posts</div></a></li>
             <!-- <li {% if web-dev %} class="active" {% endif %}><a title="Web Dev" href="{{web-dev-uri}}"><div class="menu-item-text">Web-dev</div></a></li> -->
-            {% if tags|not-empty %}
-            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}>
-	      <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div>
-	      </a>
-	    </li>
-            {% endif %}
             {% for nav-page in navbar-pages %}
+            {% if tags|not-empty %}
+            {% endif %}
             <li {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}>
               <a href="{{nav-page.uri}}"><div class="menu-item-text">{{nav-page.title}}</div></a>
             </li>
             {% endfor %}
+
+            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}>
+              <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div>
+              </a>
+            </li>
             <!-- <li><a title="RSS" href="{{rss-uri}}"><div class="menu-item-text">RSS</div></a></li> -->
           </ul>
         </nav>
@@ -78,27 +79,27 @@
         <nav id="socialmedia">
           <ul>
             <!-- <li><a title="LinkedIn" href="https://www.linkedin.com/in/" rel="external"><svg class="icon icon-linkedin"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-linkedin"></use></svg></a></li> -->
-	    <!-- <li><a title="GitHub" href="https://github.com/BuddhiLW" rel="external"><svg class="icon icon-github-circled"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-github-circled"></use></svg></a></li> -->
-	    <!-- <li><a title="RSS Feed" href="{{rss-uri}}"><svg class="icon icon-rss-squared"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-rss-squared"></use></svg></a></li> -->
+            <!-- <li><a title="GitHub" href="https://github.com/BuddhiLW" rel="external"><svg class="icon icon-github-circled"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-github-circled"></use></svg></a></li> -->
+            <!-- <li><a title="RSS Feed" href="{{rss-uri}}"><svg class="icon icon-rss-squared"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-rss-squared"></use></svg></a></li> -->
 
-	  <li>
-	    <a title="DCC" href="https://www.buddhilw.com/" rel="external">
-	      <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
-	    </a>
-	  </li>
-	  <li>
-	    <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
-	    <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
-	    </a> 
-	  </li>
-	  <li>
-	    <a title="Linkedin" href="https://www.linkedin.com/in/pedro-g-branquinho/" rel="external">
-	      <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
-	    </a>
-	  </li>
-	  <!-- [<img align="left" alt="buddhilw | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/instagram.svg" />][instagram] -->
-	  
-	  </ul>
+            <li>
+              <a title="DCC" href="https://www.buddhilw.com/" rel="external">
+                <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+                <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="Linkedin" href="https://www.linkedin.com/in/pedro-g-branquinho/" rel="external">
+                <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+              </a>
+            </li>
+            <!-- [<img align="left" alt="buddhilw | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/instagram.svg" />][instagram] -->
+
+          </ul>
         </nav>
       </nav>
     </aside>
@@ -108,18 +109,18 @@
       {% endblock %}
       <hr/>
       <div id="footercont">
-	<div>
-        Copyright &copy; {{today|date:yyyy}} {{author}}  
-        <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
-        <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
-        <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
-	</div>
-	<div>
-	  <span style="font-size:50px">🅭🅯🄎</span>
-	</div>
-	<div>
-	  <span style="font-size:50px">🅭🅯🄎</span>
-	</div>
+        <div>
+          Copyright &copy; {{today|date:yyyy}} {{author}}
+          <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
+          <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
+          <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
+        </div>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+	      </div>
+	      <div>
+	        <span style="font-size:50px">🅭🅯🄎</span>
+	      </div>
       </div>
     </article>
 

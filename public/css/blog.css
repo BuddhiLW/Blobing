@@ -1,3 +1,8 @@
+:root{
+  --a : #a13;
+  --a-hover: #f13;
+}
+
 html {
   box-sizing: border-box;
 
@@ -203,26 +208,60 @@ hr {
   padding: 0;
   margin: 40px 0;
   border: none;
-  border-top: 2px solid #522158;
-  border-bottom: 2px solid #522158;
+  border-top: 2px solid #a11;
+  border-bottom: 2px solid #c35;
   border-radius: 2px;
   text-align: center;
 }
 
 blockquote {
-  background: #eeeeee;
-  margin: 1em 0;
+  background: #555555fa;
+  margin: 1em auto;
   /* (20px / 20px) */
-  color: #555;
-  border-left: 5px solid #522158;
+  color: #fff;
+  border-left: 10px solid #daa;
   padding: 0.5em;
-  font-style: italic;
+  font-style: normal;
   font-size: 1.25em;
   line-height: 1.45833333;
+  width: 73vw;
 }
 @media (max-width: 900px) {
   blockquote {
     line-height: 1.25;
+    width:100%;
+  }
+  blockquote p {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px){
+  blockquote {
+    line-height: 1.25;
+    width:70%;
+  }
+  blockquote p {
+    width: 100%;
+  }
+}
+@media (min-width: 1600px){
+  blockquote {
+    line-height: 1.25;
+    width:55%;
+  }
+  blockquote p {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1700px){
+  blockquote {
+    line-height: 1.25;
+    width:50%;
+  }
+  blockquote p {
+    width: 100%;
   }
 }
 
@@ -287,7 +326,7 @@ code, kbd, samp {
   padding: 0;
 }
 #menucont .menu li a {
-  color: #FFF;
+  color: #222;
   width: 100%;
   margin: 0;
   font-weight: 300;
@@ -492,12 +531,12 @@ body {
 }
 
 a {
-  color: #a131ae;
+  color: var(--a);
   text-decoration: none;
   text-decoration: underline solid currentColor;
 }
 a:hover {
-  color: #cb6ed7;
+  color: var(--a-hover);
 }
 
 @media screen and (min-width: 700px) {
@@ -546,8 +585,9 @@ img {
    Sections
 ================================================== */
 #sidebar {
-  background: #522158;
-  color: #fff;
+  /* background:   #522158; */
+  background: #eee;
+  color: #333;
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-flow: column nowrap;
@@ -568,7 +608,7 @@ img {
 #sidebar #logo {
   padding: 20px;
   width: 100%;
-  color: #fff;
+  color: #333;
 }
 #sidebar #logo .icon {
   box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.05);
@@ -581,7 +621,7 @@ img {
   border-radius: 100px;
 }
 #sidebar #logo .text {
-  color: #fff;
+  color: #333;
   width: 100%;
   font-size: 30px;
   line-height: 0.8;
@@ -699,13 +739,13 @@ img {
 
 
 ol>li::marker {
-  color: #f3e;
-  font-size: 14pt;
+  /* color: #f3e; */
+  font-size: 15pt;
 }
 
 ol>li::marker::after {
-  color: #f3e;
-  font-size: 14pt;
+  /* color: #f3e; */
+  font-size: 15pt;
   content:"→";
 }
 
@@ -726,7 +766,7 @@ ol>li::marker::after {
   display: grid;
   place-items: center;
   place-content: center;
-  background: #3a1a3b;
+  /* background: #3a1a3b; */
   overflow: hidden;
 }
 

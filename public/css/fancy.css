@@ -5,7 +5,7 @@
   display: grid;
   place-items: center;
   place-content: center;
-  background: #3a1a3b50;
+  /* background: #fff; */
   overflow: hidden;
 }
 

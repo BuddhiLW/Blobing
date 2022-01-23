@@ -75,6 +75,6 @@ first cleaning.
 Sometimes we just urge to write down our thoughts, doesn't matter how
 simplistic or funny they may sound. That's one of those.
 
-> Although, entire economic and social models can arrive from these
-> banal thoughts, with inifinitely minused mathematical descriptions.
+> Although, entire economic and social models can be arrive from these
+> banal thoughts, with infinitely minused mathematical descriptions.
 

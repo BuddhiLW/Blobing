@@ -1,5 +1,5 @@
 {:title "Evil Deeds"
- :layout :page
+ :layout :page-collapse
  :page-index 0
  :navbar? true}
  

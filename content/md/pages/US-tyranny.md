@@ -91,7 +91,7 @@ Currently, 29 January 2022, President Roch Kaboré is on a military camp, captiv
 
 ## Israeli 🇮🇱 colonization of Palestine 🇵🇸
 
-<https://yewtu.be/watch?v=Q_MDC2Gty4I>
+  <iframe width="1000" height="500" src="https://yewtu.be/embed/Q_MDC2Gty4I" frameborder="0" allowfullscreen></iframe>
 
 Resources on **USA** spending on Palestine and neighboring countries:
 - <https://alethonews.com/2021/01/03/american-tax-payers-spend-at-least-23-billion-on-israel-every-year/>
@@ -104,6 +104,7 @@ Resources on **USA** spending on Palestine and neighboring countries:
 
 ## Prophets of War, Greg Hayes -- Raytheon CEO
 
-<video width="760" height="425" controls>
+<video controls autoplay>
   <source src="../../video/greg-heyes-raytheonCEO_onUkraine.mp4" type="video/mp4">
+  <source src="../../video/greg-heyes-raytheonCEO_onUkraine.webm" type="video/webm">
 </video>

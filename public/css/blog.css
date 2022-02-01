@@ -393,14 +393,14 @@ code, kbd, samp {
   }
   #menucont .menu li.active a, #menucont .menu li.active a:hover {
     font-weight: 600;
-    color: #FFF;
+    color: #FCC;
   }
   #menucont .menu li a {
     width: 100%;
     display: inline-block;
     margin: 0;
     line-height: 23px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 190, 190, 1);
     font-weight: 300;
     text-transform: uppercase;
   }
@@ -711,6 +711,7 @@ img {
   max-width: calc(100vw - 175.33px);
   font-size: 14px;
 }
+
 @media (max-width: 700px) {
   #post {
     margin: auto auto;

@@ -20,7 +20,7 @@
  :sass-src                     []
  :sass-path                    "sass"
  :theme                        "lotus" ;; default -> blue
- :resources                    ["img"]
+ :resources                    ["img" "video" "pdf"]
  :keep-files                   [".git"]
  :disqus?                      false
  :disqus-shortname             ""

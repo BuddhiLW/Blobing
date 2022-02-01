@@ -86,3 +86,24 @@ Currently, 29 January 2022, President Roch Kaboré is on a military camp, captiv
 - <https://theintercept.com/2022/01/26/burkina-faso-coup-us-military/>
 
 <!-- ## Mauritania 🇲🇷  TODO-->
+
+# Palestine 🇵🇸
+
+## Israeli 🇮🇱 colonization of Palestine 🇵🇸
+
+<https://yewtu.be/watch?v=Q_MDC2Gty4I>
+
+Resources on **USA** spending on Palestine and neighboring countries:
+- <https://alethonews.com/2021/01/03/american-tax-payers-spend-at-least-23-billion-on-israel-every-year/>
+- <https://www.irmep.org/CFP/CIA/budget/08202019_memorandum_opinion.pdf>
+- <https://original.antiwar.com/smith-grant/2017/04/23/cia-fights-disclosure-of-secret-aid-to-israel/>
+- <https://ifamericansknew.org/stat/cost_of_israel.html>
+- <https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/2021/05/12/opinion/israel-palestinians-gaza.html>
+
+# Ukraine 
+
+## Prophets of War, Greg Hayes -- Raytheon CEO
+
+<video width="760" height="425" controls>
+  <source src="../../video/greg-heyes-raytheonCEO_onUkraine.mp4" type="video/mp4">
+</video>

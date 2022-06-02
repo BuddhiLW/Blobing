@@ -16,10 +16,6 @@
     - [Mali 🇲🇱](#mali-🇲🇱)
         - [2011 Coup -- Actor: Amadou Sanogo.](#2011-coup----actor-amadou-sanogo)
         - [2020 Coup -- Actor: Assimi Goïta](#2020-coup----actor-assimi-goïta)
-- [Palestine 🇵🇸](#palestine-🇵🇸)
-    - [Israeli 🇮🇱 colonization of Palestine 🇵🇸](#israeli-🇮🇱-colonization-of-palestine-🇵🇸)
-- [Ukraine](#ukraine)
-    - [Prophets of War, Greg Hayes -- Raytheon CEO](#prophets-of-war-greg-hayes----raytheon-ceo)
 
 <!-- markdown-toc end -->
 

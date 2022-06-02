@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+     MathJax = {
+       tex: {
+         // packages: ['base,asm'],        // extensions to use
+         inlineMath: [              // start/end delimiter pairs for in-line math
+                                    ['\\(', '\\)']
+         ],
+         displayMath: [             // start/end delimiter pairs for display math
+                                    ['$$', '$$'],
+                                    ['\\[', '\\]'],
+                                    ['\begin{equation}', '\end{equation}']
+         ],
+         processEscapes: true,      // use \$ to produce a literal dollar sign
+         processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+         processRefs: true,         // process \ref{...} outside of math mode
+         digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+         // pattern for recognizing numbers
+     }};
+    </script>
+    <meta charset="utf-8">
+    <title>Dark Cyber Corner: Functional Web Projects</title>
+    
+<meta name="keywords" content=",global warming,tulmultua,pedro,Dramatism,map,collapse,panem et circenses,divergence,temores,science,extensibility,fourier series,climate,clojure,divide et impera,Kenneth Burke,gw,fala,structure,climate lag,portuguese,convergent,song,sing,ensaio,similarity,biology,inequality,português,Dramatist Petand,gomes,geometric-progression,norway,bio-cc,anova,a,julia,classify groups,fourier,common lisp,periodic,estrutura,f-test,poem,divide and conquer,poema,series,ecology,recurssion,analogy,thought,branquinho,analysis,inglês,Org-roam,climate change,english,modeling,me,tumores,propaganda,open source,finite-process">
+
+<meta name="description" content="My first impressions of Cryogen and Nyxt (Clojure/Common Lisp)">
+
+<meta property="og:description" content="My first impressions of Cryogen and Nyxt (Clojure/Common Lisp)">
+
+<meta property="og:url" content="http://buddhilw.com/posts-output/2021-06-20-demo/" />
+<meta property="og:title" content="Functional Web Projects" />
+<meta property="og:type" content="article" />
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <link href="/css/video.css" rel="stylesheet" type="text/css" />
+    <link href="/css/post.css" rel="stylesheet" type="text/css" />
+    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <aside id="sidebar">
+      <div id="logo">
+        <a title="Dark Cyber Corner" href="/">
+          <img class="icon" src="/img/perfil.jpeg">
+          <div class="text desktop-and-tablet-only">Dark Cyber Corner</div>
+          <div class="text mobile-only">Dark Cyber Corner</div>
+        </a>
+      </div>
+
+      <nav id="sidebar-links">
+        <nav id="menucont">
+          <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+          <label for="menu-checkbox" class="menutitle">
+            <svg class="icon icon-menu" aria-hidden="true"><use xlink:href="/img/icons.svg#icon-menu"></use></svg><span class="menu-text">Menu</span>
+          </label>
+          <ul class="menu">
+            <li ><a title="Home" href="/"><div class="menu-item-text">Home</div></a></li>
+            <li ><a title="Posts" href="/archives/"><div class="menu-item-text">Posts</div></a></li>
+            <!-- <li ><a title="Web Dev" href=""><div class="menu-item-text">Web-dev</div></a></li> -->
+            
+            
+            
+            <li >
+              <a href="/pages-output/library/"><div class="menu-item-text">Personal Library</div></a>
+            </li>
+            
+            
+            
+            <li >
+              <a href="/pages-output/web-dev/"><div class="menu-item-text">Portifolio</div></a>
+            </li>
+            
+            
+            
+            <li >
+              <a href="/pages-output/US-tyranny/"><div class="menu-item-text">Evil Deeds</div></a>
+            </li>
+            
+            
+            
+            <li >
+              <a href="/pages-output/about/"><div class="menu-item-text">About</div></a>
+            </li>
+            
+
+            <li >
+              <a title="Tags" href="/tags/"><div class="menu-item-text">Tags</div>
+              </a>
+            </li>
+            <!-- <li><a title="RSS" href="/feed.xml"><div class="menu-item-text">RSS</div></a></li> -->
+          </ul>
+        </nav>
+
+        <nav id="socialmedia">
+          <ul>
+            <!-- <li><a title="LinkedIn" href="https://www.linkedin.com/in/" rel="external"><svg class="icon icon-linkedin"><use xlink:href="/img/icons.svg#icon-linkedin"></use></svg></a></li> -->
+            <!-- <li><a title="GitHub" href="https://github.com/BuddhiLW" rel="external"><svg class="icon icon-github-circled"><use xlink:href="/img/icons.svg#icon-github-circled"></use></svg></a></li> -->
+            <!-- <li><a title="RSS Feed" href="/feed.xml"><svg class="icon icon-rss-squared"><use xlink:href="/img/icons.svg#icon-rss-squared"></use></svg></a></li> -->
+
+            <li>
+              <a title="DCC" href="https://www.buddhilw.com/" rel="external">
+                <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+                <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="Linkedin" href="https://www.linkedin.com/in/pedro-g-branquinho/" rel="external">
+                <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+              </a>
+            </li>
+            <!-- [<img align="left" alt="buddhilw | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/instagram.svg" />][instagram] -->
+
+          </ul>
+        </nav>
+      </nav>
+    </aside>
+
+    <article id="main">
+      
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta">
+        <h1>Functional Web Projects</h1>
+        <div class="byline">
+            <span class="date">June 20, 2021</span>
+            
+        </div>
+    </div>
+    <div class="fancy-area">
+      <div class="fancy"></div>
+    </div>
+</div>
+<div>
+    
+    <h3 id="my-first-impressions-of-cryogen-and-nyxt-clojurecommon-lisp">My first impressions of Cryogen and Nyxt (Clojure/Common Lisp)</h3><!-- ![]( "Nyxt and Cryogen"){ width = 50%} --><img src="../../img/nyxt-cryogen.png" alt="nyxt cryogen" width="700" /><h2 id="----english-verion----">--- English verion ---</h2><p>In this fortnight, I worked on two side #projects.</p><p>I learned about Nyxt, a extremely extensible browser, written in pure Common Lisp. Blazely fast! I could compose him with Emacs functions easily.</p><p>At last, I develop my static website generator, based on Cryogen, a #clojure template. It's written in 70 lines of code. Pretty astonishing.  The library itself has less than 400 lines of code.</p><p>Github page: <a href="https://github.com/BuddhiLW/Blobing">https://github.com/BuddhiLW/Blobing</a></p><blockquote><p>"Stop acting so small. You are the universe in ecstatic motion."</p><ul><li>Rumi.</li></ul></blockquote><h2 id="----portuguese-version----">--- Portuguese version ---</h2><p>Essa quinzena, tive o prazer de aprender com, e estender, dois diferentes projetos secundários.</p><p>Utilizei a biblioteca Cryogen. Foi possível escrever um gerador de sites estáticos em 70 linhas de Clojure(Script).</p><p>Comei a utilizar o Nyxt, um browser escrito em Common Lisp. Assustadoramente rápido. E, o mais importante, muito fácil de aprimorar seu comportamento. É possível utilizar as funções do meu editor de texto, nele, diretamente.</p><blockquote><p>"Pare de ajir pequeninamente. Você é o universo em movimento exstático."</p><ul><li>Rumi.</li></ul></blockquote>
+</div>
+
+<div id="post-tags">
+    <br/>
+    <b>Tags: </b>
+    
+    <a href="/tags-output/extensibility/">extensibility</a>
+    
+    <a href="/tags-output/clojure/">clojure</a>
+    
+    <a href="/tags-output/common%20lisp/">common lisp</a>
+    
+    <a href="/tags-output/open%20source/">open source</a>
+    
+</div>
+
+<br/>
+
+    
+    <div id="prev-next">
+    
+    <a class="prev" href="/posts-output/2021-06-21-Motives/"><svg class="icon icon-circle-left"><use xlink:href="/img/icons.svg#icon-circle-left"></use></svg><div class="nav-text">Kenneth Burke and Black Lagoon, with Org-roam.</div></a>
+    
+    
+    <div class="next"></div>
+    
+</div>
+
+    
+
+    
+
+</div>
+
+      <hr/>
+      <div id="footercont">
+        <div>
+          Copyright &copy; 2022 BuddhiLW
+          <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
+          <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
+          <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
+        </div>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+	      </div>
+	      <div>
+	        <span style="font-size:50px">🅭🅯🄎</span>
+	      </div>
+      </div>
+    </article>
+
+    <script src="/js/highlight.pack.js" type="application/javascript"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+  </body>
+</html>

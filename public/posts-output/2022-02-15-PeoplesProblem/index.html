@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+     MathJax = {
+       tex: {
+         // packages: ['base,asm'],        // extensions to use
+         inlineMath: [              // start/end delimiter pairs for in-line math
+                                    ['\\(', '\\)']
+         ],
+         displayMath: [             // start/end delimiter pairs for display math
+                                    ['$$', '$$'],
+                                    ['\\[', '\\]'],
+                                    ['\begin{equation}', '\end{equation}']
+         ],
+         processEscapes: true,      // use \$ to produce a literal dollar sign
+         processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+         processRefs: true,         // process \ref{...} outside of math mode
+         digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+         // pattern for recognizing numbers
+     }};
+    </script>
+    <meta charset="utf-8">
+    <title>Dark Cyber Corner: People&#39;s Problem: divide et impera</title>
+    
+<meta name="keywords" content=",global warming,tulmultua,pedro,Dramatism,map,collapse,panem et circenses,divergence,temores,science,extensibility,fourier series,climate,clojure,divide et impera,Kenneth Burke,gw,fala,structure,climate lag,portuguese,convergent,song,sing,ensaio,similarity,biology,inequality,português,Dramatist Petand,gomes,geometric-progression,norway,bio-cc,anova,a,julia,classify groups,fourier,common lisp,periodic,estrutura,f-test,poem,divide and conquer,poema,series,ecology,recurssion,analogy,thought,branquinho,analysis,inglês,Org-roam,climate change,english,modeling,me,tumores,propaganda,open source,finite-process">
+
+<meta name="description" content="Table of Contents">
+
+<meta property="og:description" content="Table of Contents">
+
+<meta property="og:url" content="http://buddhilw.com/posts-output/2022-02-15-PeoplesProblem/" />
+<meta property="og:title" content="People&#39;s Problem: divide et impera" />
+<meta property="og:type" content="article" />
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <link href="/css/video.css" rel="stylesheet" type="text/css" />
+    <link href="/css/post.css" rel="stylesheet" type="text/css" />
+    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <aside id="sidebar">
+      <div id="logo">
+        <a title="Dark Cyber Corner" href="/">
+          <img class="icon" src="/img/perfil.jpeg">
+          <div class="text desktop-and-tablet-only">Dark Cyber Corner</div>
+          <div class="text mobile-only">Dark Cyber Corner</div>
+        </a>
+      </div>
+
+      <nav id="sidebar-links">
+        <nav id="menucont">
+          <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+          <label for="menu-checkbox" class="menutitle">
+            <svg class="icon icon-menu" aria-hidden="true"><use xlink:href="/img/icons.svg#icon-menu"></use></svg><span class="menu-text">Menu</span>
+          </label>
+          <ul class="menu">
+            <li ><a title="Home" href="/"><div class="menu-item-text">Home</div></a></li>
+            <li ><a title="Posts" href="/archives/"><div class="menu-item-text">Posts</div></a></li>
+            <!-- <li ><a title="Web Dev" href=""><div class="menu-item-text">Web-dev</div></a></li> -->
+            
+            
+            
+            <li >
+              <a href="/pages-output/library/"><div class="menu-item-text">Personal Library</div></a>
+            </li>
+            
+            
+            
+            <li >
+              <a href="/pages-output/web-dev/"><div class="menu-item-text">Portifolio</div></a>
+            </li>
+            
+            
+            
+            <li >
+              <a href="/pages-output/US-tyranny/"><div class="menu-item-text">Evil Deeds</div></a>
+            </li>
+            
+            
+            
+            <li >
+              <a href="/pages-output/about/"><div class="menu-item-text">About</div></a>
+            </li>
+            
+
+            <li >
+              <a title="Tags" href="/tags/"><div class="menu-item-text">Tags</div>
+              </a>
+            </li>
+            <!-- <li><a title="RSS" href="/feed.xml"><div class="menu-item-text">RSS</div></a></li> -->
+          </ul>
+        </nav>
+
+        <nav id="socialmedia">
+          <ul>
+            <!-- <li><a title="LinkedIn" href="https://www.linkedin.com/in/" rel="external"><svg class="icon icon-linkedin"><use xlink:href="/img/icons.svg#icon-linkedin"></use></svg></a></li> -->
+            <!-- <li><a title="GitHub" href="https://github.com/BuddhiLW" rel="external"><svg class="icon icon-github-circled"><use xlink:href="/img/icons.svg#icon-github-circled"></use></svg></a></li> -->
+            <!-- <li><a title="RSS Feed" href="/feed.xml"><svg class="icon icon-rss-squared"><use xlink:href="/img/icons.svg#icon-rss-squared"></use></svg></a></li> -->
+
+            <li>
+              <a title="DCC" href="https://www.buddhilw.com/" rel="external">
+                <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+                <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="Linkedin" href="https://www.linkedin.com/in/pedro-g-branquinho/" rel="external">
+                <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+              </a>
+            </li>
+            <!-- [<img align="left" alt="buddhilw | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/instagram.svg" />][instagram] -->
+
+          </ul>
+        </nav>
+      </nav>
+    </aside>
+
+    <article id="main">
+      
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta">
+        <h1>People&#39;s Problem: divide et impera</h1>
+        <div class="byline">
+            <span class="date">February 15, 2022</span>
+            
+        </div>
+    </div>
+    <div class="fancy-area">
+      <div class="fancy"></div>
+    </div>
+</div>
+<div>
+    
+    <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --><p><strong>Table of Contents</strong></p><ul><li><a href="#the-fallacious-concept-minorities">The fallacious concept: <code>minorities</code></a><ul><li><a href="#historical-examples-of-contraditions-minority-schemes">Historical examples of contraditions minority-schemes</a></li><li><a href="#racism-in-lgbtq-groups">Racism in LGBTQ+ groups?</a></li><li><a href="#lgbtq-phobia-in-black-groups">LGBTQ+ phobia in black groups?</a></li></ul></li><li><a href="#all-resources">All resources:</a></li></ul><!-- markdown-toc end --><p>It’s said <em>divide and conquer</em> is one of the oldest tricks in the book.
+Certainly, it haven’t gone out of style.</p><blockquote><p>Tradition attributes the origin of the motto to Philip
+II of Macedon: Greek: διαίρει καὶ
+βασίλευε diaírei kài basíleue, in Ancient Greek,
+meaning “divide and rule”.</p></blockquote><blockquote><p>Divide and rule policy (Latin: divide et impera), or
+divide and conquer, in politics and sociology is
+gaining and maintaining power by breaking up larger
+concentrations of power into pieces that individually
+have less power than the one implementing the
+strategy.</p></blockquote><ul><li>Quotes from: <a href="https://en.wikipedia.org/wiki/Divide_and_rule">https://en.wikipedia.org/wiki/Divide_and_rule</a></li></ul><p><a id="orgdee0b5c"></a></p><h1 id="the-fallacious-concept-minorities">The fallacious concept: <code>minorities</code></h1><blockquote><p>A partition of objects into groups is one of the
+possible ways of subdividing the objects into groups ().</p><p>The rules are: the order in which objects are
+assigned to a group does not matter; each object can
+be assigned to only one group.</p></blockquote><ul><li>Source: Partitions into groups, Marco Taboga, PhD.</li></ul><p>For every class, or set, given that there are $n$ distinct elements, one can
+form a huge number of possible partitions with them (<a href="https://wikiless.org/wiki/Bell_number?lang=en">Known as Bell Numbers</a>).
+Here is a short table mapping for each group formed of $n$ people, how many
+partitions (subgroups) can be formed.</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides"><colgroup><col class="org-right"></col><col class="org-right"></col></colgroup><thead><tr><th scope="col" class="org-right"><code>n</code> people</th><th scope="col" class="org-right">possible groups</th></tr></thead><tbody><tr><td class="org-right">0</td><td class="org-right">1</td></tr><tr><td class="org-right">1</td><td class="org-right">1</td></tr><tr><td class="org-right">2</td><td class="org-right">2</td></tr><tr><td class="org-right">3</td><td class="org-right">5</td></tr><tr><td class="org-right">4</td><td class="org-right">15</td></tr><tr><td class="org-right">5</td><td class="org-right">52</td></tr><tr><td class="org-right">6</td><td class="org-right">203</td></tr><tr><td class="org-right">7</td><td class="org-right">877</td></tr><tr><td class="org-right">8</td><td class="org-right">4140</td></tr><tr><td class="org-right">(…)</td><td class="org-right">(…)</td></tr></tbody></table><p>Therefore, for the same group of people, let’s say, <strong>8</strong> of them, you could form
+<strong>4140</strong> possible subgroup-partition schemes! This concept is extremely important
+to be grasped. Because, these numbers are so astronomical and they signal the
+following: reasoning based on <strong>group-partitioning</strong> are essentially flawed, out
+of any context.</p><p>Any opinion can be held about groups, once we can form an
+astronomical quantity of them, and surely one of these possible partitioning
+will fit our biased description of reality.</p><p>Finally, at least half (this proportion increases as the $n$ increases) of all
+possible groupings are of <strong>minority</strong>-partitioning schemes.</p><p><a id="org340d61e"></a></p><h2 id="historical-examples-of-contraditions-minority-schemes">Historical examples of contraditions minority-schemes</h2><p>In 03 February 2022, today, it’s not outrageous to say that the
+<strong>LGBTQ+</strong>-movement and the <strong>Black</strong>-movement are two of the greatest
+<strong>minority-based</strong> movements there are. One, lead by group-thinking, might believe
+that <em>clashes</em> or <em>frictions</em> between them to be exceptions. For, they both are
+<code>minority</code> groups. Although, faced by the reality that, even when we deal with
+small groups, there are no <em>possible</em> one, unifying, partition-rule that
+characterize them. Therefore, all kinds of <strong>unaccounted</strong> behavior follow from
+the great variate of subgroups possible in a group.</p><p>We know look at examples of <strong>unaccounted</strong> behaviors arising amongst minority
+groups. Movements, itself, that appear antagonist and improbable, if we depart
+from the minority-group hypothesis.</p><p><a id="orgd3661ce"></a></p><h2 id="racism-in-lgbtq-groups">Racism in LGBTQ+ groups?</h2><p><a href="https://www.nbcnews.com/nbc-out/out-news/human-rights-campaigns-first-black-leader-sues-firing-alleging-racial-rcna14726">https://www.nbcnews.com/nbc-out/out-news/human-rights-campaigns-first-black-leader-sues-firing-alleging-racial-rcna14726</a></p><p><a id="orgcd3acf3"></a></p><h2 id="lgbtq-phobia-in-black-groups">LGBTQ+ phobia in black groups?</h2><p><a id="org8f07d40"></a></p><h1 id="all-resources">All resources:</h1><ul><li><a href="https://en.wikipedia.org/wiki/Divide_and_rule">https://en.wikipedia.org/wiki/Divide_and_rule</a></li><li><a href="https://wikiless.org/wiki/Bell_number?lang=en">https://wikiless.org/wiki/Bell_number?lang=en</a></li><li><a href="https://www.nbcnews.com/nbc-out/out-news/human-rights-campaigns-first-black-leader-sues-firing-alleging-racial-rcna14726">https://www.nbcnews.com/nbc-out/out-news/human-rights-campaigns-first-black-leader-sues-firing-alleging-racial-rcna14726</a></li></ul>
+</div>
+
+<div id="post-tags">
+    <br/>
+    <b>Tags: </b>
+    
+    <a href="/tags-output/divergence/">divergence</a>
+    
+    <a href="/tags-output/divide%20et%20impera/">divide et impera</a>
+    
+    <a href="/tags-output/divide%20and%20conquer/">divide and conquer</a>
+    
+    <a href="/tags-output/thought/">thought</a>
+    
+    <a href="/tags-output/propaganda/">propaganda</a>
+    
+</div>
+
+<br/>
+
+    
+    <div id="prev-next">
+    
+    <a class="prev" href="/posts-output/2022-03-01-WhyPoverty_Part1/"><svg class="icon icon-circle-left"><use xlink:href="/img/icons.svg#icon-circle-left"></use></svg><div class="nav-text">How a country so rich is so poor?</div></a>
+    
+    
+    <a class="next" href="/posts-output/2022-02-15-Diverge/"><div class="nav-text"">Divergence (n.): panem et circenses</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
+    
+</div>
+
+    
+
+    
+
+</div>
+
+      <hr/>
+      <div id="footercont">
+        <div>
+          Copyright &copy; 2022 BuddhiLW
+          <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
+          <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
+          <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
+        </div>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+	      </div>
+	      <div>
+	        <span style="font-size:50px">🅭🅯🄎</span>
+	      </div>
+      </div>
+    </article>
+
+    <script src="/js/highlight.pack.js" type="application/javascript"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+  </body>
+</html>

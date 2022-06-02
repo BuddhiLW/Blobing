@@ -19,7 +19,7 @@
  :archive-group-format         "yyyy MMMM"
  :sass-src                     []
  :sass-path                    "sass"
- :theme                        "blue" ;; default -> blue
+ :theme                        "lotus" ;; default -> blue
  :resources                    ["img" "video" "pdf"]
  :keep-files                   [".git"]
  :disqus?                      false

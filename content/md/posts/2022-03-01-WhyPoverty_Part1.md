@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {:title "Divergence (n.): panem et circenses"
+=======
+{:title "How a country so rich is so poor?"
+>>>>>>> 81765cc (Update contents)
  :layout :post
  :tags  ["thought", "divergence", "propaganda", "panem et circenses"]}
 

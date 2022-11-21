@@ -59,6 +59,10 @@
                   (let [config (resolve-config)]
                     (path (:blog-prefix config)
                           "public/pdf/cv-2022-11-03.pdf"))))
+  (GET "/cv2" [] (ring.util.response/file-response
+                  (let [config (resolve-config)]
+                    (path (:blog-prefix config)
+                          "pdf/cv-2022-11-03.pdf"))))
   (route/files "/")
   (route/not-found "Page not found"))
 

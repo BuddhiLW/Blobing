@@ -67,6 +67,8 @@
                   (path "cv-2022-11-03.pdf")))
   (GET "/cv6" [] (ring.util.response/file-response
                   (path "public/pdf/cv-2022-11-03.pdf")))
+  (GET "/cv7" [] (ring.util.response/file-response
+                  (path "content/pdf/cv-2022-11-03.pdf")))
   (route/files "/")
   (route/not-found "Page not found"))
 

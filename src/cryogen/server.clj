@@ -56,13 +56,13 @@
                        (when (= (:clean-urls config) :dirty)
                          "index.html")))))
   (GET "/cv1" [] (ring.util.response/file-response
-                  (let [config (resolve-config)]
-                    (path (:blog-prefix config)
-                          "public/pdf/cv-2022-11-03.pdf"))))
+                  (path
+                   "public/pdf/cv-2022-11-03.pdf")))
   (GET "/cv2" [] (ring.util.response/file-response
-                  (let [config (resolve-config)]
-                    (path (:blog-prefix config)
-                          "pdf/cv-2022-11-03.pdf"))))
+                  (path
+                   "pdf/cv-2022-11-03.pdf")))
+  (GET "/cv3" [] (ring.util.response/file-response
+                  (path "cv-2022-11-03.pdf")))
   (route/files "/")
   (route/not-found "Page not found"))
 

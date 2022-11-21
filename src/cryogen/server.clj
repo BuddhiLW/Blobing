@@ -58,17 +58,7 @@
   (GET "/cv1" [] (ring.util.response/file-response
                   (let [config (resolve-config)]
                     (path (:blog-prefix config)
-                          "cv-2022-11-03.pdf"))))
-  (GET "/cv2" [] (ring.util.response/file-response
-                  (let [config (resolve-config)]
-                    (path (:blog-prefix config)
                           "public/pdf/cv-2022-11-03.pdf"))))
-  (GET "/cv4" [] (ring.util.response/file-response
-                  (path "cv-2022-11-03.pdf")))
-  (GET "/cv6" [] (ring.util.response/file-response
-                  (path "public/pdf/cv-2022-11-03.pdf")))
-  (GET "/cv7" [] (ring.util.response/file-response
-                  (path "content/pdf/cv-2022-11-03.pdf")))
   (route/files "/")
   (route/not-found "Page not found"))
 

@@ -56,7 +56,9 @@
                        (when (= (:clean-urls config) :dirty)
                          "index.html")))))
   (GET "/cv" [] (ring.util.response/file-response
-                 (path "content/pdf/cv-2022-11-03.pdf")))
+                 (let [config (resolve-config)]
+                   (path (:blog-prefix config)
+                         "content/pdf/cv-2022-11-03.pdf"))))
   (route/files "/")
   (route/not-found "Page not found"))
 

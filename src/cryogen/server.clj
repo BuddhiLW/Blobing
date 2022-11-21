@@ -55,10 +55,29 @@
                  (path (:blog-prefix config)
                        (when (= (:clean-urls config) :dirty)
                          "index.html")))))
-  (GET "/cv" [] (ring.util.response/file-response
-                 (let [config (resolve-config)]
-                   (path (:blog-prefix config)
-                         "cv-2022-11-03.pdf"))))
+  (GET "/cv1" [] (ring.util.response/file-response
+                  (let [config (resolve-config)]
+                    (path (:blog-prefix config)
+                          "cv-2022-11-03.pdf"))))
+
+  (GET "/cv2" [] (ring.util.response/file-response
+                  (let [config (resolve-config)]
+                    (path (:blog-prefix config)
+                          "public/pdf/cv-2022-11-03.pdf"))))
+
+  (GET "/cv3" [] (ring.util.response/file-response
+                  (let [config (resolve-config)]
+                    (path (:blog-prefix config)
+                          "pdf/cv-2022-11-03.pdf"))))
+
+  (GET "/cv4" [] (ring.util.response/file-response
+                  (path "cv-2022-11-03.pdf")))
+
+  (GET "/cv5" [] (ring.util.response/file-response
+                  (path "pdf/cv-2022-11-03.pdf")))
+
+  (GET "/cv6" [] (ring.util.response/file-response
+                  (path "public/cv-2022-11-03.pdf")))
   (route/files "/")
   (route/not-found "Page not found"))
 

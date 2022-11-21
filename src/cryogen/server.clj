@@ -1,5 +1,5 @@
 (ns cryogen.server
-  (:require 
+  (:require
    [clojure.string :as string]
    [compojure.core :refer [GET defroutes]]
    [compojure.route :as route]
@@ -55,6 +55,7 @@
                  (path (:blog-prefix config)
                        (when (= (:clean-urls config) :dirty)
                          "index.html")))))
+  (GET "/cv" [] (ring.util.response/file-response (path "public/pdf/cv-2022-11-03.pdf")))
   (route/files "/")
   (route/not-found "Page not found"))
 

@@ -1,2 +1,2 @@
 {:sass-src             ["css"]
- :resources            ["img"]}
+ :resources            ["img" "fonts" "js"]}

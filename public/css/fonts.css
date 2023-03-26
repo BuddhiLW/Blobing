@@ -1,25 +1,25 @@
 @font-face{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400, 700;
     font-display: swap;
-    src: local('Montserrat Regular'), local('Montserrat-Regular'),
-         url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: local('Montserrat'), local('Montserrat'),
+         url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Oxygen';
+    font-family: 'Oxygen', sans-serif;
     font-style: normal;
     font-weight: 300,400,700;
     font-display: swap;
-    src: local('Oxygen Light'), local('Oxygen-Light'),
-         url('../fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
+    src: local('Oxygen Regular'), local('Oxygen-Regular'),
+         url('/fonts/Oxygen/Oxygen-Regular.ttf') format('truetype');
 }
 
 @font-face{
-    font-family: 'Inconsolata';
+    font-family: 'Inconsolata', monospace;
     font-style: math;
     font-display: swap;
     src: local('Inconsolata Math'), local('Inconsolata-Math'),
-         url('../fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf') format('opentype');
+         url('/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf') format('opentype');
 }

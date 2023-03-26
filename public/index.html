@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <title>Dark Cyber Corner</title>
+    
+    <meta name="description" content="My little dark corner of the cyberspace">
+    <meta name="keywords" content="">
+    
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <link href="/css/video.css" rel="stylesheet" type="text/css" />
+    <link href="/css/post.css" rel="stylesheet" type="text/css" />
+    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- <script type="text/javascript" id="MathJax-script" async
+         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+         </script> -->
     <script>
      MathJax = {
        tex: {
-         // packages: ['base,asm'],        // extensions to use
+         loader: {
+           load: ['input/tex-base', 'output/svg', 'ui/menu', '[tex]/require']
+         },
+         tex: {
+           packages: ['base', 'require']
+         },
+         packages: ['base, asm'],        // extensions to use
          inlineMath: [              // start/end delimiter pairs for in-line math
                                     ['\\(', '\\)']
          ],
@@ -20,22 +42,47 @@
          processRefs: true,         // process \ref{...} outside of math mode
          digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
          // pattern for recognizing numbers
-     }};
+         tags: 'none',              // or 'ams' or 'all'
+         tagSide: 'right',          // side for \tag macros
+         tagIndent: '0.8em',        // amount to indent tags
+         useLabelIds: true,         // use label name rather than tag for ids
+         maxMacros: 1000,           // maximum number of macro substitutions per expression
+         maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
+         baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
+                         ((document.getElementsByTagName('base').length === 0) ?
+                          '' : String(document.location).replace(/#.*$/, '')),
+         formatError:               // function called when TeX syntax errors occur
+                                    (jax, err) => jax.formatError(err)
+       }
+     };
+     // MathJax = {
+     //   tex: {
+     //     packages: ['base,asm'],        // extensions to use
+     //     inlineMath: [              // start/end delimiter pairs for in-line math
+     //                                [['$', '$'], ['\\(', '\\)']],
+     //                                ['\\(', '\\)']
+     //     ],
+     //     displayMath: [             // start/end delimiter pairs for display math
+     //                                ['$$', '$$'],
+     //                                ['\\[', '\\]'],
+     //                                ['\begin{equation}', '\end{equation}']
+     //     ],
+     //     processEscapes: true,      // use \$ to produce a literal dollar sign
+     //     processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+     //     processRefs: true,         // process \ref{...} outside of math mode
+     //     digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+     //     // pattern for recognizing numbers
+     // }};
     </script>
-    <meta charset="utf-8">
-    <title>Dark Cyber Corner</title>
-    
-    <meta name="description" content="My little dark corner of the cyberspace">
-    <meta name="keywords" content="">
-    
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script>
+     MathJax = {
+     };
+    </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
-    <link href="/css/video.css" rel="stylesheet" type="text/css" />
-    <link href="/css/post.css" rel="stylesheet" type="text/css" />
-    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
-    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-chtml.js">
+    </script>
+
   </head>
   <body>
     <aside id="sidebar">
@@ -112,9 +159,9 @@
 <div id="post">
     <div class="post-header">
     <div id="post-meta">
-        <h1>Tumultua-me os tumores dos temores (Poem)</h1>
+        <h1>Implicações da Compreensão</h1>
         <div class="byline">
-            <span class="date">June 1, 2022</span>
+            <span class="date">March 26, 2023</span>
             
         </div>
     </div>
@@ -124,33 +171,18 @@
 </div>
 <div>
     
-    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org64d5362">September 17, 2017  - PGB</a></li></ol><p><a id="org64d5362"></a></p><h1 id="september-17-2017----pgb">September 17, 2017  - PGB</h1><p class="verse">
-Tumultua-me os tumores dos temores<br /><br />
-Ruído irôico onírico<br />
-Ouvido escopido cúpido<br />
-Olfato dos fatos olávos<br />
-Maldito do bendito encardido<br />
-Navios nativos novos<br />
-Fazem fazendas fênicas<br />
-Procriam progresso regressivo<br /><br />
-Banham as banheiras dos banidos<br />
-Com conhecer convencido<br />
-Os científicos cientes cientistas<br />
-Contrabandistas contradiz o que condiz<br />
-Corre com a corrente, e a corta<br />
-Raíz ranzinza dos rabis<br />
-A interlocução eloquente vende…<br /></p>
+    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org6bc51c3">2017, August 17, Pedro Branquinho</a></li></ol><p><a id="org6bc51c3"></a></p><h1 id="2017-august-17-pedro-branquinho">2017, August 17, Pedro Branquinho</h1><blockquote><p>Quanto mais um pessoa é compreensível, mais ela entende o quanto é falha a maior parte das tentativas de comunicações diárias. Pois, nem sempre falamos a mesma ou sobre a mesma coisa, enquanto conversamos, em termos de níveis de abstração.</p></blockquote><blockquote><p>Existem diferentes níveis de abstrações. Não-verbal, verbal, metaverbal1, “metametaverbal” etc. O desafio da comunicação é sempre decodificar esses níveis de abstração, presentes, durante a comunicação. E assim, entender, e, melhor ajustar, como se comunicar de volta. Claro, da maneira mais desambigua possível. É fácil notar o quão difícil é isso. Ainda mais, se as “sintonias” são bem diferentes</p></blockquote>
 </div>
 
 <div id="post-tags">
     <br/>
     <b>Tags: </b>
     
-    <a href="/tags-output/tulmultua/">tulmultua</a>
-    
     <a href="/tags-output/pedro/">pedro</a>
     
-    <a href="/tags-output/temores/">temores</a>
+    <a href="/tags-output/reflex%C3%A3o/">reflexão</a>
+    
+    <a href="/tags-output/sem%C3%A2ntica/">semântica</a>
     
     <a href="/tags-output/portuguese/">portuguese</a>
     
@@ -158,13 +190,19 @@ A interlocução eloquente vende…<br /></p>
     
     <a href="/tags-output/gomes/">gomes</a>
     
-    <a href="/tags-output/poem/">poem</a>
+    <a href="/tags-output/general/">general</a>
     
-    <a href="/tags-output/poema/">poema</a>
+    <a href="/tags-output/semantics/">semantics</a>
+    
+    <a href="/tags-output/geral/">geral</a>
     
     <a href="/tags-output/branquinho/">branquinho</a>
     
-    <a href="/tags-output/tumores/">tumores</a>
+    <a href="/tags-output/compreens%C3%A3o/">compreensão</a>
+    
+    <a href="/tags-output/implica%C3%A7%C3%B5es/">implicações</a>
+    
+    <a href="/tags-output/compreens%C3%ADvel/">compreensível</a>
     
 </div>
 
@@ -178,7 +216,7 @@ A interlocução eloquente vende…<br /></p>
     <div class="prev"></div>
     
     
-    <a class="next" href="/posts-output/2022-03-01-WhyPoverty_Part1/"><div class="nav-text"">How a country so rich is so poor?</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
+    <a class="next" href="/posts-output/2022-06-01-Tumultua/"><div class="nav-text"">Tumultua-me os tumores dos temores (Poem)</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
     
 </div>
 
@@ -189,17 +227,17 @@ A interlocução eloquente vende…<br /></p>
       <hr/>
       <div id="footercont">
         <div>
-          Copyright &copy; 2022 BuddhiLW
+          Copyright &copy; 2023 BuddhiLW
           <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
           <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
           <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
         </div>
         <div>
           <span style="font-size:50px">🅭🅯🄎</span>
-	      </div>
-	      <div>
-	        <span style="font-size:50px">🅭🅯🄎</span>
-	      </div>
+        </div>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+        </div>
       </div>
     </article>
 
@@ -209,4 +247,5 @@ A interlocução eloquente vende…<br /></p>
     
     
   </body>
+
 </html>

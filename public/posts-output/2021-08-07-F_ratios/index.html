@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <title>Dark Cyber Corner: Noise-Signal ratios (F-tests) - (SS)</title>
+    
+<meta name="keywords" content=",global warming,tulmultua,pedro,Dramatism,map,collapse,panem et circenses,divergence,temores,science,extensibility,fourier series,climate,clojure,divide et impera,reflexão,Kenneth Burke,gw,fala,semântica,structure,climate lag,portuguese,convergent,song,sing,ensaio,similarity,biology,inequality,português,Dramatist Petand,gomes,geometric-progression,norway,general,bio-cc,anova,a,julia,classify groups,fourier,semantics,common lisp,periodic,estrutura,f-test,poem,divide and conquer,poema,series,ecology,recurssion,geral,analogy,thought,branquinho,analysis,inglês,compreensão,Org-roam,climate change,english,modeling,me,tumores,implicações,compreensível,propaganda,open source,finite-process">
+
+<meta name="description" content="How to classify Groups scientifically (F-tests)Let&#39;s imagine we have four normaly-distributed groups with different
+&#39;intrinsic&#39; variability in regards to belief on a given subject.">
+
+<meta property="og:description" content="How to classify Groups scientifically (F-tests)Let&#39;s imagine we have four normaly-distributed groups with different
+&#39;intrinsic&#39; variability in regards to belief on a given subject.">
+
+<meta property="og:url" content="http://buddhilw.com/posts-output/2021-08-07-F_ratios/" />
+<meta property="og:title" content="Noise-Signal ratios (F-tests) - (SS)" />
+<meta property="og:type" content="article" />
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <link href="/css/video.css" rel="stylesheet" type="text/css" />
+    <link href="/css/post.css" rel="stylesheet" type="text/css" />
+    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- <script type="text/javascript" id="MathJax-script" async
+         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+         </script> -->
     <script>
      MathJax = {
        tex: {
-         // packages: ['base,asm'],        // extensions to use
+         loader: {
+           load: ['input/tex-base', 'output/svg', 'ui/menu', '[tex]/require']
+         },
+         tex: {
+           packages: ['base', 'require']
+         },
+         packages: ['base, asm'],        // extensions to use
          inlineMath: [              // start/end delimiter pairs for in-line math
                                     ['\\(', '\\)']
          ],
@@ -20,31 +51,47 @@
          processRefs: true,         // process \ref{...} outside of math mode
          digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
          // pattern for recognizing numbers
-     }};
+         tags: 'none',              // or 'ams' or 'all'
+         tagSide: 'right',          // side for \tag macros
+         tagIndent: '0.8em',        // amount to indent tags
+         useLabelIds: true,         // use label name rather than tag for ids
+         maxMacros: 1000,           // maximum number of macro substitutions per expression
+         maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
+         baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
+                         ((document.getElementsByTagName('base').length === 0) ?
+                          '' : String(document.location).replace(/#.*$/, '')),
+         formatError:               // function called when TeX syntax errors occur
+                                    (jax, err) => jax.formatError(err)
+       }
+     };
+     // MathJax = {
+     //   tex: {
+     //     packages: ['base,asm'],        // extensions to use
+     //     inlineMath: [              // start/end delimiter pairs for in-line math
+     //                                [['$', '$'], ['\\(', '\\)']],
+     //                                ['\\(', '\\)']
+     //     ],
+     //     displayMath: [             // start/end delimiter pairs for display math
+     //                                ['$$', '$$'],
+     //                                ['\\[', '\\]'],
+     //                                ['\begin{equation}', '\end{equation}']
+     //     ],
+     //     processEscapes: true,      // use \$ to produce a literal dollar sign
+     //     processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+     //     processRefs: true,         // process \ref{...} outside of math mode
+     //     digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+     //     // pattern for recognizing numbers
+     // }};
     </script>
-    <meta charset="utf-8">
-    <title>Dark Cyber Corner: Noise-Signal ratios (F-tests) - (SS)</title>
-    
-<meta name="keywords" content=",global warming,tulmultua,pedro,Dramatism,map,collapse,panem et circenses,divergence,temores,science,extensibility,fourier series,climate,clojure,divide et impera,Kenneth Burke,gw,fala,structure,climate lag,portuguese,convergent,song,sing,ensaio,similarity,biology,inequality,português,Dramatist Petand,gomes,geometric-progression,norway,bio-cc,anova,a,julia,classify groups,fourier,common lisp,periodic,estrutura,f-test,poem,divide and conquer,poema,series,ecology,recurssion,analogy,thought,branquinho,analysis,inglês,Org-roam,climate change,english,modeling,me,tumores,propaganda,open source,finite-process">
+    <script>
+     MathJax = {
+     };
+    </script>
 
-<meta name="description" content="How to classify Groups scientifically (F-tests)Let&#39;s imagine we have four normaly-distributed groups with different
-&#39;intrinsic&#39; variability in regards to belief on a given subject.">
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-chtml.js">
+    </script>
 
-<meta property="og:description" content="How to classify Groups scientifically (F-tests)Let&#39;s imagine we have four normaly-distributed groups with different
-&#39;intrinsic&#39; variability in regards to belief on a given subject.">
-
-<meta property="og:url" content="http://buddhilw.com/posts-output/2021-08-07-F_ratios/" />
-<meta property="og:title" content="Noise-Signal ratios (F-tests) - (SS)" />
-<meta property="og:type" content="article" />
-
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
-    <link href="/css/video.css" rel="stylesheet" type="text/css" />
-    <link href="/css/post.css" rel="stylesheet" type="text/css" />
-    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
-    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <aside id="sidebar">
@@ -162,51 +209,50 @@ groups are more orthodox, as blue, which has extremely narrow possible
 views about this subject X.</p><p>So, the question is, can we categorize them
 as one thing (holding the same belief), without committing
 overgeneralization?</p><h3 id="the-hypothesis">The Hypothesis</h3><p>S1: Hypothesis undirectional ANOVA</p><p>Can we measure the behavior of these four groups as the same, without
-loss of generality?</p><p>The Null and Alternative Hypothesis follow,</p><p><span equation="">$$\begin</span><span aligned="">
-\begin</span><span cases="">
-\begin</span><span cases="">
+loss of generality?</p><p>The Null and Alternative Hypothesis follow,</p><p>\begin{equation}
+\begin{aligned}
+\begin{cases}
 H_0: \hat{\mu_1}&amp;=\hat{\mu_2}=\hat{\mu_3}=\hat{\mu_4}\\
 H_1: \hat{\mu_i}&amp;\neq \hat{\mu_j},\quad i\neq{}j
-\end</span><span aligned="">
-\end</span><span equation="">
-\end</span> \qquad (1)$$</p><p>That is, either they can or can not be treated as the same.</p><p>The Analysis Of Variance (ANOVA) method is perfectly suited for that</p><p>We will have a more in-depth knowledge of the origins and the
+\end{cases}
+\end{aligned} \qquad (1)
+\end{equation}</p><p>That is, either they can or can not be treated as the same.</p><p>The Analysis Of Variance (ANOVA) method is perfectly suited for that</p><p>We will have a more in-depth knowledge of the origins and the
 mathematical basis of ANOVA's in other posts.</p><p>Let's dive in solving our mystery first. Just an overview:</p><blockquote><ul><li>ANOVA will compare differences of means using standard variations</li></ul><ol><li>There are the <em>Within</em> measures of groups.</li><li>There are the <em>Between</em> measures of groups.</li></ol></blockquote><blockquote><ul><li>Generally, if we wanted to compare directly among two groups, we would use:</li></ul><ol><li>T-tests</li><li>Z-tests</li></ol></blockquote><ol><li><p>Why use it instead of T-tests and Z-tests</p><p>By using the <strong>Variations</strong> as our way of comparison, we can
 abstract the fact we are dealing with n-groups and concentrate in a
 one-dimensional variable.</p><p>If we were to deal with means to derive these conclusions, we
 couldn't take that approach. We rather would have to make six
-T-tests:</p><p><span equation="">$$\begin</span><span aligned="">
-\begin</span><span n-groups="">
-\binom{\textrm</span><span aligned="">}{2}&amp;= \frac{n!}{2!(n-2)!}\\
+T-tests:</p><p>\begin{equation}
+\begin{aligned}
+\binom{\textrm{n-groups}}{2}&amp;= \frac{n!}{2!(n-2)!}\\
 \implies n=4 : \binom{\textrm{4}}{2}&amp;= \frac{4!}{2!(4-2)!}=6
-\end</span><span equation="">
-\end</span> \qquad (2)$$</p></li><li><p>What does it measure, exactly?</p><p><span between="">Our final measure we'll be look at is the F-ratio:
-\(F=\dfrac{S_</span><span within="">}{S_</span>}\)</p><blockquote><ul><li>The <strong>Variation</strong><span within=""> inside groups can be estimated by
-\(S_</span>\).</li><li>The <strong>Variation</strong><span between=""> among different groups can be estimated by
-\(S_</span>\).</li></ul></blockquote><p><span between="">But, the Between estimator also takes the Within variation as a
-baseline. So, truly, it can be seen as \(S_</span><span within="">=S_</span><span intrinsic="" variation="" among="" groups="">+
-S_{\textrm</span>}\)</p><p><span intrinsic="" variation="" among="" groups="">Thus, F is a ratio to measure how much of
-\(S_{\textrm</span>}\) account for differences among individuals of each groups.</p></li></ol><h3 id="finally-computation">Finally, computation</h3><p>Now that we had an overview of what we need to compute an ANOVA and how
+\end{aligned}\qquad (2)
+\end{equation}</p></li><li><p>What does it measure, exactly?</p><p>Our final measure we'll be look at is the F-ratio:
+$$F=\dfrac{S_{Between}}{S_{Within}}$$</p><blockquote><ul><li>The <strong>Variation</strong> inside groups can be estimated by
+\(S_{Within}\).</li><li>The <strong>Variation</strong> among different groups can be estimated by
+\(S_{Between}\).</li></ul></blockquote><p>But, the Between estimator also takes the Within variation as a
+baseline. So, truly, it can be seen as $$S_{Between}=S_{Within}+
+S_{\textrm{Intrinsic variation among groups}}$$</p><p>Thus, F is a ratio to measure how much of \( S_{\textrm{Intrinsic variation among groups}}\) account for differences among individuals of each groups.</p></li></ol><h3 id="finally-computation">Finally, computation</h3><p>Now that we had an overview of what we need to compute an ANOVA and how
 it work, let's do the Math.</p><ol><li><p><em>A priori</em> threshold for certainty</p><p>In Statistics, we can choose levels of causality and certainties we
 are prepared to accept as truth. Here, we will adopt the
 \(\alpha=0.05\). That is, I want to be "95% sure" that this relation
 is Causal.</p></li><li><p>Degrees of freedom</p><p>An abstract concept we use to compute are degrees of freedom. In
 this case we have 4 groups and - let's arbitrarily say we took 4
-people and measured them in each group. So,</p><p><span equation="">$$\begin</span><span aligned="">
-\begin</span><span cases="">
-\begin</span><span between="">
-df_</span><span groups="">&amp;=(n_{\textrm</span><span within="">}-1)=3 \\
-df_</span><span measures="">&amp;=(n_{\textrm</span><span groups="">}-n_{\textrm</span><span cases="">})=12\
-\end</span><span aligned="">
-\end</span><span equation="">
-\end</span> \qquad (3)$$</p><ol><li><p>Our cutoff</p><p>Looking at a table, \(F_{3,12}=2.60552\).</p><p>This is our cutoff.</p></li></ol></li><li><p>Variations and F</p><p>Generally, we have,</p><p><span between="">\(F=\dfrac{S_</span><span within="">}{S_</span>}\)</p><p><span between="">\(S_</span>=\sqrt{n.S^2_M}\)</p><p><span df="">\(S^2_M=\dfrac{\sum {\textrm{(M-GM)}^2}}{\textrm</span><span between="">_</span>}\)</p><p><span within="">\(S_</span><span i="1">=\dfrac{\sum_</span><span n="">^N {S_i^2}}</span> \)</p><!--  --></li></ol><blockquote><ul><li><strong>n</strong>: quantity of people measured per group</li><li><strong>N</strong>: quantity of groups</li><li><strong>GM</strong>: mean of means</li></ul></blockquote><pre><code>Thus,
-</code></pre><!--  \implies S^2\_M&=\dfrac{(50-51)^2+(49.7-51)^2+(53-51)^2+(51.3-51)^2}{(4-1)}= 2.26\\\\ --><!-- \quad S\_{Between}&=\sqrt{4\times{}2.26}=9.04\\\\ --><!-- GM &= \frac{50+49.7+53+51.3}{4}=51 \\\\ --><p><span equation="">$$\begin</span><span aligned="">
-\begin</span><span within="">
-S_</span><span between="">&amp;=\dfrac{12+6+3+17}{4}=9.5\\
+people and measured them in each group. So,</p><p>\begin{equation}
+\begin{aligned}
+\begin{cases}
+df_{between}&amp;=(n_{\textrm{groups}}-1)=3 \\
+df_{within}&amp;=(n_{\textrm{measures}}-n_{\textrm{groups}})=12\
+\end{cases}
+\end{aligned}\qquad (3)
+\end{equation}</p><ol><li><p>Our cutoff</p><p>Looking at a table, \(F_{3,12}=2.60552\).</p><p>This is our cutoff.</p></li></ol></li><li><p>Variations and F</p><p>Generally, we have,</p><p>\(F=\dfrac{S_{Between}}{S_{Within}}\)</p><p>\(S_{Between}=\sqrt{n.S^2_M}\)</p><p>\(S^2_M=\dfrac{\sum {\textrm{(M-GM)}^2}}{\textrm{df}_{between}}\)</p><p>\(S_{Within}=\dfrac{\sum_{i=1}^N {S_i^2}}{N} \)</p><!--  --></li></ol><blockquote><ul><li><strong>n</strong>: quantity of people measured per group</li><li><strong>N</strong>: quantity of groups</li><li><strong>GM</strong>: mean of means</li></ul></blockquote><pre><code>Thus,
+</code></pre><!--  \implies S^2\_M&=\dfrac{(50-51)^2+(49.7-51)^2+(53-51)^2+(51.3-51)^2}{(4-1)}= 2.26\\\\ --><!-- \quad S\_{Between}&=\sqrt{4\times{}2.26}=9.04\\\\ --><!-- GM &= \frac{50+49.7+53+51.3}{4}=51 \\\\ --><p>\begin{equation}
+\begin{aligned}
+S_{Within}&amp;=\dfrac{12+6+3+17}{4}=9.5\\
 GM &amp;= \frac{50+49.7+53+51.3}{4}=51 \\
-\quad S_</span><span aligned="">&amp;=\sqrt{4\times{}2.26}=9.04\\
+\quad S_{Between}&amp;=\sqrt{4\times{}2.26}=9.04\\
 S^2_M &amp;= \dfrac{(50-51)^2+(49.7-51)^2+(53-51)^2+(51.3-51)^2}{(4-1)}= 2.26
-\end</span><span equation="">
-\end</span>$$</p><blockquote><p>Finally, \(F=\dfrac{9.04}{9.5}=0.952\).</p></blockquote><ol start="4"><li><p>Comparison with a table and cutoff</p><p>As \(F=0.952\) measured is way less than
+\end{aligned}
+\end{equation}</p><blockquote><p>Finally, \(F=\dfrac{9.04}{9.5}=0.952\).</p></blockquote><ol start="4"><li><p>Comparison with a table and cutoff</p><p>As \(F=0.952\) measured is way less than
 \(F_{{(3,12),\alpha=0.05}}=2.60552\). We conclude that we
 shouldn't negate the null hypothesis (\(H_0\)).</p><p>In this case, we could say all these four groups could be treated as
 the same (average-wise).</p><p>Do you agree? Well, either you do or not, that's scientific scrutiny,
@@ -248,17 +294,17 @@ right there. In a research that would be the conclusions we would arrive at!</p>
       <hr/>
       <div id="footercont">
         <div>
-          Copyright &copy; 2022 BuddhiLW
+          Copyright &copy; 2023 BuddhiLW
           <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
           <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
           <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
         </div>
         <div>
           <span style="font-size:50px">🅭🅯🄎</span>
-	      </div>
-	      <div>
-	        <span style="font-size:50px">🅭🅯🄎</span>
-	      </div>
+        </div>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+        </div>
       </div>
     </article>
 
@@ -268,4 +314,5 @@ right there. In a research that would be the conclusions we would arrive at!</p>
     
     
   </body>
+
 </html>

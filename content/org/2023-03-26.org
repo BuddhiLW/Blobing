@@ -1,0 +1,8 @@
+#+title: 2023 03 26
+
+* 2017, August 17, Pedro Branquinho
+#+begin_quote
+  Quanto mais um pessoa é compreensível, mais ela entende o quanto é falha a maior parte das tentativas de comunicações diárias. Pois, nem sempre falamos a mesma ou sobre a mesma coisa, enquanto conversamos, em termos de níveis de abstração.
+
+  Existem diferentes níveis de abstrações. Não-verbal, verbal, metaverbal1, "metametaverbal" etc. O desafio da comunicação é sempre decodificar esses níveis de abstração, presentes, durante a comunicação. E assim, entender, e, melhor ajustar, como se comunicar de volta. Claro, da maneira mais desambigua possível. É fácil notar o quão difícil é isso. Ainda mais, se as "sintonias" são bem diferentes
+#+end_quote

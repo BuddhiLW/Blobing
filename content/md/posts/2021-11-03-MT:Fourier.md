@@ -21,17 +21,28 @@
 
 ## Função à descrever
 
+```latex
 \begin{equation}
 \begin{aligned}
 f(x) =
 \begin{cases}
-1, \quad 0\leq\text{x}<\pi\\\\
-0, \quad -\pi\leq\text{x}<0\\\\
-\end{cases}\\\\
+1, \quad 0\leq\text{x}<\pi\\
+0, \quad -\pi\leq\text{x}<0\\
+\end{cases}\\
 \text{periodic with period T}=2\pi
 \end{aligned}
 \end{equation}
-
+```
+\begin\{equation\}
+\begin\{aligned\}
+f(x) =
+\begin\{cases\}
+1, \quad 0\leq\text\{x\}<\pi\\\\
+0, \quad -\pi\leq\text\{x\}<0\\\\
+\end\{cases\}\\\\
+\text\{periodic with period T\}=2\pi
+\end\{aligned\}
+\end\{equation\}
 
 <a id="orgbb90a0c"></a>
 
@@ -39,31 +50,31 @@ f(x) =
 
 Usando,
 
-$$\begin{equation}
-\begin{aligned}
-f(x) = \dfrac{1}{2}a\_0 + \sum\_{n=1}^\infty \left[a\_n \cos(\dfrac{n \pi x}{L}) + b_n \sin(\dfrac{n \pi x}{L})\right]
-\end{aligned}
-\end{equation}$$
+\begin\{equation\}
+\begin\{aligned\}
+f(x) = \dfrac\{1\}\{2\}a\_0 + \sum\_\{n=1\}^\infty \left[a\_n \cos(\dfrac\{n \pi x\}\{L\}) + b_n \sin(\dfrac\{n \pi x\}\{L\})\right]
+\end\{aligned\}
+\end\{equation\}
 
 Chegamos em,
 
-\begin{equation}
-\begin{aligned}
-\begin{cases}
+\begin\{equation\}
+\begin\{aligned\}
+\begin\{cases\}
 a_0 &= 1\\\\
-a_n &= 0, \quad \forall n \in \mathbb{K}\\\\
-b_k &= \dfrac{2}{(2k-1)\pi}
-\end{cases}
-\end{aligned}
-\end{equation}
+a_n &= 0, \quad \forall n \in \mathbb\{K\}\\\\
+b_k &= \dfrac\{2\}\{(2k-1)\pi\}
+\end\{cases\}
+\end\{aligned\}
+\end\{equation\}
 
 O que significa que
 
-$$\begin{equation}
-\begin{aligned}
-f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x)}\right)}
-\end{aligned}
-\end{equation}$$
+\begin\{equation\}
+\begin\{aligned\}
+f(x) = \frac\{1\}\{2\} + \sum_\{k=1\}^\{\infty\}\{\left(\dfrac\{2\}\{(2k-1)\pi\}\sin\{((2k-1)x)\}\right)\}
+\end\{aligned\}
+\end\{equation\}
 
 
 <a id="org18d9e9b"></a>
@@ -127,6 +138,6 @@ Fourier com 10 termos de aproximação
 
     PlotlyJS.plot([trace2,trace3])
 
-\Fourier com 100 termos de aproximação
+Fourier com 100 termos de aproximação
 [![img](../../img/fourier2.png)](ein-images/fourier2.png)
 

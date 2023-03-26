@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <title>Dark Cyber Corner: Fourier Series, An Example</title>
+    
+<meta name="keywords" content=",global warming,tulmultua,pedro,Dramatism,map,collapse,panem et circenses,divergence,temores,science,extensibility,fourier series,climate,clojure,divide et impera,reflexão,Kenneth Burke,gw,fala,semântica,structure,climate lag,portuguese,convergent,song,sing,ensaio,similarity,biology,inequality,português,Dramatist Petand,gomes,geometric-progression,norway,general,bio-cc,anova,a,julia,classify groups,fourier,semantics,common lisp,periodic,estrutura,f-test,poem,divide and conquer,poema,series,ecology,recurssion,geral,analogy,thought,branquinho,analysis,inglês,compreensão,Org-roam,climate change,english,modeling,me,tumores,implicações,compreensível,propaganda,open source,finite-process">
+
+<meta name="description" content="Table of Contents">
+
+<meta property="og:description" content="Table of Contents">
+
+<meta property="og:url" content="http://buddhilw.com/posts-output/2021-11-03-MT:Fourier/" />
+<meta property="og:title" content="Fourier Series, An Example" />
+<meta property="og:type" content="article" />
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
+    <link href="/css/video.css" rel="stylesheet" type="text/css" />
+    <link href="/css/post.css" rel="stylesheet" type="text/css" />
+    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- <script type="text/javascript" id="MathJax-script" async
+         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+         </script> -->
     <script>
      MathJax = {
        tex: {
-         // packages: ['base,asm'],        // extensions to use
+         loader: {
+           load: ['input/tex-base', 'output/svg', 'ui/menu', '[tex]/require']
+         },
+         tex: {
+           packages: ['base', 'require']
+         },
+         packages: ['base, asm'],        // extensions to use
          inlineMath: [              // start/end delimiter pairs for in-line math
                                     ['\\(', '\\)']
          ],
@@ -20,29 +49,47 @@
          processRefs: true,         // process \ref{...} outside of math mode
          digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
          // pattern for recognizing numbers
-     }};
+         tags: 'none',              // or 'ams' or 'all'
+         tagSide: 'right',          // side for \tag macros
+         tagIndent: '0.8em',        // amount to indent tags
+         useLabelIds: true,         // use label name rather than tag for ids
+         maxMacros: 1000,           // maximum number of macro substitutions per expression
+         maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
+         baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
+                         ((document.getElementsByTagName('base').length === 0) ?
+                          '' : String(document.location).replace(/#.*$/, '')),
+         formatError:               // function called when TeX syntax errors occur
+                                    (jax, err) => jax.formatError(err)
+       }
+     };
+     // MathJax = {
+     //   tex: {
+     //     packages: ['base,asm'],        // extensions to use
+     //     inlineMath: [              // start/end delimiter pairs for in-line math
+     //                                [['$', '$'], ['\\(', '\\)']],
+     //                                ['\\(', '\\)']
+     //     ],
+     //     displayMath: [             // start/end delimiter pairs for display math
+     //                                ['$$', '$$'],
+     //                                ['\\[', '\\]'],
+     //                                ['\begin{equation}', '\end{equation}']
+     //     ],
+     //     processEscapes: true,      // use \$ to produce a literal dollar sign
+     //     processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+     //     processRefs: true,         // process \ref{...} outside of math mode
+     //     digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+     //     // pattern for recognizing numbers
+     // }};
     </script>
-    <meta charset="utf-8">
-    <title>Dark Cyber Corner: Fourier Series, An Example</title>
-    
-<meta name="keywords" content=",global warming,tulmultua,pedro,Dramatism,map,collapse,panem et circenses,divergence,temores,science,extensibility,fourier series,climate,clojure,divide et impera,Kenneth Burke,gw,fala,structure,climate lag,portuguese,convergent,song,sing,ensaio,similarity,biology,inequality,português,Dramatist Petand,gomes,geometric-progression,norway,bio-cc,anova,a,julia,classify groups,fourier,common lisp,periodic,estrutura,f-test,poem,divide and conquer,poema,series,ecology,recurssion,analogy,thought,branquinho,analysis,inglês,Org-roam,climate change,english,modeling,me,tumores,propaganda,open source,finite-process">
+    <script>
+     MathJax = {
+     };
+    </script>
 
-<meta name="description" content="Table of Contents">
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-chtml.js">
+    </script>
 
-<meta property="og:description" content="Table of Contents">
-
-<meta property="og:url" content="http://buddhilw.com/posts-output/2021-11-03-MT:Fourier/" />
-<meta property="og:title" content="Fourier Series, An Example" />
-<meta property="og:type" content="article" />
-
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
-    <link href="/css/video.css" rel="stylesheet" type="text/css" />
-    <link href="/css/post.css" rel="stylesheet" type="text/css" />
-    <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/css/blog.css" rel="stylesheet" type="text/css" />
-    <link href="/css/lotus-highlightjs.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <aside id="sidebar">
@@ -131,32 +178,42 @@
 </div>
 <div>
     
-    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org92968c8">Plot de uma série de Fourier</a><ol><li><a href="#orgaa53458">Função à descrever</a></li><li><a href="#orgbb90a0c">Solução analítica</a></li><li><a href="#org18d9e9b">Implementação em Julia</a></li><li><a href="#orgd89c0a2">Plot</a></li></ol></li></ol><p><a id="org92968c8"></a></p><h1 id="plot-de-uma-série-de-fourier">Plot de uma série de Fourier</h1><p><a id="orgaa53458"></a></p><h2 id="função-à-descrever">Função à descrever</h2><p><span equation="">\begin</span><span aligned="">
-\begin</span><span cases="">
+    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org92968c8">Plot de uma série de Fourier</a><ol><li><a href="#orgaa53458">Função à descrever</a></li><li><a href="#orgbb90a0c">Solução analítica</a></li><li><a href="#org18d9e9b">Implementação em Julia</a></li><li><a href="#orgd89c0a2">Plot</a></li></ol></li></ol><p><a id="org92968c8"></a></p><h1 id="plot-de-uma-série-de-fourier">Plot de uma série de Fourier</h1><p><a id="orgaa53458"></a></p><h2 id="função-à-descrever">Função à descrever</h2><pre><code class="latex">\begin{equation}
+\begin{aligned}
 f(x) =
-\begin</span><span x="">
-1, \quad 0\leq\text</span><span x="">&lt;\pi\\
-0, \quad -\pi\leq\text</span><span cases="">&lt;0\\
-\end</span><span periodic="" with="" period="" t="">\\
-\text</span><span aligned="">=2\pi
-\end</span><span equation="">
-\end</span></p><p><a id="orgbb90a0c"></a></p><h2 id="solução-analítica">Solução analítica</h2><p>Usando,</p><p><span equation="">$$\begin</span><span aligned="">
-\begin</span><span n="1">
-f(x) = \dfrac{1}{2}a_0 + \sum_</span>^\infty \left[<span l="">a_n \cos(\dfrac{n \pi x}</span><span l="">) + b_n \sin(\dfrac{n \pi x}</span>)\right]<span aligned="">
-\end</span><span equation="">
-\end</span>$$</p><p>Chegamos em,</p><p><span equation="">\begin</span><span aligned="">
-\begin</span><span cases="">
-\begin</span><span k="">
+\begin{cases}
+1, \quad 0\leq\text{x}&lt;\pi\\
+0, \quad -\pi\leq\text{x}&lt;0\\
+\end{cases}\\
+\text{periodic with period T}=2\pi
+\end{aligned}
+\end{equation}
+</code></pre><p>\begin{equation}
+\begin{aligned}
+f(x) =
+\begin{cases}
+1, \quad 0\leq\text{x}&lt;\pi\\
+0, \quad -\pi\leq\text{x}&lt;0\\
+\end{cases}\\
+\text{periodic with period T}=2\pi
+\end{aligned}
+\end{equation}</p><p><a id="orgbb90a0c"></a></p><h2 id="solução-analítica">Solução analítica</h2><p>Usando,</p><p>\begin{equation}
+\begin{aligned}
+f(x) = \dfrac{1}{2}a_0 + \sum_{n=1}^\infty \left[a_n \cos(\dfrac{n \pi x}{L}) + b_n \sin(\dfrac{n \pi x}{L})\right]
+\end{aligned}
+\end{equation}</p><p>Chegamos em,</p><p>\begin{equation}
+\begin{aligned}
+\begin{cases}
 a_0 &amp;= 1\\
-a_n &amp;= 0, \quad \forall n \in \mathbb</span><span cases="">\\
+a_n &amp;= 0, \quad \forall n \in \mathbb{K}\\
 b_k &amp;= \dfrac{2}{(2k-1)\pi}
-\end</span><span aligned="">
-\end</span><span equation="">
-\end</span></p><p>O que significa que</p><p><span equation="">$$\begin</span><span aligned="">
-\begin</span><span k="1">
-f(x) = \frac{1}{2} + \sum_</span><span aligned="">^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x)}\right)}
-\end</span><span equation="">
-\end</span>$$</p><p><a id="org18d9e9b"></a></p><h2 id="implementação-em-julia">Implementação em Julia</h2><p>A função aproximação da série de <strong>Fourier</strong></p><pre><code>function f(x,N)
+\end{cases}
+\end{aligned}
+\end{equation}</p><p>O que significa que</p><p>\begin{equation}
+\begin{aligned}
+f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x)}\right)}
+\end{aligned}
+\end{equation}</p><p><a id="org18d9e9b"></a></p><h2 id="implementação-em-julia">Implementação em Julia</h2><p>A função aproximação da série de <strong>Fourier</strong></p><pre><code>function f(x,N)
   g = 1/2
   for k in 1:1:N
       g += (2/((2*k -1)*π))*sin((2*k-1)*x)
@@ -191,7 +248,7 @@ trace3 = PlotlyJS.scatter(;x=xs, y=values_actual)
 PlotlyJS.plot([trace,trace3])
 </code></pre><p>Fourier com 10 termos de aproximação
 <a href="ein-images/fourier.png"><img src="../../img/fourier.png" alt="img" /></a></p><pre><code>PlotlyJS.plot([trace2,trace3])
-</code></pre><p>\Fourier com 100 termos de aproximação
+</code></pre><p>Fourier com 100 termos de aproximação
 <a href="ein-images/fourier2.png"><img src="../../img/fourier2.png" alt="img" /></a></p>
 </div>
 
@@ -240,17 +297,17 @@ PlotlyJS.plot([trace,trace3])
       <hr/>
       <div id="footercont">
         <div>
-          Copyright &copy; 2022 BuddhiLW
+          Copyright &copy; 2023 BuddhiLW
           <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
           <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
           <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
         </div>
         <div>
           <span style="font-size:50px">🅭🅯🄎</span>
-	      </div>
-	      <div>
-	        <span style="font-size:50px">🅭🅯🄎</span>
-	      </div>
+        </div>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+        </div>
       </div>
     </article>
 
@@ -260,4 +317,5 @@ PlotlyJS.plot([trace,trace3])
     
     
   </body>
+
 </html>

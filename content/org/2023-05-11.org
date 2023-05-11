@@ -1,0 +1,12 @@
+#+title: 2023 05 11
+
+* Multiple cursors mode
+Multiple cursors rock! [fn:1][fn:2] And it works wonders with Evil Mode in Doom Emacs.
+
+Just gotta activate it, in =.init.el=, by un-commenting "*multiple-cursors  ; editing in many places at once*".
+
+Bam!, and read the docs. Using the =Describing the module= is also a big help, e.i., =doom/describe-module=.
+
+* Footnotes
+[fn:1] https://github.com/gabesoft/evil-mc
+[fn:2] https://github.com/magnars/multiple-cursors.el

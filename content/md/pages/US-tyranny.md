@@ -11,11 +11,15 @@
 - [West Africa](#west-africa)
     - [Burkina Faso 🇧🇫](#burkina-faso-🇧🇫)
         - [Coup 2022, Jan -- Actor: Damiba. President Roch Kaboré is deposed.](#coup-2022-jan----actor-damiba-president-roch-kaboré-is-deposed)
-        - [Coup 2014 -- Actor: Isaac Zida.](#coup-2014----actor-isaac-zida)
+        - [Coup 2014 -- Actor: Isaac Zida. ](#coup-2014----actor-isaac-zida)
         - [Coup 2015 -- Actor: Gen. Gilbert Diendéré](#coup-2015----actor-gen-gilbert-diendéré)
     - [Mali 🇲🇱](#mali-🇲🇱)
-        - [2011 Coup -- Actor: Amadou Sanogo.](#2011-coup----actor-amadou-sanogo)
+        - [2011 Coup -- Actor: Amadou Sanogo. ](#2011-coup----actor-amadou-sanogo)
         - [2020 Coup -- Actor: Assimi Goïta](#2020-coup----actor-assimi-goïta)
+- [Palestine 🇵🇸](#palestine-🇵🇸)
+    - [Israeli 🇮🇱 colonization of Palestine 🇵🇸](#israeli-🇮🇱-colonization-of-palestine-🇵🇸)
+- [Ukraine ](#ukraine)
+    - [Prophets of War, Greg Hayes -- Raytheon CEO](#prophets-of-war-greg-hayes----raytheon-ceo)
 
 <!-- markdown-toc end -->
 
@@ -108,3 +112,4 @@ Resources on **USA** spending on Palestine and neighboring countries:
   <source src="../../video/greg-heyes-raytheonCEO_onUkraine.mp4" type="video/mp4">
   <source src="../../video/greg-heyes-raytheonCEO_onUkraine.webm" type="video/webm">
 </video>
+

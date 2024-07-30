@@ -2,18 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Dark Cyber Corner: Fourier Series, An Example</title>
+    <title>Dark Cyber Corner: Posts Tagged &quot;linux&quot;</title>
     
-<meta name="keywords" content=",scientific method,global warming,tulmultua,pedro,Dramatism,map,terminal,philosophy,collapse,panem et circenses,divergence,temores,vent,science,extensibility,fourier series,exploration,climate,clojure,divide et impera,reflexão,Kenneth Burke,gw,fala,semântica,computação,structure,Open Source,climate lag,linux,portuguese,convergent,song,mathematics,sing,ensaio,método científico,better,similarity,biology,I said it,inequality,português,Dramatist Petand,math,gomes,logic,geometric-progression,cursors,Operational System,norway,computing,general,bio-cc,anova,emacs,Fermi Paradox,a,julia,programming,classify groups,windows,fourier,semantics,common lisp,FOSS,periodic,estrutura,f-test,poem,DE,divide and conquer,poema,series,ecology,recurssion,geral,analogy,WE,thought,branquinho,analysis,inglês,compreensão,OS,Org-roam,climate change,english,modeling,me,tumores,implicações,lazywal,compreensível,matemática,unix,propaganda,open source,finite-process,multiple,window manager">
-
-<meta name="description" content="Table of Contents">
-
-<meta property="og:description" content="Table of Contents">
-
-<meta property="og:url" content="http://buddhilw.com/posts-output/2021-11-03-MT:Fourier/" />
-<meta property="og:title" content="Fourier Series, An Example" />
-<meta property="og:type" content="article" />
-
+    <meta name="description" content="My little dark corner of the cyberspace">
+    <meta name="keywords" content="">
+    
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link href="/css/video.css" rel="stylesheet" type="text/css" />
     <link href="/css/post.css" rel="stylesheet" type="text/css" />
@@ -94,135 +87,17 @@
 
     <article id="main">
       
-<div id="post">
-    <div class="post-header">
-    <div id="post-meta">
-        <h1>Fourier Series, An Example</h1>
-        <div class="byline">
-            <span class="date">November 3, 2021</span>
-            
-        </div>
+<div id="posts-by-tag">
+    <div id="page-header">
+        <h1>Posts Tagged &quot;linux&quot;</h1>
     </div>
-    <div class="fancy-area">
-      <div class="fancy"></div>
-    </div>
-</div>
-<div>
+    <ul>
     
-    <h1 id="table-of-contents">Table of Contents</h1><ol><li><a href="#org92968c8">Plot de uma série de Fourier</a><ol><li><a href="#orgaa53458">Função à descrever</a></li><li><a href="#orgbb90a0c">Solução analítica</a></li><li><a href="#org18d9e9b">Implementação em Julia</a></li><li><a href="#orgd89c0a2">Plot</a></li></ol></li></ol><p><a id="org92968c8"></a></p><h1 id="plot-de-uma-série-de-fourier">Plot de uma série de Fourier</h1><p><a id="orgaa53458"></a></p><h2 id="função-à-descrever">Função à descrever</h2><pre><code class="latex">\begin{equation}
-\begin{aligned}
-f(x) =
-\begin{cases}
-1, \quad 0\leq\text{x}&lt;\pi\\
-0, \quad -\pi\leq\text{x}&lt;0\\
-\end{cases}\\
-\text{periodic with period T}=2\pi
-\end{aligned}
-\end{equation}
-</code></pre><p>\begin{equation}
-\begin{aligned}
-f(x) =
-\begin{cases}
-1, \quad 0\leq\text{x}&lt;\pi\\
-0, \quad -\pi\leq\text{x}&lt;0\\
-\end{cases}\\
-\text{periodic with period T}=2\pi
-\end{aligned}
-\end{equation}</p><p><a id="orgbb90a0c"></a></p><h2 id="solução-analítica">Solução analítica</h2><p>Usando,</p><p>\begin{equation}
-\begin{aligned}
-f(x) = \dfrac{1}{2}a_0 + \sum_{n=1}^\infty \left[a_n \cos(\dfrac{n \pi x}{L}) + b_n \sin(\dfrac{n \pi x}{L})\right]
-\end{aligned}
-\end{equation}</p><p>Chegamos em,</p><p>\begin{equation}
-\begin{aligned}
-\begin{cases}
-a_0 &amp;= 1\\
-a_n &amp;= 0, \quad \forall n \in \mathbb{K}\\
-b_k &amp;= \dfrac{2}{(2k-1)\pi}
-\end{cases}
-\end{aligned}
-\end{equation}</p><p>O que significa que</p><p>\begin{equation}
-\begin{aligned}
-f(x) = \frac{1}{2} + \sum_{k=1}^{\infty}{\left(\dfrac{2}{(2k-1)\pi}\sin{((2k-1)x)}\right)}
-\end{aligned}
-\end{equation}</p><p><a id="org18d9e9b"></a></p><h2 id="implementação-em-julia">Implementação em Julia</h2><p>A função aproximação da série de <strong>Fourier</strong></p><pre><code>function f(x,N)
-  g = 1/2
-  for k in 1:1:N
-      g += (2/((2*k -1)*π))*sin((2*k-1)*x)
-  end
-  return g
-end
-</code></pre><p>Mapeamos os valores para o intervalo que queremos estimar a função periódica</p><pre><code>values = map(x -&gt; f.(-4*π:0.01:4*π,x), 1:1:100)
-</code></pre><p>Por fim, definimos a função real, a qual queremos aproximar</p><pre><code>function f_actual(x)
-    if abs(x)&lt;π
-	if 0&lt;=x&lt;π 
-	    return 1
-	elseif -π&lt;=x&lt;0
-	    return 0
-	end
-    else 
-	y = (x/2π -floor(x/2π))*2π
-	if π&lt;=y&lt;2π 
-	    return 0
-	elseif 0&lt;=y&lt;π
-	    return 1
-	end
-    end
-end
-</code></pre><p>Gerando os valores literais</p><pre><code>values_actual = f_actual.(-4*π:0.01:4*π)
-</code></pre><p><a id="orgd89c0a2"></a></p><h2 id="plot">Plot</h2><p>Usaremos a biblioteca <em>PlotlyJS.jl</em>, para gerarmos um gráfico de alta qualidade,</p><pre><code>trace = PlotlyJS.scatter(;x=xs, y=values[10])
-
-trace2 = PlotlyJS.scatter(;x=xs, y=values[100])
-
-trace3 = PlotlyJS.scatter(;x=xs, y=values_actual)
-
-
-PlotlyJS.plot([trace,trace3])
-</code></pre><p>Fourier com 10 termos de aproximação
-<a href="ein-images/fourier.png"><img src="../../img/fourier.png" alt="img" /></a></p><pre><code>PlotlyJS.plot([trace2,trace3])
-</code></pre><p>Fourier com 100 termos de aproximação
-<a href="ein-images/fourier2.png"><img src="../../img/fourier2.png" alt="img" /></a></p>
-</div>
-
-<div id="post-tags">
-    <br/>
-    <b>Tags: </b>
+        <li>
+            <a href="/posts-output/2024-07-30/">What Operational System is Better?</a>
+        </li>
     
-    <a href="/tags-output/science/">science</a>
-    
-    <a href="/tags-output/fourier%20series/">fourier series</a>
-    
-    <a href="/tags-output/inequality/">inequality</a>
-    
-    <a href="/tags-output/julia/">julia</a>
-    
-    <a href="/tags-output/fourier/">fourier</a>
-    
-    <a href="/tags-output/periodic/">periodic</a>
-    
-    <a href="/tags-output/series/">series</a>
-    
-    <a href="/tags-output/analysis/">analysis</a>
-    
-    <a href="/tags-output/modeling/">modeling</a>
-    
-</div>
-
-<br/>
-
-    
-    <div id="prev-next">
-    
-    <a class="prev" href="/posts-output/2021-11-23-Metrica/"><svg class="icon icon-circle-left"><use xlink:href="/img/icons.svg#icon-circle-left"></use></svg><div class="nav-text">A estrutura fala (Poem)</div></a>
-    
-    
-    <a class="next" href="/posts-output/2021-08-07-F_ratios/"><div class="nav-text"">Noise-Signal ratios (F-tests) - (SS)</div><svg class="icon icon-circle-right"><use xlink:href="/img/icons.svg#icon-circle-right"></use></svg></a>
-    
-</div>
-
-    
-
-    
-
+    </ul>
 </div>
 
       <hr/>

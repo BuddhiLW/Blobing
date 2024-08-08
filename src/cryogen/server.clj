@@ -76,4 +76,4 @@
    (merge {:init (partial init fast)} opts)))
 
 (defn -main [& args]
-  (serve {:port 3000, :fast ((set args) "fast")}))
+  (serve {:port 3003, :fast ((set args) "fast")}))

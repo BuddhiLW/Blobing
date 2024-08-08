@@ -49,15 +49,18 @@
 <div id="preview">
 <div id="corner-tl" class="corner"></div>
 <div id="corner-tr" class="corner"></div>
-<h3>What I Do</h3>
-<p>I research at University of São Paulo and enjoy learning about a variety of subjects, including Web Design.</p>
+<h3>Expertise</h3>
+<p>Fullstack Developer, with a Degree in Physics Engineering. Linux Veteran.</p>
+<!-- <p>I research at University of São Paulo and enjoy learning about a variety of subjects, including Web Design.</p> -->
 <div id="corner-br" class="corner"></div>
 <div id="corner-bl" class="corner"></div>
+<p> <b>My resume: </b> <a target="_blank" href="https://github.com/BuddhiLW/cv/blob/main/out/cv-2024-02-21.pdf">Download Resume</a></p>
 </div>
 </div>
 </div>
 </div>
 </div>
+
 </section>
 
 <section class="s2">
@@ -65,43 +68,50 @@
 
 <div class="about-wrapper">
 <div class="about-me">
-<h4>More about me</h4>
+<h4>Context</h4>
 
-<p>I'm in my last semester as an Undergradute in Engineering Physics and I've acquire a repertoire of skills.</p>
+<p>I have been solving problems, and facilitating workflows, with Software, since 2018.</p>
 
-<p>I've worked for other Engineers, to automate report production. These Healt and Safety Engineers have worked to Lupo S.A., JBS and other major companies in Brazil. </p>
+<p>The Physics Engineering Degree has been received in 2022 (enrolled in 2016). I took a year-break in university; don't ask 🫠🤣.</p>
 
-<p>Also, I developed an automation project dealing with Clearence and Ledger, using Clojure for FlowFinance in Santa Catarina, Brazil.</p>
+<p>A meaningful amount of my work has Clojure(Script) in it.</p>
 
-<p> Currently, I research Traffic Flow and Traffic Jams under supervision of <a href=http://spherio.eel.usp.br/mediawiki/index.php/Wei-Liang_Qian"">Ph.D. Qian Wei-Liang</a>.
+<p>Currently, I'm in the playground-gang, with the cool kids, writting mostly Go.</p>
+<!-- <p>I'm in my last semester as an Undergradute in Engineering Physics and I've acquire a repertoire of skills.</p> -->
+
+<!-- <p>I've worked for other Engineers, to automate report production. These Healt and Safety Engineers have worked to Lupo S.A., JBS and other major companies in Brazil. </p> -->
+
+<!-- <p>Also, I developed an automation project dealing with Clearence and Ledger, using Clojure for FlowFinance in Santa Catarina, Brazil.</p> -->
+
+<p> I will always be thankful to people that shaped my path, like my university supervisor, <a href=http://spherio.eel.usp.br/mediawiki/index.php/Wei-Liang_Qian"">Ph.D. Qian Wei-Liang</a>.
 
 <hr>
 
-<h4>TOP EXPERTISE</h4>
+<h4>TOP TOOLS</h4>
 
-<p>Engineer Physicist with strong background on Computing: <a target="_blank" href="https://github.com/BuddhiLW/cv/blob/main/out/cv-2024-02-21.pdf">Download Resume</a></p>
 
 <div id="skills">
 <ul>
-<li>Linux</li>
-<li>Python</li>
-<li>Julia</li>
 <li>Clojure</li>
 <li>ClojureScript</li>
+<li>Go</li>
+<li>Python</li>
+<li>Julia</li>
 </ul>
 
 <ul>
-<li>ArchLinux/EXWM</li>
-<li>General Purpouse</li>
-<li>PDEs and Data Science</li>
-<li>Automation and pipelines</li>
-<li>Reagent and Retit (Full Stack)</li>
+
+<li>Linux</li>
+<li>Docker</li>
+<!-- <li>ArchLinux/EXWM</li> -->
+<!-- <li>General Purpouse</li> -->
+<!-- <li>PDEs and Data Science</li> -->
+<!-- <li>Automation and pipelines</li> -->
+<!-- <li>Reagent and Retit (Full Stack)</li> -->
 </ul>
 
 </div>
-
 </div>
-
 
 <div class="social-links">
 <img id="social_img" src="../../img/portifolio/youtube.png">
@@ -166,22 +176,22 @@
 <a href=""></a>
 <h3 style="text-align: center;">Get In Touch</h3>
 
-<form id="contact-form">
-<a name="contact"></a>
+<form id="contact-form" method="POST" action="mailto:pedrogbranquinho@gmail.com" enctype="text/plain">
+  <a name="contact"></a>
 
-<label>Name</label>
-<input class="input-field" type="text" name="name">
+  <label>Name</label>
+  <input class="input-field" type="text" name="name">
 
-<label>Subject</label>
-<input class="input-field" type="text" name="subject">
+  <label>Subject</label>
+  <input class="input-field" type="text" name="subject">
 
-<label>Email</label>
-<input class="input-field" type="text" name="email">
+  <label>Email</label>
+  <input class="input-field" type="text" name="email">
 
-<label>Message</label>
-<textarea class="input-field" name="message"></textarea>
+  <label>Message</label>
+  <textarea class="input-field" name="message"></textarea>
 
-<input id="submit-btn" type="submit" value="Send">
+  <input id="submit-btn" type="submit" value="Send">
 </form>
 </div>
 </section>

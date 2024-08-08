@@ -79,7 +79,7 @@
 
 <h4>TOP EXPERTISE</h4>
 
-<p>Engineer Physicist with strong background on Computing: <a target="_blank" href="https://github.com/BuddhiLW/cv/blob/main/template_english.pdf">Download Resume</a></p>
+<p>Engineer Physicist with strong background on Computing: <a target="_blank" href="https://github.com/BuddhiLW/cv/blob/main/out/cv-2024-02-21.pdf">Download Resume</a></p>
 
 <div id="skills">
 <ul>

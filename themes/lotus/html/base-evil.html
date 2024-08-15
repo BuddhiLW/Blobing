@@ -1,56 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>{{title}}{% block subtitle %}{% endblock %}</title>
-        {% block meta %}
-        <meta name="description" content="{{description}}">
-        <meta name="keywords" content="">
-        {% endblock %}
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:300,400,700|Inconsolata" rel="stylesheet">
-        {% style "css/post.css"%}
-        {% style "css/normalize.css" %}
-        {% style "css/reading.css"%}
-        {% style "css/lotus-highlightjs.min.css" %}
-    </head>
-    <body>
-        <nav id="sidebar-links">
-            <aside id="sidebar">
-                <div class="fancy-area">
-                    <div class="fancy"></div>
-                    <nav id="socialmedia">
-                        <ul class="socialmedia">
-                            <li>
-                                <a title="DCC" href="https://www.buddhilw.com/" rel="external">
-                                    <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
-                                    <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
-                                </a>
-                            </li>
-                            <li>
-                                <a title="Linkedin" href="https://www.linkedin.com/in/pedro-g-branquinho/" rel="external">
-                                    <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}{% block subtitle %}{% endblock %}</title>
+    {% block meta %}
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="">
+    {% endblock %}
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    {% style "css/video.css"%}
+    {% style "css/post.css"%}
+    {% style "css/normalize.css" %}
+    {% style "css/blog.css" %}
+    {% style "css/lotus-highlightjs.min.css" %}
+    {% style "css/fonts.css" %}
+    {% style "css/evil-deeds.css" %}
+  </head>
+  <body>
+    <aside id="sidebar">
+      <div id="logo">
+        <a title="{{title}}" href="{{index-uri}}">
+          <img class="icon" src="/img/perfil.jpeg">
+          <div class="text desktop-and-tablet-only">{{title}}</div>
+          <div class="text mobile-only">{{title}}</div>
+        </a>
+      </div>
+
+      <nav id="sidebar-links">
+        <nav id="menucont">
+          <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+          <label for="menu-checkbox" class="menutitle">
+            <svg class="icon icon-menu" aria-hidden="true"><use xlink:href="{{blog-prefix}}/img/icons.svg#icon-menu"></use></svg><span class="menu-text">Menu</span>
+          </label>
+          <ul class="menu">
+            <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}"><div class="menu-item-text">Home</div></a></li>
+            <li {% if archives %} class="active" {% endif %}><a title="Posts" href="{{archives-uri}}"><div class="menu-item-text">Posts</div></a></li>
+            {% for nav-page in navbar-pages %}
+            {% if tags|not-empty %}
+            {% endif %}
+            <li {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}>
+              <a href="{{nav-page.uri}}"><div class="menu-item-text">{{nav-page.title}}</div></a>
+            </li>
+            {% endfor %}
+
+            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}>
+              <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div>
+              </a>
+            </li>
+            <li><a title="RSS" href="{{rss-uri}}"><div class="menu-item-text">RSS</div></a></li>
+          </ul>
         </nav>
-        {% block content %}
-        {% endblock %}
-        <hr/>
-        <div id="footercont">
-            <div>
-                Copyright &copy; {{today|date:yyyy}} {{author}}
-            </div>
+
+        <nav id="socialmedia">
+          <ul>
+            <li>
+              <a title="DCC" href="https://www.buddhilw.com/" rel="external">
+                <img align="left" alt="buddhilw.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="GitHub" href="https://github.com/BuddhiLW" rel="external">
+                <img align="left" alt="buddhilw | Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg"/>
+              </a>
+            </li>
+            <li>
+              <a title="Linkedin" href="https://www.linkedin.com/in/pedro-g-branquinho/" rel="external">
+                <img align="left" alt="buddhilw | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </nav>
+    </aside>
+
+    <article id="main">
+      {% block content %}
+      {% endblock %}
+      <hr/>
+      <div id="footercont">
+        <div>
+          Copyright &copy; {{today|date:yyyy}} {{author}}
+          <br>Powered by <a href="http://cryogenweb.org">Cryogen</a>
+          <br>Initially themed by <a href="http://github.com/KingMob">KingMob</a>
+          <br>Extended by <a href="http://github.com/BuddhiLW/Blobing">BuddhiLW</a>
         </div>
-        <script type="text/javascript" src="http://baruffio.com/reading.js/scripts/reading.min.js"></script>
-        {% script "js/highlight.pack.js" %}
-        <script>hljs.initHighlightingOnLoad();</script>
-    </body>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+        </div>
+        <div>
+          <span style="font-size:50px">🅭🅯🄎</span>
+        </div>
+      </div>
+    </article>
+
+    {% script "js/highlight.pack.js" %}
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    {% if post.klipse %} {{post.klipse|safe}} {% endif %}
+    {% if page.klipse %} {{page.klipse|safe}} {% endif %}
+  </body>
 </html>

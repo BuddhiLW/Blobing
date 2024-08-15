@@ -18,8 +18,10 @@
         - [2020 Coup -- Actor: Assimi Goïta](#2020-coup----actor-assimi-goïta)
 - [Palestine 🇵🇸](#palestine-🇵🇸)
     - [Israeli 🇮🇱 colonization of Palestine 🇵🇸](#israeli-🇮🇱-colonization-of-palestine-🇵🇸)
-- [Ukraine ](#ukraine)
+    - [Human Rights Violations](#human-rights-violations)
+- [Ukraine 🇺🇦](#ukraine-🇺🇦)
     - [Prophets of War, Greg Hayes -- Raytheon CEO](#prophets-of-war-greg-hayes----raytheon-ceo)
+- [Footnotes](#footnotes)
 
 <!-- markdown-toc end -->
 
@@ -82,14 +84,18 @@ Currently, 29 January 2022, President Roch Kaboré is on a military camp, captiv
 
 - <https://theintercept.com/2022/01/26/burkina-faso-coup-us-military/>
 
-### 2020 Coup -- Actor: Assimi Goïta
+### 2020, 2021, 2022 Coup -- Actor: Assimi Goïta (2020, 2021), Western Backed military officers (2022)
 
 > In 2020, Col. Assimi Goïta, who worked with U.S. Special Operations forces for years, participating in Flintlock training exercises and attending a Joint Special Operations University seminar at MacDill Air Force Base in Florida, headed the junta that overthrew Mali’s government.
 
+> Mali’s interim vice-president, Col Assimi Goïta, who led a military coup last year [2020], has declared he has seized power from the transitional president and prime minister, after they failed to consult him about the formation of a new government.
+
+> Mali's military junta on Monday said it thwarted an attempted coup last week led by army officers and supported by an unnamed Western state. [Issued on: 17/05/2022]
+
 - <https://www.washingtonpost.com/world/asia_pacific/mali-coup-leader-was-trained-by-us-special-operations-forces/2020/08/21/33153fbe-e31c-11ea-82d8-5e55d47e90ca_story.html>
 - <https://theintercept.com/2022/01/26/burkina-faso-coup-us-military/>
-
-<!-- ## Mauritania 🇲🇷  TODO-->
+- <https://www.theguardian.com/world/2021/may/24/mali-president-prime-minister-and-defence-minister-arrested-sources-say/>
+- <https://www.france24.com/en/africa/20220517-mali-s-military-junta-says-it-foiled-an-attempted-coup/>
 
 # Palestine 🇵🇸
 
@@ -109,12 +115,9 @@ Resources on **USA** spending on Palestine and neighboring countries:
 
 As the human rights violations of Palestinians by jew-european colonialists happens daily. Here is just a brief example of several international law violations thoughout the years.
 
-Right to property: The Israeli government has been accused of land-grabbing and the forced removal of Palestinian families from their homes, which violates the right to property. For example, in 2018, Israel demolished over 40 homes in the West Bank settlement of Khan al-Ahmar, displacing an entire Bedouin community.^[1]^[2]^[3] Including the destruction of schools built with humanitarian-aid, by Belgium and Italy.^[2] 
+Right to property: The Israeli government has been accused of land-grabbing and the forced removal of Palestinian families from their homes, which violates the right to property. For example, in 2018, Israel demolished over 40 homes in the West Bank settlement of Khan al-Ahmar, displacing an entire Bedouin community[^1] [^2] [^3]. Including the destruction of schools built with humanitarian-aid, by Belgium and Italy[^2].
 
-```quote 
-Any destruction of property by the occupying power is prohibited, except when rendered absolutely necessary by military operations, the UN says. The extensive demolition of property is a grave breach of the Fourth Geneva Convention and may amount to a war crime, it adds. 
-```
-[^1]
+> Any destruction of property by the occupying power is prohibited, except when rendered absolutely necessary by military operations, the UN says. The extensive demolition of property is a grave breach of the Fourth Geneva Convention and may amount to a war crime, it adds. [^1]
 
 <!-- ## TODO -->
 <!-- Right to adequate standard of living: The forced removal of Palestinians from their lands and properties can disrupt essential services such as healthcare, education, and access to food and water. For example, in 2016, Israel demolished a school in the West Bank settlement of Beit Hanoun, which served over 700 students.^[4] -->
@@ -127,15 +130,11 @@ Any destruction of property by the occupying power is prohibited, except when re
 
 <!-- Right to a fair trial: The forced removal of Palestinians from their lands and properties may involve legal proceedings that are unfair or biased against them. For example, in 2017, Israel passed the Regularization Law, which retroactively legalized settlements built on land that was confiscated from Palestinian owners.^[8] -->
 
-## References: 
 [^1]: Khan al-Ahmar: Israel court approves demolition of Bedouin village, https://www.bbc.com/news/world-middle-east-45420915  
 [^2]: https://www.aljazeera.com/news/2017/4/4/eu-criticises-israels-west-bank-demolitions-policy
 [^3]: https://www.unocha.org/publications/report/occupied-palestinian-territory/west-bank-demolitions-and-displacement-overview-october-2018
-<!-- [^2] "Israel destroys school in West Bank settlement." Middle East Eye, 9 Mar 2016, https://www.middleeasteye.net/news/israel-destroys-school-west-bank-settlement.  -->
-<!-- [^3] "Israel demolishes Palestinian home in East Jerusalem." Al Jazeera, 18 May 2019, https://www.aljazeera.com/news/2019/5/17/israel-demolishes-palestinian-home-east-jerusalem.  -->
-<!-- [^4] "Israel passes law legalising settlements." BBC News, 6 Jul 2017, https://www.bbc.com/news/world-middle-east-40983595. -->
 
-# Ukraine 
+# Ukraine 🇺🇦
 
 ## Prophets of War, Greg Hayes -- Raytheon CEO
 

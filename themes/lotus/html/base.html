@@ -34,7 +34,6 @@
           <ul class="menu">
             <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}"><div class="menu-item-text">Home</div></a></li>
             <li {% if archives %} class="active" {% endif %}><a title="Posts" href="{{archives-uri}}"><div class="menu-item-text">Posts</div></a></li>
-            <!-- <li {% if web-dev %} class="active" {% endif %}><a title="Web Dev" href="{{web-dev-uri}}"><div class="menu-item-text">Web-dev</div></a></li> -->
             {% for nav-page in navbar-pages %}
             {% if tags|not-empty %}
             {% endif %}
@@ -47,7 +46,7 @@
               <a title="Tags" href="{{tags-uri}}"><div class="menu-item-text">Tags</div>
               </a>
             </li>
-            <!-- <li><a title="RSS" href="{{rss-uri}}"><div class="menu-item-text">RSS</div></a></li> -->
+            <li><a title="RSS" href="{{rss-uri}}"><div class="menu-item-text">RSS</div></a></li>
           </ul>
         </nav>
 

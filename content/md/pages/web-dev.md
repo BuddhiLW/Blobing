@@ -54,7 +54,7 @@
 <!-- <p>I research at University of São Paulo and enjoy learning about a variety of subjects, including Web Design.</p> -->
 <div id="corner-br" class="corner"></div>
 <div id="corner-bl" class="corner"></div>
-<p> <b>My resume: </b> <a target="_blank" href="https://github.com/BuddhiLW/cv/blob/main/out/cv-2024-02-21.pdf">Download Resume</a></p>
+<p> <b>My resume: </b> <a target="_blank" href="https://buddhilw.com/pdf/cv-2024-11-01.pdf">Download Resume</a></p>
 </div>
 </div>
 </div>

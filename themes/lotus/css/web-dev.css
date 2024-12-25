@@ -33,3 +33,9 @@ div#prev-next {
 #prev-next .item {
     max-width: 30%
 }
+
+
+/* 🇵🇸 */
+#christmas-mode{
+    background-color: #CE1126;
+}

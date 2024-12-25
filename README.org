@@ -2,7 +2,5 @@
 CC - Attribute me - Share Alike; You can monetize the way you want, though.
 [[http://creativecommons.org/licenses/by-sa/4.0/][https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg]] 🅭🅯🄎
 
-Netlify Status [[https://api.netlify.com/api/v1/badges/b64c13cc-8fc6-4bea-8510-c2670a7a0d0b/deploy-status][https://app.netlify.com/sites/buddhilw/deploys]]
-
 *The /working/ website*:
 [[www.buddhilw.com][buddhilw.com]]

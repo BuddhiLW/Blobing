@@ -38,6 +38,7 @@
 <div data-mode="yellow" id="yellow-mode" class="theme-dot"></div>
 <div data-mode="green" id="green-mode" class="theme-dot"></div>
 <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+<div data-mode="christmas" id="christmas-mode" class="theme-dot"></div>
 </div>
 
 <p id="settings-note">*Theme settings will be saved for<br>your next vist</p>

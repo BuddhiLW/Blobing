@@ -36,5 +36,9 @@ function setTheme(mode){
 		document.getElementById('theme-style').href = '../../css/purple.css'
 	}
 
+	if (mode == 'christmas'){
+		document.getElementById('theme-style').href = '../../css/christmas.css'
+	}
+
 	localStorage.setItem('theme', mode)
 }

@@ -51,7 +51,7 @@
 <div id="corner-tl" class="corner"></div>
 <div id="corner-tr" class="corner"></div>
 <h3>Expertise</h3>
-<p>Fullstack Developer, with a Degree in Physics Engineering. Linux Veteran.</p>
+<p>Fullstack Developer, with a Degree in Engineering Physics. Linux Veteran.</p>
 <!-- <p>I research at University of São Paulo and enjoy learning about a variety of subjects, including Web Design.</p> -->
 <div id="corner-br" class="corner"></div>
 <div id="corner-bl" class="corner"></div>

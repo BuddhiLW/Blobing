@@ -71,13 +71,13 @@
 <div class="about-me">
 <h4>Context</h4>
 
-<p>I have been solving problems, and facilitating workflows, with Software, since 2018.</p>
+<p>I have been solving problems, and facilitating workflows, with Software, since <b>2018</b>.</p>
 
 <p>The Physics Engineering Degree has been received in 2022 (enrolled in 2016). I took a year-break in university; don't ask 🫠🤣.</p>
 
-<p>A meaningful amount of my work has Clojure(Script) in it.</p>
+<p>A meaningful amount of my work has <b>Clojure(Script)</b> in it.</p>
 
-<p>Currently, I'm in the playground-gang, with the cool kids, writting mostly Go.</p>
+<p>Currently, I'm walking with the cool kids, writting mostly <b>Go</b>.</p>
 <!-- <p>I'm in my last semester as an Undergradute in Engineering Physics and I've acquire a repertoire of skills.</p> -->
 
 <!-- <p>I've worked for other Engineers, to automate report production. These Healt and Safety Engineers have worked to Lupo S.A., JBS and other major companies in Brazil. </p> -->
@@ -112,22 +112,25 @@
 
    <div id="skills">
    <ul>
-   <li>Clojure</li>
-   <li>ClojureScript</li>
-   <li>Go</li>
-   <li>Python</li>
-   <li>Julia</li>
-    </ul>
-
+    <li>Clojure</li>
+    <li>ClojureScript</li>
+    <li>Go</li>
+    <li>Python</li>
+    <li>Julia</li>
+   </ul>
    <ul>
-
-   <li>Linux</li>
-   <li>Docker</li>
-   <!-- <li>ArchLinux/EXWM</li> -->
-    <!-- <li>General Purpouse</li> -->
-    <!-- <li>PDEs and Data Science</li> -->
-    <!-- <li>Automation and pipelines</li> -->
-    <!-- <li>Reagent and Retit (Full Stack)</li> -->
+       <li>Linux</li>
+       <li>Docker/Docker Compose</li>
+       <li>Kubernetes</li>
+       <li>Github Actions</li>
+       <li>CI/CD pipelines</li>
+   </ul>
+   <ul>
+       <li>SAGA pattern (Cadence)</li>
+       <li>HTTP1/HTTP2</li>
+       <li>Kafka, GraphQL, ORM</li>
+       <li>Mobile (expo)</li>
+       <li>Fullstack Apps</li>
    </ul>
    </div>
 </section>

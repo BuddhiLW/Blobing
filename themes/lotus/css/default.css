@@ -231,7 +231,6 @@ h6 { font-size: 16px;}
 	background-color: #7E4C74;
 }
 
-
 #christmas-mode{
     background-color: #CE1126;
 }
@@ -313,6 +312,43 @@ h6 { font-size: 16px;}
     display: flex;
     justify-content: space-evenly;
     background-color: var(--previewShadow);
+	margin: auto;
+	margin-bottom: 2em;
+}
+
+section {
+    display: flex; /* Flexbox to center the content */
+    justify-content: center; /* Horizontally center the box */
+    align-items: center; /* Vertically center the box */
+}
+
+section.s2.skills {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: var(--secondaryColor); /* Background color */
+}
+
+section.s2.skills .title {
+    display: flex; /* Flexbox for content inside */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 0.5em 1em; /* Add spacing around text */
+    background-color: var(--mainColor); /* Red background */
+    color: var(--borderColor); /* White text color */
+    border: 2px solid var(--borderColor); /* Add a white border */
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    text-align: center; /* Ensure text inside aligns */
+	margin: 1.2em;
+}
+
+section.s2.skills .title h4 {
+    margin: 0; /* Remove default margin around h4 */
+    padding: 0; /* Ensure no extra padding */
+    font-size: 1.5em; /* Adjust font size as needed */
+    font-weight: bold; /* Make text bold */
 }
 
 .social-links{

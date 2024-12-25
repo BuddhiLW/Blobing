@@ -88,32 +88,8 @@
 
 <hr>
 
-<h4>TOP TOOLS</h4>
-
-
-<div id="skills">
-<ul>
-<li>Clojure</li>
-<li>ClojureScript</li>
-<li>Go</li>
-<li>Python</li>
-<li>Julia</li>
-</ul>
-
-<ul>
-
-<li>Linux</li>
-<li>Docker</li>
-<!-- <li>ArchLinux/EXWM</li> -->
-<!-- <li>General Purpouse</li> -->
-<!-- <li>PDEs and Data Science</li> -->
-<!-- <li>Automation and pipelines</li> -->
-<!-- <li>Reagent and Retit (Full Stack)</li> -->
-</ul>
 
 </div>
-</div>
-
 <div class="social-links">
 <img id="social_img" src="../../img/portifolio/youtube.png">
 <h3>Find me on Youtube & Social Medias</h3>
@@ -127,6 +103,33 @@
 </div>
 
 </div>
+</section>
+
+<section class="s2 skills">
+    <div class="title">
+        <h4 style="text-align: center;">TOP TOOLS</h4>
+    </div>
+
+   <div id="skills">
+   <ul>
+   <li>Clojure</li>
+   <li>ClojureScript</li>
+   <li>Go</li>
+   <li>Python</li>
+   <li>Julia</li>
+    </ul>
+
+   <ul>
+
+   <li>Linux</li>
+   <li>Docker</li>
+   <!-- <li>ArchLinux/EXWM</li> -->
+    <!-- <li>General Purpouse</li> -->
+    <!-- <li>PDEs and Data Science</li> -->
+    <!-- <li>Automation and pipelines</li> -->
+    <!-- <li>Reagent and Retit (Full Stack)</li> -->
+   </ul>
+   </div>
 </section>
 
 <!-- <section class="s1"> -->
@@ -178,21 +181,21 @@
 <h3 style="text-align: center;">Get In Touch</h3>
 
 <form id="contact-form" method="POST" action="mailto:pedrogbranquinho@gmail.com" enctype="text/plain">
-  <a name="contact"></a>
+<a name="contact"></a>
 
-  <label>Name</label>
-  <input class="input-field" type="text" name="name">
+<label>Name</label>
+<input class="input-field" type="text" name="name">
 
-  <label>Subject</label>
-  <input class="input-field" type="text" name="subject">
+<label>Subject</label>
+<input class="input-field" type="text" name="subject">
 
-  <label>Email</label>
-  <input class="input-field" type="text" name="email">
+<label>Email</label>
+<input class="input-field" type="text" name="email">
 
-  <label>Message</label>
-  <textarea class="input-field" name="message"></textarea>
+<label>Message</label>
+<textarea class="input-field" name="message"></textarea>
 
-  <input id="submit-btn" type="submit" value="Send">
+<input id="submit-btn" type="submit" value="Send">
 </form>
 </div>
 </section>

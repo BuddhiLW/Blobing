@@ -8,7 +8,10 @@
                            [compojure "1.7.0"]
                            [ring-server "0.5.0"]
                            [cryogen-flexmark "0.1.5"]
-                           [cryogen-core "0.4.1"]]
+                           [cryogen-core "0.4.1"]
+                           [hiccup "2.0.0-RC3"]]
+            :source-paths ["src/clj"]
+            :test-paths ["test/clj"]
             :plugins [[lein-ring "0.12.5"]]
             :main cryogen.core
             :ring {:init cryogen.server/init

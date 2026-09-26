@@ -47,23 +47,23 @@ being less than 1. Series with geometric ratios less than one will be
 converging series. The sum total value of the infinite series given
 by:
 
-Let \\(\mathbf{a} = (a_0, a_1, a_2, \ldots)\\), be terms of the
+Let \\(\mathbf\{a\} = (a_0, a_1, a_2, \ldots)\\), be terms of the
 series. Let \\(r\\) be the `ratio` between two consecutive terms,
-\\(r=\dfrac{a_{j+1}}{a_j}\\). Thus, the infinite sum is given by
-\\(S_\{\infty\} = \dfrac{a_0}{1-r}\\).
+\\(r=\dfrac\{a_\{j+1\}\}\{a_j\}\\). Thus, the infinite sum is given by
+\\(S_\{\infty\} = \dfrac\{a_0\}\{1-r\}\\).
 
 
 <a id="org0b2715d"></a>
 
 ### Case example, back to our analogy
 
-So, let's say, in our analogy, that \\(\mathbf{a}\\) signifies the
+So, let's say, in our analogy, that \\(\mathbf\{a\}\\) signifies the
 consecutive efforts of each task. e.i., \\(a_0\\) is the effort to do the
 first cleaning task. Therefore, if we simplify our `ratio` to a decreasing
 average \\(|r|<1\\), we have that the \\(S_\{\infty\}\\) can be applied.
 
 Thus, let \\(a_0=1\\) and \\(r=0.5\\), the total effort to clean, in the
-entire chain of process is:  \\(S_\{\infty\} = \dfrac{1}{1-0.5} = 2\\). So,
+entire chain of process is:  \\(S_\{\infty\} = \dfrac\{1\}\{1-0.5\} = 2\\). So,
 the effort of all cleaning chain is twice the cleaning effort of the
 first cleaning.
 

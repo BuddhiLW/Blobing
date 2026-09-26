@@ -1,7 +1,7 @@
 {:site-title                   "Dark Cyber Corner"
  :author                       "BuddhiLW"
  :description                  "My little dark corner of the cyberspace"
- :site-url                     "http://buddhilw.com/"
+ :site-url                     "https://www.buddhilw.com/" ;; canonical: buddhilw.com 301s here. Comment threads are keyed by page URL, so never change this again.
  :post-root                    "posts"
  :page-root                    "pages"
  :projects-root                "projects"
@@ -14,7 +14,7 @@
  :blog-prefix                  "" ;; /blog -> default -- changes due to netifly
  :rss-name                     "feed.xml"
  :rss-filters                  ["cryogen"]
- :recent-posts                 3
+ :recent-posts                 8
  :post-date-format             "yyyy-MM-dd"
  :archive-group-format         "yyyy MMMM"
  :sass-src                     []
@@ -33,4 +33,7 @@
  :hide-future-posts?           true
  :klipse                       {}
  :description-include-elements #{:p :h1 :h2 :h3 :h4 :h5 :h6}
- :debug?                       false}
+ :debug?                       false
+ :comments {:host    "https://comments.buddhilw.com" ;; Remark42, k8s repo platform/comments
+                       :site-id "blobing"
+                       :locale  "en"}}

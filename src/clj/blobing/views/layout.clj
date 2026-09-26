@@ -70,8 +70,11 @@
     [:ul
      (nav-link index-uri "Home" home)
      (nav-link archives-uri "Posts" archives)
+     ;; a page whose front matter sets :href links out instead of to itself
+     ;; (Portifolio -> the portfolio site, which offers a way back here)
      (for [nav-page navbar-pages]
-       (nav-link (:uri nav-page) (:title nav-page) (= (:uri page) (:uri nav-page))))
+       (nav-link (or (:href nav-page) (:uri nav-page)) (:title nav-page)
+                 (= (:uri page) (:uri nav-page))))
      (nav-link tags-uri "Tags" (= uri tags-uri))
      (nav-link rss-uri "RSS" false)]]
    [:ul.social

@@ -93,3 +93,12 @@
 (deftest unknown-view-test
   (is (thrown-with-msg? clojure.lang.ExceptionInfo #"No view for :nope"
                         (pages/view :nope ctx))))
+
+(deftest navbar-page-with-href-links-out-test
+  (let [portfolio "https://portfolio.buddhilw.com/?ref=blog"
+        page (render :home {:navbar-pages [{:uri "/pages-output/web-dev/" :title "Portifolio" :href portfolio}
+                                           {:uri "/pages-output/evil/" :title "Evil Deeds"}]})
+        hrefs (into {} (map (juxt enlive/text #(get-in % [:attrs :href]))
+                            (enlive/select page [:nav#site-nav :a])))]
+    (is (= portfolio (hrefs "Portifolio")) "the Portifolio entry goes to the portfolio site")
+    (is (= "/pages-output/evil/" (hrefs "Evil Deeds")) "pages without :href still link to themselves")))

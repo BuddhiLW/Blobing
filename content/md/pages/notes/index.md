@@ -1,0 +1,223 @@
+{:title "Notes", :layout :page, :navbar? true, :page-index 50, :keg-index true, :keg-name "blw-zet", :keg-exported ["0.md" "1.md" "10.md" "100.md" "101.md" "102.md" "103.md" "104.md" "105.md" "106.md" "107.md" "108.md" "109.md" "11.md" "110.md" "111.md" "112.md" "113.md" "114.md" "115.md" "117.md" "118.md" "119.md" "12.md" "120.md" "122.md" "123.md" "124.md" "125.md" "126.md" "127.md" "128.md" "129.md" "13.md" "130.md" "131.md" "132.md" "133.md" "134.md" "135.md" "136.md" "137.md" "138.md" "139.md" "140.md" "141.md" "142.md" "143.md" "144.md" "146.md" "147.md" "148.md" "149.md" "15.md" "150.md" "151.md" "153.md" "154.md" "155.md" "156.md" "157.md" "158.md" "159.md" "16.md" "160.md" "161.md" "162.md" "168.md" "169.md" "17.md" "170.md" "171.md" "172.md" "173.md" "175.md" "176.md" "177.md" "178.md" "179.md" "18.md" "180.md" "181.md" "182.md" "184.md" "186.md" "187.md" "188.md" "189.md" "19.md" "190.md" "191.md" "193.md" "195.md" "196.md" "197.md" "198.md" "199.md" "2.md" "20.md" "200.md" "201.md" "202.md" "203.md" "204.md" "205.md" "206.md" "207.md" "208.md" "209.md" "21.md" "210.md" "211.md" "212.md" "213.md" "214.md" "215.md" "217.md" "218.md" "219.md" "22.md" "220.md" "221.md" "222.md" "223.md" "224.md" "225.md" "226.md" "228.md" "229.md" "230.md" "231.md" "232.md" "233.md" "234.md" "235.md" "236.md" "237.md" "238.md" "239.md" "24.md" "240.md" "25.md" "26.md" "27.md" "28.md" "29.md" "3.md" "31.md" "32.md" "33.md" "34.md" "35.md" "37.md" "38.md" "39.md" "4.md" "40.md" "41.md" "42.md" "43.md" "45.md" "46.md" "47.md" "48.md" "49.md" "5.md" "50.md" "51.md" "52.md" "53.md" "54.md" "55.md" "56.md" "57.md" "58.md" "59.md" "6.md" "60.md" "61.md" "62.md" "63.md" "64.md" "66.md" "67.md" "68.md" "69.md" "7.md" "70.md" "71.md" "72.md" "73.md" "74.md" "75.md" "76.md" "77.md" "78.md" "79.md" "8.md" "80.md" "81.md" "82.md" "83.md" "84.md" "85.md" "86.md" "87.md" "88.md" "89.md" "9.md" "90.md" "91.md" "92.md" "93.md" "94.md" "95.md" "96.md" "97.md" "98.md" "99.md"]}
+
+A public slice of my zettelkasten: short, unpolished notes, linked to one another.
+
+- [Modernizing a 28-Year-Old Funeral Home System](/pages-output/notes/233/) <small>2026-03-16</small>
+- [Interesting projects](/pages-output/notes/234/) <small>2026-03-04</small>
+- [Computer Science Fundamentals Books](/pages-output/notes/240/) <small>2026-03-03</small>
+- [Unusually good quotes](/pages-output/notes/88/) <small>2026-03-01</small>
+- [Claude leaks](/pages-output/notes/239/) <small>2026-02-24</small>
+- [LLMs](/pages-output/notes/232/) <small>2026-02-15</small>
+- [AI dialogue](/pages-output/notes/238/) <small>2026-01-21</small>
+- [Future linkedin post](/pages-output/notes/237/) <small>2026-01-01</small>
+- [Bussiness ideas](/pages-output/notes/236/) <small>2026-01-01</small>
+- [Personal Projects and why](/pages-output/notes/235/) <small>2025-12-31</small>
+- [Facebook gathered-content](/pages-output/notes/6/) <small>2025-12-31</small>
+- [Why Clojure?](/pages-output/notes/86/) <small>2025-12-11</small>
+- [Market strategies and signals](/pages-output/notes/99/) <small>2025-10-23</small>
+- [Documentaries Middle East](/pages-output/notes/98/) <small>2025-10-23</small>
+- [xkb setting for the session](/pages-output/notes/97/) <small>2025-10-23</small>
+- [TODO List of thigs](/pages-output/notes/96/) <small>2025-10-23</small>
+- [# External redirecting with ClojureScript](/pages-output/notes/95/) <small>2025-10-23</small>
+- [A matemática, a computação e o método científico](/pages-output/notes/94/) <small>2025-10-23</small>
+- [Design System GovBR (Brazilian Government)](/pages-output/notes/93/) <small>2025-10-23</small>
+- [Freqtrade operations](/pages-output/notes/92/) <small>2025-10-23</small>
+- [Freqtrade](/pages-output/notes/91/) <small>2025-10-23</small>
+- [Discipline (Ed talk)](/pages-output/notes/90/) <small>2025-10-23</small>
+- [Freqtrade"](/pages-output/notes/89/) <small>2025-10-23</small>
+- [The divergent series (20221128185105)](/pages-output/notes/9/) <small>2025-10-23</small>
+- [Consolidação de mercado death care.](/pages-output/notes/87/) <small>2025-10-23</small>
+- [Too bright for the dark](/pages-output/notes/85/) <small>2025-10-23</small>
+- [Nassim Nicholas Taleb](/pages-output/notes/84/) <small>2025-10-23</small>
+- [Colorir](/pages-output/notes/83/) <small>2025-10-23</small>
+- [Exercising](/pages-output/notes/82/) <small>2025-10-23</small>
+- [Bankers and Tellers](/pages-output/notes/81/) <small>2025-10-23</small>
+- [On Kelly Criterion](/pages-output/notes/80/) <small>2025-10-23</small>
+- [On hypocrisies](/pages-output/notes/79/) <small>2025-10-23</small>
+- [Statistical references](/pages-output/notes/78/) <small>2025-10-23</small>
+- [Documentaries](/pages-output/notes/77/) <small>2025-10-23</small>
+- [The underling forces behind Industry](/pages-output/notes/8/) <small>2025-10-23</small>
+- [Kelly Criterion for Blackjack - Betting Variation](/pages-output/notes/76/) <small>2025-10-23</small>
+- [Blackjack Practice](/pages-output/notes/75/) <small>2025-10-23</small>
+- [Psytrance](/pages-output/notes/74/) <small>2025-10-23</small>
+- ['Introduction to the History of Computing', by Gerard O'Regan](/pages-output/notes/73/) <small>2025-10-23</small>
+- [Logseq - A note-taking app](/pages-output/notes/72/) <small>2025-10-23</small>
+- [(no title yet)](/pages-output/notes/71/) <small>2025-10-23</small>
+- ['Data Compression - The Complete Reference', by David Salomon](/pages-output/notes/70/) <small>2025-10-23</small>
+- [Vim formatting text](/pages-output/notes/7/) <small>2025-10-23</small>
+- [Semantics with Applications (Hanne Riis Nielson, Flemming Nielso)](/pages-output/notes/69/) <small>2025-10-23</small>
+- [Undergraduate Textbooks (Springer)](/pages-output/notes/68/) <small>2025-10-23</small>
+- [Creation of a bootstraping/ricing system](/pages-output/notes/67/) <small>2025-10-23</small>
+- [OCR - Optical Character Recognition](/pages-output/notes/66/) <small>2025-10-23</small>
+- [Same old, same old](/pages-output/notes/64/) <small>2025-10-23</small>
+- [Use and translate tutorials with Clojure](/pages-output/notes/62/) <small>2025-10-23</small>
+- [Cassandra, Postgres and Kafka with Clojure](/pages-output/notes/61/) <small>2025-10-23</small>
+- [Exchanges with ChatGPT about databases](/pages-output/notes/60/) <small>2025-10-23</small>
+- [Exchanges with Chat GPT](/pages-output/notes/59/) <small>2025-10-23</small>
+- [Interesting Websites and People](/pages-output/notes/58/) <small>2025-10-23</small>
+- [20230518102750](/pages-output/notes/57/) <small>2025-10-23</small>
+- [Deployment steps, with `Clojure(Script)`](/pages-output/notes/56/) <small>2025-10-23</small>
+- [Differences on Jetty and Aleph (Clojure web applications libraries)](/pages-output/notes/55/) <small>2025-10-23</small>
+- [Nice Voltaire quote (in Portuguese)](/pages-output/notes/54/) <small>2025-10-23</small>
+- [Multiple requests `day8.re-frame/http-fx`](/pages-output/notes/53/) <small>2025-10-23</small>
+- [How much it costs to full-fled website?](/pages-output/notes/52/) <small>2025-10-23</small>
+- [How to setup `transmission` in Ubuntu](/pages-output/notes/51/) <small>2025-10-23</small>
+- [Horizontal Rules with CSS](/pages-output/notes/50/) <small>2025-10-23</small>
+- [Experimenting with KEG](/pages-output/notes/5/) <small>2025-10-23</small>
+- [Re-frame documentation notes (Cofx)](/pages-output/notes/49/) <small>2025-10-23</small>
+- [Payment in software companies](/pages-output/notes/48/) <small>2025-10-23</small>
+- [Re-frame](/pages-output/notes/47/) <small>2025-10-23</small>
+- [Stack Overflow Deleted question](/pages-output/notes/46/) <small>2025-10-23</small>
+- [Install emacs with native compilation](/pages-output/notes/45/) <small>2025-10-23</small>
+- [Quote 1](/pages-output/notes/43/) <small>2025-10-23</small>
+- [Components and examples in ClojureScript](/pages-output/notes/42/) <small>2025-10-23</small>
+- [Re-frame](/pages-output/notes/41/) <small>2025-10-23</small>
+- [Time alone](/pages-output/notes/40/) <small>2025-10-23</small>
+- [The enginners and the price system](/pages-output/notes/4/) <small>2025-10-23</small>
+- [20230412182243](/pages-output/notes/39/) <small>2025-10-23</small>
+- [p1 (20230330173106)](/pages-output/notes/38/) <small>2025-10-23</small>
+- [Cool websites](/pages-output/notes/37/) <small>2025-10-23</small>
+- [Notes on DEFCon doc](/pages-output/notes/35/) <small>2025-10-23</small>
+- [The capitalist markets](/pages-output/notes/34/) <small>2025-10-23</small>
+- [Discurso de formatura](/pages-output/notes/33/) <small>2025-10-23</small>
+- [Learn Reitit Course Notes](/pages-output/notes/32/) <small>2025-10-23</small>
+- [VirtualBox and Mongodb - AVX and AVX2](/pages-output/notes/31/) <small>2025-10-23</small>
+- [Automate testing your website rendering](/pages-output/notes/29/) <small>2025-10-23</small>
+- [Dostoievsky's The Idiot (20221125132220)](/pages-output/notes/3/) <small>2025-10-23</small>
+- [Dotfiles: the struggle is real](/pages-output/notes/28/) <small>2025-10-23</small>
+- [Configuração do Github Actions](/pages-output/notes/27/) <small>2025-10-23</small>
+- [Quick Notes on Software development](/pages-output/notes/231/) <small>2025-10-23</small>
+- [Software Idea](/pages-output/notes/26/) <small>2025-10-23</small>
+- [Chinese Class 2](/pages-output/notes/25/) <small>2025-10-23</small>
+- ['Solving' `tmux` using the `/bin/sh`](/pages-output/notes/24/) <small>2025-10-23</small>
+- [Music](/pages-output/notes/230/) <small>2025-10-23</small>
+- [Useful priming](/pages-output/notes/229/) <small>2025-10-23</small>
+- [DOC Lo and Behold Reveries of the Connected World](/pages-output/notes/226/) <small>2025-10-23</small>
+- [bla](/pages-output/notes/225/) <small>2025-10-23</small>
+- [Kubernetes and GitOps](/pages-output/notes/224/) <small>2025-10-23</small>
+- [Cryptography](/pages-output/notes/223/) <small>2025-10-23</small>
+- [Learning OpSec](/pages-output/notes/222/) <small>2025-10-23</small>
+- [At a crossroads](/pages-output/notes/221/) <small>2025-10-23</small>
+- [On the nature of taking notes](/pages-output/notes/220/) <small>2025-10-23</small>
+- [One of the problems of Clean Architecture and DDD (Modern Computer Science and Software Engineering in general)](/pages-output/notes/219/) <small>2025-10-23</small>
+- [Chinese Class 1](/pages-output/notes/22/) <small>2025-10-23</small>
+- [Pantonímia](/pages-output/notes/218/) <small>2025-10-23</small>
+- [TODO empresas sem website](/pages-output/notes/217/) <small>2025-10-23</small>
+- [Clean Architecture](/pages-output/notes/215/) <small>2025-10-23</small>
+- [Book quotes](/pages-output/notes/214/) <small>2025-10-23</small>
+- [Ethics to Nicomaco](/pages-output/notes/213/) <small>2025-10-23</small>
+- [Architectures and Design Patterns](/pages-output/notes/212/) <small>2025-10-23</small>
+- [📋 Daily / Weekly Operational Plan](/pages-output/notes/211/) <small>2025-10-23</small>
+- [🧬 The Secret Blueprint: The Evolutionary Arc](/pages-output/notes/210/) <small>2025-10-23</small>
+- [Language and culture](/pages-output/notes/21/) <small>2025-10-23</small>
+- [Elm tips](/pages-output/notes/209/) <small>2025-10-23</small>
+- [Prompts](/pages-output/notes/208/) <small>2025-10-23</small>
+- [Formação DEV](/pages-output/notes/207/) <small>2025-10-23</small>
+- [BitCENT -- Project](/pages-output/notes/206/) <small>2025-10-23</small>
+- [Typescript](/pages-output/notes/205/) <small>2025-10-23</small>
+- [Cursor](/pages-output/notes/204/) <small>2025-10-23</small>
+- [Storybook](/pages-output/notes/203/) <small>2025-10-23</small>
+- [Kanban](/pages-output/notes/202/) <small>2025-10-23</small>
+- [This brings me memories...](/pages-output/notes/201/) <small>2025-10-23</small>
+- [Projeto Portifólio estilo Netflix - Formação d3vr](/pages-output/notes/200/) <small>2025-10-23</small>
+- [Chinese Practices](/pages-output/notes/20/) <small>2025-10-23</small>
+- [Makes Sense](/pages-output/notes/2/) <small>2025-10-23</small>
+- [Full Cycle notes](/pages-output/notes/199/) <small>2025-10-23</small>
+- [Coursera - TDD/BDD, IBM](/pages-output/notes/198/) <small>2025-10-23</small>
+- [Synchronicity](/pages-output/notes/197/) <small>2025-10-23</small>
+- [Automatic Differentiation (AD)](/pages-output/notes/196/) <small>2025-10-23</small>
+- [About Psychology](/pages-output/notes/195/) <small>2025-10-23</small>
+- [Why Programming Languages choices are important](/pages-output/notes/193/) <small>2025-10-23</small>
+- [Python GLIBC annoyances](/pages-output/notes/191/) <small>2025-10-23</small>
+- [Cryptography -- Steganography](/pages-output/notes/190/) <small>2025-10-23</small>
+- [Chinese and programming](/pages-output/notes/19/) <small>2025-10-23</small>
+- [Collaboration Efforts (20250203012420)](/pages-output/notes/189/) <small>2025-10-23</small>
+- [Useful resources](/pages-output/notes/188/) <small>2025-10-23</small>
+- [Managing Open Source Contributions (20250201182222)](/pages-output/notes/187/) <small>2025-10-23</small>
+- [Captions automation project (20250201180611)](/pages-output/notes/186/) <small>2025-10-23</small>
+- [Opiniões Petrificadas](/pages-output/notes/184/) <small>2025-10-23</small>
+- [SQLite and the Three Musketeers](/pages-output/notes/182/) <small>2025-10-23</small>
+- [showcasing keg](/pages-output/notes/181/) <small>2025-10-23</small>
+- [Templating to PDF](/pages-output/notes/180/) <small>2025-10-23</small>
+- [Enxugar as lágrimas alheias](/pages-output/notes/179/) <small>2025-10-23</small>
+- [Lutris debug - glibc](/pages-output/notes/18/) <small>2025-10-23</small>
+- [Maintaining KEG](/pages-output/notes/178/) <small>2025-10-23</small>
+- [O fracasso](/pages-output/notes/177/) <small>2025-10-23</small>
+- [A necessidade por uma internet diferente](/pages-output/notes/176/) <small>2025-10-23</small>
+- [MkDocs and KEG](/pages-output/notes/175/) <small>2025-10-23</small>
+- [Abby Martin](/pages-output/notes/173/) <small>2025-10-23</small>
+- [Feedback Nubank](/pages-output/notes/172/) <small>2025-10-23</small>
+- [Degrau de Vendas](/pages-output/notes/171/) <small>2025-10-23</small>
+- [FBI and Vegas](/pages-output/notes/170/) <small>2025-10-23</small>
+- [Input-method in the terminal - tmux](/pages-output/notes/17/) <small>2025-10-23</small>
+- [The Trials of Norman Finkelstein DOC](/pages-output/notes/169/) <small>2025-10-23</small>
+- [The Bibi Files (2024) DOC](/pages-output/notes/168/) <small>2025-10-23</small>
+- [Gaza Fights for Freedom (2019) DOC](/pages-output/notes/162/) <small>2025-10-23</small>
+- [The ultra zionists (2011), Louis Theroux DOC](/pages-output/notes/161/) <small>2025-10-23</small>
+- [Tantura DOC](/pages-output/notes/160/) <small>2025-10-23</small>
+- [A Command-line Interface (`CLI`) for translation](/pages-output/notes/16/) <small>2025-10-23</small>
+- [Freqtrade Moving Averages strats](/pages-output/notes/159/) <small>2025-10-23</small>
+- [Freqtrade shorting ideas](/pages-output/notes/158/) <small>2025-10-23</small>
+- [Freqtrade commands](/pages-output/notes/157/) <small>2025-10-23</small>
+- [Reunião](/pages-output/notes/156/) <small>2025-10-23</small>
+- [Freqtrade Hyperopt hacks](/pages-output/notes/155/) <small>2025-10-23</small>
+- [Telegram API](/pages-output/notes/154/) <small>2025-10-23</small>
+- [Project Idea](/pages-output/notes/153/) <small>2025-10-23</small>
+- [Valkey - A OSS alternative to Redis](/pages-output/notes/151/) <small>2025-10-23</small>
+- [Os Três Mosqueteiros](/pages-output/notes/150/) <small>2025-10-23</small>
+- [Active procedure of paranoiac thought](/pages-output/notes/15/) <small>2025-10-23</small>
+- [Isosec related APIs](/pages-output/notes/149/) <small>2025-10-23</small>
+- [Poem -- Nem um dia](/pages-output/notes/148/) <small>2025-10-23</small>
+- [Clojure Deploy (Resources)](/pages-output/notes/147/) <small>2025-10-23</small>
+- [Military Industrial Complex](/pages-output/notes/146/) <small>2025-10-23</small>
+- [(Orasis) Azure Useful commands](/pages-output/notes/144/) <small>2025-10-23</small>
+- [Switch Headset Profile Programmatically](/pages-output/notes/143/) <small>2025-10-23</small>
+- [The 'Desktop' Debate](/pages-output/notes/142/) <small>2025-10-23</small>
+- [A `M-x` (`execute-extended-command`) for `XMonad`](/pages-output/notes/141/) <small>2025-10-23</small>
+- [Interesting commands Unix](/pages-output/notes/140/) <small>2025-10-23</small>
+- [Rice up](/pages-output/notes/139/) <small>2025-10-23</small>
+- [A lógica matemática e a filosofia da vida.](/pages-output/notes/137/) <small>2025-10-23</small>
+- [Pywal with Kitty terminal](/pages-output/notes/135/) <small>2025-10-23</small>
+- [Lazy Wall Cli](/pages-output/notes/134/) <small>2025-10-23</small>
+- [Github submodules](/pages-output/notes/133/) <small>2025-10-23</small>
+- [Cadence](/pages-output/notes/132/) <small>2025-10-23</small>
+- [Kafka built with C++](/pages-output/notes/131/) <small>2025-10-23</small>
+- [Developing Fullstack Mobile App](/pages-output/notes/130/) <small>2025-10-23</small>
+- [Vim plugin for snippets](/pages-output/notes/13/) <small>2025-10-23</small>
+- [Books to be a good self seller (whore)](/pages-output/notes/129/) <small>2025-10-23</small>
+- [CSS pen awesome ideas](/pages-output/notes/128/) <small>2025-10-23</small>
+- [When to Use Webhooks, WebSocket, Pub/Sub, and Polling?](/pages-output/notes/127/) <small>2025-10-23</small>
+- [System Design: Google Drive (Full Cycle)](/pages-output/notes/126/) <small>2025-10-23</small>
+- [Movies and Books Content Management System - Project, Idea](/pages-output/notes/125/) <small>2025-10-23</small>
+- [Reasons not to give up](/pages-output/notes/124/) <small>2025-10-23</small>
+- [Biquini](/pages-output/notes/123/) <small>2025-10-23</small>
+- [FullCycle notes](/pages-output/notes/122/) <small>2025-10-23</small>
+- [QR-Code Supply Management System](/pages-output/notes/120/) <small>2025-10-23</small>
+- [Useful extra-functionalies in Vim](/pages-output/notes/12/) <small>2025-10-23</small>
+- [Arranjos de Flores, Funerária(s) - Work](/pages-output/notes/119/) <small>2025-10-23</small>
+- [Enhanced API Idea for Festival Organization and Big Events (20240407173723) - Work](/pages-output/notes/118/) <small>2025-10-23</small>
+- [Career Summit](/pages-output/notes/117/) <small>2025-10-23</small>
+- [Movies](/pages-output/notes/115/) <small>2025-10-23</small>
+- [Crime and Punishment, Dostoievski (20240406015319) - Parts I-III](/pages-output/notes/114/) <small>2025-10-23</small>
+- [Movies - Devil's Advocate](/pages-output/notes/113/) <small>2025-10-23</small>
+- [Aljazeera Investigations Doc 07, Out DOC](/pages-output/notes/112/) <small>2025-10-23</small>
+- [Job Search](/pages-output/notes/111/) <small>2025-10-23</small>
+- [Linkedin Convo](/pages-output/notes/110/) <small>2025-10-23</small>
+- [The Specter of Communism](/pages-output/notes/11/) <small>2025-10-23</small>
+- [Cloud Walk](/pages-output/notes/109/) <small>2025-10-23</small>
+- [GPT for Carrer advice](/pages-output/notes/107/) <small>2025-10-23</small>
+- [Useful Linux Info (Keystroke Singnals and it's meanings)](/pages-output/notes/106/) <small>2025-10-23</small>
+- [Practical Physics](/pages-output/notes/105/) <small>2025-10-23</small>
+- [ChatGPT summarization chronics](/pages-output/notes/104/) <small>2025-10-23</small>
+- [Training Periodization](/pages-output/notes/103/) <small>2025-10-23</small>
+- [Binding developer-oriented commands to keystrokes in Emacs](/pages-output/notes/102/) <small>2025-10-23</small>
+- [Dump - Trading and settings](/pages-output/notes/101/) <small>2025-10-23</small>
+- [Trading Stategy #1 - Hyperoptable strategy](/pages-output/notes/100/) <small>2025-10-23</small>
+- [`tmux` really is awesome](/pages-output/notes/10/) <small>2025-10-23</small>
+- [Trying out KEG](/pages-output/notes/1/) <small>2025-10-23</small>
+- [Sorry, planned but not yet available](/pages-output/notes/0/) <small>2025-10-23</small>
+- [Ascension of Bahá’u’lláh - what Emacs can tech you](/pages-output/notes/63/) <small>2025-10-23</small>
+- [My adventure into Infrastructure Land](/pages-output/notes/228/) <small>2025-10-23</small>
+- [Set theory, Charles Pinter](/pages-output/notes/138/) <small>2025-10-23</small>
+- [Great Ideas Tasks](/pages-output/notes/136/) <small>2025-10-23</small>
+- [Awesome practical projects](/pages-output/notes/108/) <small>2025-10-23</small>

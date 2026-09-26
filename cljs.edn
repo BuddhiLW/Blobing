@@ -1,0 +1,6 @@
+{:main          blobing.site
+ :output-to     "themes/lotus/js/site.js"
+ :output-dir    "target/cljs"
+ :optimizations :advanced
+ :pretty-print  false
+ :language-out  :ecmascript-2017}

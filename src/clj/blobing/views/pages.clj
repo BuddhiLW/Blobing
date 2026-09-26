@@ -5,7 +5,8 @@
   The article title is the page's only <h1>; body headings were re-ranked to
   start at <h2> by cryogen.content."
   (:require [blobing.views.components :as c]
-            [blobing.views.layout :as layout]))
+            [blobing.views.layout :as layout]
+            [clojure.string :as str]))
 
 (defmulti view
   "Renders the page `kind` (:post, :page, :home, ...) for cryogen context `ctx`."
@@ -28,6 +29,45 @@
      [:div.fancy-area {:aria-hidden "true"} [:div.fancy]])
    (c/outline-nav outline)
    [:div.prose (c/raw content)]))
+
+(defn- iso->date
+  "An ISO-8601 instant string as a java.util.Date, nil when it is not one."
+  [s]
+  (try (java.util.Date/from (java.time.Instant/parse (str s)))
+       (catch Exception _ nil)))
+
+(defn- parent-uri
+  "`/pages-output/notes/12/` -> `/pages-output/notes/`."
+  [uri]
+  (str/replace (str uri) #"[^/]+/?$" ""))
+
+(defmethod view :note
+  ;; A zettelkasten note exported by hive-keg (layout :note). The page's
+  ;; `:keg-*` keys carry the note id, update time, tags and the published
+  ;; notes that link here; links to private notes were already removed.
+  [_ {:keys [page uri] :as ctx}]
+  (let [{:keys [title keg-id keg-updated keg-tags keg-backlinks outline content]} page]
+    (layout/document
+     ctx
+     {:subtitle title
+      :article  page
+      :body     [:article.page.note
+                 [:header.post-header
+                  [:h1.post-title title]
+                  [:p.post-meta
+                   (str "Note " keg-id)
+                   (when-let [d (iso->date keg-updated)] (list " · updated " (c/date d)))]
+                  (when (seq keg-tags)
+                    [:ul.tag-list {:aria-label "Tags"}
+                     (for [t keg-tags] [:li [:span.tag t]])])]
+                 (c/outline-nav outline)
+                 [:div.prose (c/raw content)]
+                 (when (seq keg-backlinks)
+                   [:nav.backlinks {:aria-labelledby "backlinks-title"}
+                    [:h2#backlinks-title "Linked from"]
+                    [:ul (for [{link :uri link-title :title} keg-backlinks]
+                           [:li [:a {:href link} link-title]])]])
+                 [:p.note-index [:a {:href (parent-uri uri)} "← All notes"]]]})))
 
 (defmethod view :post [_ {:keys [post site-url uri] :as ctx}]
   (layout/document

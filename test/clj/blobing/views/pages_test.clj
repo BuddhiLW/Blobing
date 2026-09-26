@@ -50,6 +50,32 @@
       (is (= "About cats"
              (-> (enlive/select page [[:meta (enlive/attr= :name "description")]]) first :attrs :content))))))
 
+(deftest note-view-test
+  (let [note {:title         "Why Clojure?"
+              :keg-id        "86"
+              :keg-updated   "2025-12-11T04:06:21Z"
+              :keg-tags      ["clojure" "lisp"]
+              :keg-backlinks [{:uri "/pages-output/notes/12/" :title "Lisp <3"}]
+              :content       "<p>Because data.</p>"}
+        page (render :note {:page note :uri "/pages-output/notes/86/"})]
+    (testing "title is the only h1; note id and update date in the meta line"
+      (is (= ["Why Clojure?"] (texts page [:h1])))
+      (is (str/starts-with? (first (texts page [:.post-meta])) "Note 86 · updated"))
+      (is (= "2025-12-11" (-> (enlive/select page [:.post-meta :time]) first :attrs :datetime))))
+    (testing "tags are labels, not links (notes have no tag pages)"
+      (is (= ["clojure" "lisp"] (texts page [:.tag-list :span.tag])))
+      (is (empty? (enlive/select page [:.tag-list :a]))))
+    (testing "backlinks, escaped, and the way back to the index"
+      (is (= ["Lisp <3"] (texts page [:.backlinks :a])))
+      (is (= "/pages-output/notes/" (-> (enlive/select page [:.note-index :a]) first :attrs :href))))
+    (testing "the body passes through"
+      (is (= ["Because data."] (texts page [:.prose :p])))))
+  (testing "a note without tags, backlinks or a parseable date still renders"
+    (let [page (render :note {:page {:title "Bare" :keg-id "1" :keg-updated "not a date" :content ""}
+                              :uri "/pages-output/notes/1/"})]
+      (is (= ["Note 1"] (texts page [:.post-meta])))
+      (is (empty? (enlive/select page [:.backlinks]))))))
+
 (deftest outline-rail-test
   (testing "two or more sections render the index with in-page links"
     (let [page (render :post {:post (assoc post :outline [{:id "a" :level 2 :text "Alpha"}

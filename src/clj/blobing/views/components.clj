@@ -36,14 +36,20 @@
      (for [{:keys [uri name]} tags]
        [:li [:a.tag {:href uri} name]])]))
 
-(defn toc
-  "Wraps a cryogen-generated TOC (`:toc true` in the metadata)."
-  [toc-html]
-  (when toc-html
-    [:nav.toc {:aria-label "Table of contents"}
+(defn outline-nav
+  "Section index from `cryogen.content/outline`: a sticky rail beside the
+  article on wide screens, a collapsible block above the text on narrow
+  ones (blobing.site highlights the section being read). Rendered only for
+  pages with at least two sections."
+  [outline]
+  (when (next outline)
+    [:aside.outline {:aria-label "On this page"}
      [:details {:open true}
-      [:summary "Contents"]
-      (raw toc-html)]]))
+      [:summary "On this page"]
+      [:ol
+       (for [{:keys [id level text]} outline]
+         [:li {:class (str "outline-h" level)}
+          [:a {:href (str "#" id)} text]])]]]))
 
 (defn prev-next [{:keys [prev next]}]
   (when (or prev next)

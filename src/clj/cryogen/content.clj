@@ -56,25 +56,17 @@
 ;; ---------------------------------------------------------------------------
 ;; Passes over the top-level block sequence
 
-(defn- toc-nav [list-node]
-  {:tag     :nav
-   :attrs   {:class "toc" :aria-label "Table of contents"}
-   :content [{:tag     :details
-              :attrs   {:open ""}
-              :content [{:tag :summary :attrs nil :content ["Contents"]}
-                        list-node]}]})
-
-(defn extract-tocs
-  "Replaces every hand-made table of contents (a TOC marker followed by a
-  list) with a single `nav.toc` element. A marker with no list after it is
-  left alone."
+(defn drop-hand-tocs
+  "Removes every hand-made table of contents (a TOC marker followed by a
+  list). The page renders its own index from `outline`, so these would only
+  duplicate it. A marker with no list after it is left alone."
   [nodes]
   (loop [nodes (seq nodes) out []]
     (if-let [[node & more] nodes]
       (if (toc-marker? node)
-        (let [[gap [lst & after]] (split-with blank-node? more)]
+        (let [[_gap [lst & after]] (split-with blank-node? more)]
           (if (list-node? lst)
-            (recur after (conj out (toc-nav lst)))
+            (recur after out)
             (recur more (conj out node))))
         (recur more (conj out node)))
       out)))
@@ -134,6 +126,70 @@
                        (assoc n :tag (level->tag (ranks l)))
                        n))
                    nodes)))
+
+(defn- node-seq
+  "Every node of an enlive tree (or seq of trees), depth-first, in document order."
+  [nodes]
+  (tree-seq #(or (map? %) (sequential? %))
+            #(if (map? %) (:content %) %)
+            nodes))
+
+(defn slugify
+  "URL fragment for heading text: accents folded, lowercase, dash-separated."
+  [s]
+  (-> (java.text.Normalizer/normalize (str s) java.text.Normalizer$Form/NFD)
+      (str/replace #"\p{M}" "")
+      str/lower-case
+      (str/replace #"[^a-z0-9]+" "-")
+      (str/replace #"^-+|-+$" "")))
+
+(defn- empty-anchor? [node]
+  (and (map? node) (= :a (:tag node)) (str/blank? (text-of node))))
+
+(defn drop-redundant-anchors
+  "Removes hand-written empty `<a id=..>` anchors whose id a heading already
+  carries. Posts often place one right before a heading markdown also ids,
+  which would put the same id on the page twice."
+  [nodes]
+  (let [heading-ids (set (keep #(when (heading-level %) (get-in % [:attrs :id]))
+                               (node-seq nodes)))]
+    (remove #(and (empty-anchor? %) (heading-ids (get-in % [:attrs :id]))) nodes)))
+
+(defn ensure-heading-ids
+  "Gives every heading an id, keeping the ones markdown already produced and
+  de-duplicating new ones, so anchors and the outline can always link to it."
+  [nodes]
+  (let [taken  (atom (set (keep #(get-in % [:attrs :id]) (filter map? (node-seq nodes)))))
+        unique (fn [base]
+                 (let [base (if (str/blank? base) "section" base)
+                       id   (->> (cons base (map #(str base "-" %) (iterate inc 2)))
+                                 (remove @taken)
+                                 first)]
+                   (swap! taken conj id)
+                   id))]
+    (walk/postwalk (fn [n]
+                     (if (and (heading-level n) (str/blank? (get-in n [:attrs :id])))
+                       (assoc-in n [:attrs :id] (unique (slugify (text-of n))))
+                       n))
+                   nodes)))
+
+(defn- heading-text
+  "A heading's text without the `#` self-link `decorate` appends."
+  [heading]
+  (->> (:content heading)
+       (remove #(and (map? %) (= "heading-anchor" (get-in % [:attrs :class]))))
+       text-of
+       str/trim))
+
+(defn outline
+  "The page's section index: every h2/h3 that has an id, in document order."
+  [nodes]
+  (->> (node-seq nodes)
+       (filter #(#{2 3} (heading-level %)))
+       (keep (fn [h]
+               (when-let [id (get-in h [:attrs :id])]
+                 {:id id :level (heading-level h) :text (heading-text h)})))
+       vec))
 
 ;; ---------------------------------------------------------------------------
 ;; Presentation affordances
@@ -204,18 +260,21 @@
 (defn normalize-dom [nodes title]
   (-> nodes
       unwrap-empty-anchors
-      extract-tocs
+      drop-hand-tocs
       (drop-title-heading title)
       normalize-headings
+      drop-redundant-anchors
+      ensure-heading-ids
       decorate
       vec))
 
 (defn normalize-article
-  "`:update-article-fn` for cryogen: runs on every parsed post and page."
+  "`:update-article-fn` for cryogen: runs on every parsed post and page.
+  Adds `:outline`, the section index the page view renders."
   [article config]
-  (let [auto? (auto-description? article config)
+  (let [auto?   (auto-description? article config)
         article (update article :content-dom normalize-dom (:title article))]
-    (cond-> article
+    (cond-> (assoc article :outline (outline (:content-dom article)))
       auto? (assoc :description (summarize (:content-dom article))))))
 
 (def hooks

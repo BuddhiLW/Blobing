@@ -15,8 +15,9 @@
   (throw (ex-info (str "No view for " kind) {:kind kind :known (keys (methods view))})))
 
 (defn- article-body
-  "Header, decorative band and prose shared by posts and pages."
-  [{:keys [title date author tags toc content]} {:keys [band?]}]
+  "Header, decorative band, section index and prose shared by posts and
+  pages. They are siblings so the article can lay the index out as a rail."
+  [{:keys [title date author tags outline content]} {:keys [band?]}]
   (list
    [:header.post-header
     [:h1.post-title title]
@@ -25,9 +26,8 @@
     (c/tag-list tags)]
    (when band?
      [:div.fancy-area {:aria-hidden "true"} [:div.fancy]])
-   [:div.prose
-    (c/toc toc)
-    (c/raw content)]))
+   (c/outline-nav outline)
+   [:div.prose (c/raw content)]))
 
 (defmethod view :post [_ {:keys [post site-url uri] :as ctx}]
   (layout/document

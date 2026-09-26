@@ -43,8 +43,12 @@ markdown levels read naturally (`#`, `##`, ...): at build time
 `cryogen.content` re-ranks them so the shallowest level used becomes `<h2>`
 and levels never skip. It also:
 
-- turns a hand-made table of contents (org-export `# Table of Contents` or
-  markdown-toc's `**Table of Contents**` + list) into a collapsible `nav.toc`;
+- builds the page's "On this page" index from the h2/h3 headings (a sticky
+  rail with scroll-spy on wide screens, a collapsed block on phones), so a
+  hand-made table of contents (org-export `# Table of Contents`, or
+  markdown-toc's `**Table of Contents**` + list) is dropped as redundant;
+- gives every heading a unique id and removes hand-written anchors that
+  duplicate one;
 - drops a first heading that just repeats the title;
 - derives the meta description from the first real paragraphs (a
   `:description` in the post metadata always wins).

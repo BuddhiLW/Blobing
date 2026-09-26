@@ -395,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.06em;
   color: var(--muted);
 }
-.prose > h2:first-child, .prose > .toc + h2 { margin-top: 1em; }
+.prose > h2:first-child { margin-top: 0.5em; }
 .prose h2 + h3, .prose h3 + h4 { margin-top: 0.8em; }
 
 .heading-anchor {
@@ -519,11 +519,14 @@ pre code, pre code.hljs { padding: 0; background: none; border: 0; font-size: 0.
 .hljs-strong { font-weight: 700; }
 
 /* Display math scrolls sideways on narrow screens instead of breaking layout. */
-mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; padding: 0.25em 0; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.25em 0; }
 
-/* ---- Table of contents ---------------------------------------------------- */
+/* ---- Section index ("On this page") --------------------------------------
+   One element, two layouts: a collapsible card above the text on narrow
+   screens, a sticky rail beside it on wide ones. blobing.site marks the
+   section being read with aria-current. */
 
-.toc {
+.outline {
   margin: 0 0 2em;
   padding: 0.9rem 1.2rem;
   background: var(--surface);
@@ -531,18 +534,63 @@ mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; padding: 0
   border-radius: var(--radius);
   font-size: var(--step--1);
 }
-.toc summary {
+.outline summary {
   cursor: pointer;
   font-family: var(--font-display);
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
 }
-.toc ol, .toc ul { margin: 0.6rem 0 0; padding-left: 1.2em; }
-.toc li { margin: 0.2em 0; }
-.toc a { text-decoration: none; }
-.toc a:hover { text-decoration: underline; }
+.outline ol { list-style: none; margin: 0.6rem 0 0; padding: 0; }
+.outline li { margin: 0; }
+.outline a {
+  display: block;
+  padding: 0.28rem 0 0.28rem 0.8rem;
+  border-left: 2px solid var(--border);
+  color: var(--muted);
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.outline .outline-h3 a { padding-left: 1.6rem; font-size: 0.94em; }
+.outline a:hover { color: var(--link); }
+.outline a[aria-current="true"] {
+  color: var(--accent-strong);
+  border-left-color: var(--accent);
+  font-weight: 700;
+}
+
+@media (min-width: 80rem) {
+  .content:has(> .post > .outline, > .page > .outline) {
+    max-width: calc(var(--measure) + 17rem);
+  }
+  .post:has(> .outline), .page:has(> .outline) {
+    display: grid;
+    grid-template-columns: minmax(0, var(--measure)) 14rem;
+    column-gap: 3rem;
+    align-items: start;
+  }
+  .post > *, .page > * { grid-column: 1; }
+  .post > .outline, .page > .outline {
+    grid-column: 2;
+    grid-row: 1 / span 50;   /* spans the whole article, so sticky follows it */
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin: 0;
+    padding: 0.25rem 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+  }
+  /* The rail is always open: its summary is a label, not a toggle. */
+  .outline summary { pointer-events: none; list-style: none; margin-bottom: 0.25rem; }
+  .outline summary::-webkit-details-marker { display: none; }
+}
 
 /* ---- Post header & decoration ------------------------------------------- */
 

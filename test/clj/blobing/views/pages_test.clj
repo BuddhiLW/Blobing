@@ -50,6 +50,16 @@
       (is (= "About cats"
              (-> (enlive/select page [[:meta (enlive/attr= :name "description")]]) first :attrs :content))))))
 
+(deftest outline-rail-test
+  (testing "two or more sections render the index with in-page links"
+    (let [page (render :post {:post (assoc post :outline [{:id "a" :level 2 :text "Alpha"}
+                                                          {:id "b" :level 3 :text "Beta"}])})]
+      (is (= ["#a" "#b"] (map #(get-in % [:attrs :href]) (enlive/select page [:aside.outline :a]))))
+      (is (= ["outline-h2" "outline-h3"] (map #(get-in % [:attrs :class]) (enlive/select page [:aside.outline :li]))))))
+  (testing "a single section gets no index"
+    (is (empty? (enlive/select (render :post {:post (assoc post :outline [{:id "a" :level 2 :text "A"}])})
+                               [:aside.outline])))))
+
 (deftest comments-test
   (testing "no comments section while no Remark42 host is configured"
     (is (empty? (enlive/select (render :post {:post post}) [:#comments]))))

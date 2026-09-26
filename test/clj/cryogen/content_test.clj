@@ -35,22 +35,52 @@
     (is (= [:h2 :h3]
            (tags (content/normalize-dom (dom "<h1>A</h1><blockquote><h3>B</h3></blockquote>") "T"))))))
 
-(deftest toc-extraction-test
-  (testing "org-export TOC heading + list becomes nav.toc"
+(deftest hand-toc-test
+  (testing "org-export TOC heading + list is dropped (the page renders its own index)"
     (let [out (content/normalize-dom
-               (dom "<h1 id=\"table-of-contents\">Table of Contents</h1>\n<ol><li><a href=\"#x\">X</a></li></ol><h1>X</h1>")
+               (dom "<h1 id=\"table-of-contents\">Table of Contents</h1>\n<ol><li><a href=\"#x\">X</a></li></ol><h1 id=\"x\">X</h1>")
                "T")]
-      (is (= 1 (count (enlive/select out [:nav.toc]))))
+      (is (empty? (enlive/select out [:ol])))
       (is (= [:h2] (tags out)) "the TOC heading no longer counts as a section")))
-  (testing "markdown-toc bold paragraph between comments becomes nav.toc"
+  (testing "markdown-toc bold paragraph between comments is dropped"
     (let [out (content/normalize-dom
                (dom "<!-- markdown-toc start --><p><strong>Table of Contents</strong></p>\n<ul><li>a</li></ul><!-- markdown-toc end --><h1>a</h1>")
                "T")]
-      (is (= 1 (count (enlive/select out [:nav.toc :ul]))))
-      (is (not (str/includes? (render out) "<strong>Table of Contents")))))
+      (is (empty? (enlive/select out [:ul])))
+      (is (not (str/includes? (render out) "Table of Contents")))))
   (testing "a marker with nothing to wrap is left alone"
     (let [out (content/normalize-dom (dom "<p><strong>Contents</strong></p><p>text</p>") "T")]
-      (is (empty? (enlive/select out [:nav.toc]))))))
+      (is (= ["Contents" "text"] (map enlive/text (enlive/select out [:p])))))))
+
+(deftest ensure-heading-ids-test
+  (let [out (content/normalize-dom
+             (dom "<h1>Ação Rápida!</h1><h1 id=\"kept\">Kept</h1><h1>Ação rápida</h1><h1></h1>")
+             "T")]
+    (is (= ["acao-rapida" "kept" "acao-rapida-2" "section"]
+           (map #(get-in % [:attrs :id]) (enlive/select out [:h2]))))))
+
+(deftest redundant-anchor-test
+  (let [out (content/normalize-dom
+             (dom "<a id=\"the-problem\"></a><h2 id=\"the-problem\">The Problem</h2><a id=\"org1\"></a><h2>Other</h2>")
+             "T")]
+    (is (= 1 (count (enlive/select out [(enlive/attr= :id "the-problem")])))
+        "the anchor duplicating a heading id is gone")
+    (is (= 1 (count (enlive/select out [[:a (enlive/attr= :id "org1")]])))
+        "an anchor other links rely on is kept")))
+
+(deftest outline-test
+  (let [out (content/normalize-dom
+             (dom "<h1 id=\"a\">Alpha</h1><h2 id=\"b\">Beta</h2><h3 id=\"c\">Gamma</h3><h1 id=\"d\">Delta</h1>")
+             "T")]
+    (testing "h2/h3 in document order; the # self-link is not part of the text"
+      (is (= [{:id "a" :level 2 :text "Alpha"}
+              {:id "b" :level 3 :text "Beta"}
+              {:id "d" :level 2 :text "Delta"}]
+             (content/outline out))))
+    (testing "normalize-article attaches it"
+      (is (= "a" (-> (content/normalize-article {:title "T" :content-dom (dom "<h1 id=\"a\">Alpha</h1>")}
+                                                {:blocks-per-preview 2})
+                     :outline first :id))))))
 
 (deftest org-anchor-test
   (testing "empty anchor paragraphs are unwrapped, anchor kept"

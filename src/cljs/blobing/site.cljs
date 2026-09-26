@@ -173,6 +173,69 @@
           (.catch #(js/console.warn "KaTeX failed to load" %))))))
 
 ;; ---------------------------------------------------------------------------
+;; Section index: scroll-spy over the outline rendered by
+;; blobing.views.components/outline-nav.
+
+(def ^:private wide-screen "(min-width: 80rem)")
+
+(def ^:private reading-line
+  "Pixels from the top of the viewport: a heading above it has been reached."
+  120)
+
+(defn- link-target [link]
+  (.slice (.getAttribute link "href") 1))
+
+(defn- current-section
+  "Id of the last outlined heading scrolled past the reading line, or nil."
+  [links]
+  (.reduce links
+           (fn [current link]
+             (let [heading (.getElementById js/document (link-target link))]
+               (if (and heading (< (.-top (.getBoundingClientRect heading)) reading-line))
+                 (link-target link)
+                 current)))
+           nil))
+
+(defn- mark-current!
+  "Flags the link for section `id`; keeps it in view when the index is a rail."
+  [links id rail?]
+  (.forEach links
+            (fn [link]
+              (if (identical? (link-target link) id)
+                (do (.setAttribute link "aria-current" "true")
+                    (when rail? (.scrollIntoView link #js {"block" "nearest"})))
+                (.removeAttribute link "aria-current")))))
+
+(defn- sync-open!
+  "The index is always open as a rail, collapsed above the text on narrow screens."
+  [details wide?]
+  (if wide?
+    (.setAttribute details "open" "")
+    (.removeAttribute details "open")))
+
+(defn- init-outline! []
+  (when-let [outline ($ ".outline")]
+    (let [details (.querySelector outline "details")
+          links   (js/Array.from (.querySelectorAll outline "a"))
+          wide    (.matchMedia js/window wide-screen)
+          state   #js {"current" nil "queued" false}
+          refresh (fn []
+                    (gobj/set state "queued" false)
+                    (let [id (current-section links)]
+                      (when-not (identical? id (gobj/get state "current"))
+                        (gobj/set state "current" id)
+                        (mark-current! links id (.-matches wide)))))]
+      (sync-open! details (.-matches wide))
+      (.addEventListener wide "change" #(sync-open! details (.-matches %)))
+      (.addEventListener js/window "scroll"
+                         (fn []
+                           (when-not (gobj/get state "queued")
+                             (gobj/set state "queued" true)
+                             (js/requestAnimationFrame refresh)))
+                         #js {"passive" true})
+      (refresh))))
+
+;; ---------------------------------------------------------------------------
 ;; Comments: self-hosted Remark42 (threads, replies, social and Keycloak
 ;; logins; markdown sanitized server-side). The mount carries its config as
 ;; data-* attributes rendered by blobing.views.components/comments.
@@ -202,6 +265,7 @@
 (defn init! []
   (init-theme!)
   (init-menu!)
+  (init-outline!)
   (init-highlighting!)
   (init-math!)
   (init-comments!))

@@ -70,7 +70,7 @@
   (when (seq host)
     [:section#comments.comments {:aria-labelledby "comments-title"}
      [:h2#comments-title "Comments"]
-     [:p.comments-note "Sign in with Google, GitHub, Facebook or your account to comment and reply."]
+     [:p.comments-note "Sign in to comment and reply. Comments are moderated and stored on this site's own server."]
      [:div#remark42 {:data-host    host
                      :data-site-id (or site-id "blobing")
                      :data-url     page-url

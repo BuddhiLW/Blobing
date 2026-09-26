@@ -1,7 +1,7 @@
 {:site-title                   "Dark Cyber Corner"
  :author                       "BuddhiLW"
  :description                  "My little dark corner of the cyberspace"
- :site-url                     "http://buddhilw.com/"
+ :site-url                     "https://www.buddhilw.com/" ;; canonical: buddhilw.com 301s here. Comment threads are keyed by page URL, so never change this again.
  :post-root                    "posts"
  :page-root                    "pages"
  :projects-root                "projects"
@@ -34,6 +34,6 @@
  :klipse                       {}
  :description-include-elements #{:p :h1 :h2 :h3 :h4 :h5 :h6}
  :debug?                       false
- :comments {:host    "" ;; Remark42 base URL, e.g. "https://comments.buddhilw.com"; blank = comments hidden
-            :site-id "blobing"
-            :locale  "en"}}
+ :comments {:host    "https://comments.buddhilw.com" ;; Remark42, k8s repo platform/comments
+                       :site-id "blobing"
+                       :locale  "en"}}
